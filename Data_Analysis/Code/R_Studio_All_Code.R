@@ -1909,4 +1909,3 @@ pie(df_pavlos_ag$Count, labels = paste(df_pavlos_ag$age, "\n", df_pavlos_ag$Coun
     main = "Age Distribution (Pavlos)", radius = 1)
 pie(df_gialouris_ag$Count, labels = paste(df_gialouris_ag$age, "\n", df_gialouris_ag$Count), col = c("lightblue", "lightgreen"),
     main = "Age Distribution (Gialouris)", radius = 1)
-
