@@ -6,35 +6,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Navigation</title>
     <style>
+        /* General Styles */
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
             text-align: center;
+            
+            /* Background Image */
+            background-image: url('A_detailed,_high-quality_background_image_of_a_mod.png'); /* Update the path here */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh; /* Ensures full screen */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
+
+        h1 {
+            font-size: 36px;
+            color: #ffffff;
+            margin-top: 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        p {
+            font-size: 20px;
+            color: #ffffff;
+            margin-top: -10px;
+            margin-bottom: 40px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
         ul {
             list-style-type: none;
             padding: 0;
+            margin-top: 20px;
         }
+
         li {
-            margin: 10px 0;
+            margin: 15px 0;
         }
+
         a {
             text-decoration: none;
             color: #0073e6;
-            font-size: 18px;
+            font-size: 20px;
+            padding: 10px 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            transition: all 0.3s ease;
         }
+
         a:hover {
+            background-color: #0073e6;
+            color: #ffffff;
             text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
 <body>
-    <h1>SAS Project Statistic Datatables</h1>
-    <p>Choose a datatable category:</p>
-    <ul>
-        <li><a href="Erwt_Leoforeio/index.html">Erwt_Leoforeio</a></li>
-        <li><a href="Erwt_Stash/index.html">Erwt_Stash</a></li>
-        <li><a href="Stop_Visualization/index.html">Stop_Visualization</a></li>
-    </ul>
+    <div class="container">
+        <h1>Urban Transport Systems Project Content</h1>
+        <p>Choose a category to view:</p>
+        <ul>
+            <li><a href="Erwt_Leoforeio/index.html">Bus Questionnaire</a></li>
+            <li><a href="Erwt_Stash/index.html">Bus Stop Questionnaire</a></li>
+            <li><a href="Stop_Visualization/index.html">Bus Stop Visualization</a></li>
+        </ul>
+    </div>
 </body>
 </html>
