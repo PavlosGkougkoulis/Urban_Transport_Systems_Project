@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Navigation</title>
     <style>
+        /* General Styles */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -13,10 +14,6 @@
             background-color: #f5f5f5;
             color: #333;
             text-align: center;
-            background-image: url('https://www.example.com/urban-transport-bg.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
         }
 
         h1 {
@@ -60,11 +57,10 @@
             text-decoration: underline;
         }
 
-        /* Adding a bus image as the header */
+        /* Header Image */
         .header-img {
             width: 100%;
-            height: auto;
-            max-height: 400px;
+            height: 250px; /* Adjust height to better fit the layout */
             object-fit: cover;
             border-bottom: 5px solid #0073e6;
         }
@@ -74,11 +70,20 @@
             margin: 0 auto;
             padding: 20px;
         }
+
+        /* Background Style for Body */
+        .background {
+            background-image: url('https://via.placeholder.com/1920x1080/0000FF/808080?text=Urban+Transport'); /* Replace with actual image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh; /* Ensures full screen */
+        }
     </style>
 </head>
-<body>
+<body class="background">
     <!-- Bus Image Header -->
-    <img class="header-img" src="https://www.example.com/bus-image.jpg" alt="Urban Transport">
+    <img class="header-img" src="https://via.placeholder.com/1920x400/0000FF/FFFFFF?text=Urban+Transport+Systems" alt="Urban Transport">
 
     <div class="container">
         <h1>SAS Project Statistic Datatables</h1>
