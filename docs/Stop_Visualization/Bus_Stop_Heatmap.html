@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_b6b5f67cc0805fef950d510e2aff73b2 {
+                #map_f2fbd2a733a3165fba983f97892f2a44 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,16 +39,16 @@
 <body>
     
     
-            <div class="folium-map" id="map_b6b5f67cc0805fef950d510e2aff73b2" ></div>
+            <div class="folium-map" id="map_f2fbd2a733a3165fba983f97892f2a44" ></div>
         
 </body>
 <script>
     
     
-            var map_b6b5f67cc0805fef950d510e2aff73b2 = L.map(
-                "map_b6b5f67cc0805fef950d510e2aff73b2",
+            var map_f2fbd2a733a3165fba983f97892f2a44 = L.map(
+                "map_f2fbd2a733a3165fba983f97892f2a44",
                 {
-                    center: [39.37586258, 22.93861205],
+                    center: [39.36136106, 22.9328832],
                     crs: L.CRS.EPSG3857,
                     zoom: 12,
                     zoomControl: true,
@@ -60,622 +60,2524 @@
 
         
     
-            var tile_layer_ff0e9a401d6996a24b38c2e2188c14cb = L.tileLayer(
+            var tile_layer_0076ff17bf264dc497c8a616861a942a = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             );
         
     
-            tile_layer_ff0e9a401d6996a24b38c2e2188c14cb.addTo(map_b6b5f67cc0805fef950d510e2aff73b2);
+            tile_layer_0076ff17bf264dc497c8a616861a942a.addTo(map_f2fbd2a733a3165fba983f97892f2a44);
         
     
-            var circle_marker_bc5023529de0c00cf4cc1666095e90a6 = L.circleMarker(
+            var feature_group_366f9bba34fdde6590f26b60bb9053b6 = L.featureGroup(
+                {}
+            );
+        
+    
+            var circle_marker_0eb96630bcbf7524c401f458353ebcce = L.circleMarker(
                 [39.36136106, 22.9328832],
-                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_b6b5f67cc0805fef950d510e2aff73b2);
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
         
     
-        var popup_9dd28a8dc0e829aeb53ba6cbd0585caf = L.popup({"maxWidth": 250, "minWidth": 150});
+        var popup_d6e1fb2f3b2093300d2eabd84ac9aac2 = L.popup({"maxWidth": 250, "minWidth": 150});
 
         
             
-                var html_f035c6e1f49d935505c69e261f8158ec = $(`<div id="html_f035c6e1f49d935505c69e261f8158ec" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 009<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Time in Stop:</strong> 25<br>         <strong>Time Delay:</strong> 2'      </div>     </div>`)[0];
-                popup_9dd28a8dc0e829aeb53ba6cbd0585caf.setContent(html_f035c6e1f49d935505c69e261f8158ec);
+                var html_47cff67cbfecd4b1b5d085a6160f1758 = $(`<div id="html_47cff67cbfecd4b1b5d085a6160f1758" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 009<br>         <strong>Boardings:</strong> 14<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>7:35:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 0'     </div>     </div>`)[0];
+                popup_d6e1fb2f3b2093300d2eabd84ac9aac2.setContent(html_47cff67cbfecd4b1b5d085a6160f1758);
             
         
 
-        circle_marker_bc5023529de0c00cf4cc1666095e90a6.bindPopup(popup_9dd28a8dc0e829aeb53ba6cbd0585caf)
+        circle_marker_0eb96630bcbf7524c401f458353ebcce.bindPopup(popup_d6e1fb2f3b2093300d2eabd84ac9aac2)
         ;
 
         
     
     
-            var circle_marker_ac1320130efa9e2ab7156b2f87f1f7af = L.circleMarker(
+            var circle_marker_a0b2c478a057da8e933e38498ecb3450 = L.circleMarker(
                 [39.36215812, 22.9351447],
-                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_b6b5f67cc0805fef950d510e2aff73b2);
-        
-    
-        var popup_c0c6b55680b7b2cc84f43b425b801163 = L.popup({"maxWidth": 250, "minWidth": 150});
-
-        
-            
-                var html_b2beb0463d7b30f992e09c788d0f9862 = $(`<div id="html_b2beb0463d7b30f992e09c788d0f9862" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 021<br>         <strong>Boardings:</strong> 2<br>         <strong>Unboardings:</strong> 2<br>         <strong>Time in Stop:</strong> 24<br>         <strong>Time Delay:</strong> 4'      </div>     </div>`)[0];
-                popup_c0c6b55680b7b2cc84f43b425b801163.setContent(html_b2beb0463d7b30f992e09c788d0f9862);
-            
-        
-
-        circle_marker_ac1320130efa9e2ab7156b2f87f1f7af.bindPopup(popup_c0c6b55680b7b2cc84f43b425b801163)
-        ;
-
-        
-    
-    
-            var circle_marker_16f4fa51d93d768595d16224cde7d6e4 = L.circleMarker(
-                [39.36216762, 22.9397343],
-                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_b6b5f67cc0805fef950d510e2aff73b2);
-        
-    
-        var popup_ee93d835b159f56a502e863d7a4966e3 = L.popup({"maxWidth": 250, "minWidth": 150});
-
-        
-            
-                var html_e67f9dc3e59423ac96e6adacce83358e = $(`<div id="html_e67f9dc3e59423ac96e6adacce83358e" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 022<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Time in Stop:</strong> 22<br>         <strong>Time Delay:</strong> 3'      </div>     </div>`)[0];
-                popup_ee93d835b159f56a502e863d7a4966e3.setContent(html_e67f9dc3e59423ac96e6adacce83358e);
-            
-        
-
-        circle_marker_16f4fa51d93d768595d16224cde7d6e4.bindPopup(popup_ee93d835b159f56a502e863d7a4966e3)
-        ;
-
-        
-    
-    
-            var circle_marker_124aa481ad6908cc948fa137dd821703 = L.circleMarker(
-                [39.36137758, 22.94332156],
-                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_b6b5f67cc0805fef950d510e2aff73b2);
-        
-    
-        var popup_746d3f16082ebde995a89bce6a63d882 = L.popup({"maxWidth": 250, "minWidth": 150});
-
-        
-            
-                var html_a08ac75c060f2e8bfb99ce28f682d807 = $(`<div id="html_a08ac75c060f2e8bfb99ce28f682d807" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 023<br>         <strong>Boardings:</strong> 4<br>         <strong>Unboardings:</strong> 4<br>         <strong>Time in Stop:</strong> 23<br>         <strong>Time Delay:</strong> 4'      </div>     </div>`)[0];
-                popup_746d3f16082ebde995a89bce6a63d882.setContent(html_a08ac75c060f2e8bfb99ce28f682d807);
-            
-        
-
-        circle_marker_124aa481ad6908cc948fa137dd821703.bindPopup(popup_746d3f16082ebde995a89bce6a63d882)
-        ;
-
-        
-    
-    
-            var circle_marker_2e5d8c921dcc5190de3e46fe77e11ad2 = L.circleMarker(
-                [39.36088393, 22.94709222],
-                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_b6b5f67cc0805fef950d510e2aff73b2);
-        
-    
-        var popup_4f65314aca9a6cb677bd71f24c5c8369 = L.popup({"maxWidth": 250, "minWidth": 150});
-
-        
-            
-                var html_2bac100a4439b6bd1056e0e8a44bac29 = $(`<div id="html_2bac100a4439b6bd1056e0e8a44bac29" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 024<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Time in Stop:</strong> 6<br>         <strong>Time Delay:</strong> 2'      </div>     </div>`)[0];
-                popup_4f65314aca9a6cb677bd71f24c5c8369.setContent(html_2bac100a4439b6bd1056e0e8a44bac29);
-            
-        
-
-        circle_marker_2e5d8c921dcc5190de3e46fe77e11ad2.bindPopup(popup_4f65314aca9a6cb677bd71f24c5c8369)
-        ;
-
-        
-    
-    
-            var circle_marker_26ce576c9b6bbfd6ad7d9dd6513b99c2 = L.circleMarker(
-                [39.36357456, 22.94957881],
-                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_b6b5f67cc0805fef950d510e2aff73b2);
-        
-    
-        var popup_0ff055855a628013ce58c73688de14bf = L.popup({"maxWidth": 250, "minWidth": 150});
-
-        
-            
-                var html_04bde033daed42793e6c6f330e4e3dbc = $(`<div id="html_04bde033daed42793e6c6f330e4e3dbc" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 030<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Time in Stop:</strong> 6<br>         <strong>Time Delay:</strong> 1'      </div>     </div>`)[0];
-                popup_0ff055855a628013ce58c73688de14bf.setContent(html_04bde033daed42793e6c6f330e4e3dbc);
-            
-        
-
-        circle_marker_26ce576c9b6bbfd6ad7d9dd6513b99c2.bindPopup(popup_0ff055855a628013ce58c73688de14bf)
-        ;
-
-        
-    
-    
-            var circle_marker_9c0e60b046a471246e9d0bfd6758efe0 = L.circleMarker(
-                [39.36522082, 22.95112601],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_b6b5f67cc0805fef950d510e2aff73b2);
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
         
     
-        var popup_b0309495d5b2a9289009675ef2673951 = L.popup({"maxWidth": 250, "minWidth": 150});
+        var popup_ff89593e9bd570ef74b2510bcca2d725 = L.popup({"maxWidth": 250, "minWidth": 150});
 
         
             
-                var html_4cd84934164af000ab96c710a59aba59 = $(`<div id="html_4cd84934164af000ab96c710a59aba59" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 031<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Time in Stop:</strong> 12<br>         <strong>Time Delay:</strong> 0'      </div>     </div>`)[0];
-                popup_b0309495d5b2a9289009675ef2673951.setContent(html_4cd84934164af000ab96c710a59aba59);
+                var html_77fc3b616fa9860b1022cbe391d93351 = $(`<div id="html_77fc3b616fa9860b1022cbe391d93351" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 111<br>         <strong>Boardings:</strong> 2<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>7:36:00 πμ<br>         <strong>Time in Stop:</strong> 9"<br>         <strong>Time Delay:</strong> 4'     </div>     </div>`)[0];
+                popup_ff89593e9bd570ef74b2510bcca2d725.setContent(html_77fc3b616fa9860b1022cbe391d93351);
             
         
 
-        circle_marker_9c0e60b046a471246e9d0bfd6758efe0.bindPopup(popup_b0309495d5b2a9289009675ef2673951)
+        circle_marker_a0b2c478a057da8e933e38498ecb3450.bindPopup(popup_ff89593e9bd570ef74b2510bcca2d725)
         ;
 
         
     
     
-            var circle_marker_c7aaee2a0db3f952b0ca5e322a3635d9 = L.circleMarker(
+            var circle_marker_4182a6bd64103251d6c60bd3629ee8bb = L.circleMarker(
+                [39.36216762, 22.9397343],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_b3fb92eeb2ffb2f468532f6491a984b1 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_54e21502892480c66678f53bd504d59c = $(`<div id="html_54e21502892480c66678f53bd504d59c" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 109<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>7:38:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 3'     </div>     </div>`)[0];
+                popup_b3fb92eeb2ffb2f468532f6491a984b1.setContent(html_54e21502892480c66678f53bd504d59c);
+            
+        
+
+        circle_marker_4182a6bd64103251d6c60bd3629ee8bb.bindPopup(popup_b3fb92eeb2ffb2f468532f6491a984b1)
+        ;
+
+        
+    
+    
+            var circle_marker_01bda853e70dc5ba9f72147d1acc60e8 = L.circleMarker(
+                [39.36137758, 22.94332156],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_3cf5334444e2b19b8b81f59306d6976a = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_496e5037562c5c90b473951c98ae92fa = $(`<div id="html_496e5037562c5c90b473951c98ae92fa" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 024<br>         <strong>Boardings:</strong> 5<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>7:40:00 πμ<br>         <strong>Time in Stop:</strong> 13"<br>         <strong>Time Delay:</strong> 2'     </div>     </div>`)[0];
+                popup_3cf5334444e2b19b8b81f59306d6976a.setContent(html_496e5037562c5c90b473951c98ae92fa);
+            
+        
+
+        circle_marker_01bda853e70dc5ba9f72147d1acc60e8.bindPopup(popup_3cf5334444e2b19b8b81f59306d6976a)
+        ;
+
+        
+    
+    
+            var circle_marker_388a0b277c9326fbfbcb91d5cbd96b72 = L.circleMarker(
+                [39.36088393, 22.94709222],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_1ace21e652486b8459e6455792595dbe = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_ea90914834ebfe2745f6b4ad9a265883 = $(`<div id="html_ea90914834ebfe2745f6b4ad9a265883" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 023<br>         <strong>Boardings:</strong> 1<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>7:40:00 πμ<br>         <strong>Time in Stop:</strong> 8"<br>         <strong>Time Delay:</strong> 4'     </div>     </div>`)[0];
+                popup_1ace21e652486b8459e6455792595dbe.setContent(html_ea90914834ebfe2745f6b4ad9a265883);
+            
+        
+
+        circle_marker_388a0b277c9326fbfbcb91d5cbd96b72.bindPopup(popup_1ace21e652486b8459e6455792595dbe)
+        ;
+
+        
+    
+    
+            var circle_marker_be9cbb4b27af3642386e6a34d7ed15ae = L.circleMarker(
+                [39.36357456, 22.94957881],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_7316ee18e8206143461cb080d0ea5ce9 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_2e39b588523a3c3721ccf39324eca56a = $(`<div id="html_2e39b588523a3c3721ccf39324eca56a" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 021<br>         <strong>Boardings:</strong> 5<br>         <strong>Unboardings:</strong> 1<br>         <strong>Arrival Time:</strong>7:41:00 πμ<br>         <strong>Time in Stop:</strong> 14"<br>         <strong>Time Delay:</strong> 4'     </div>     </div>`)[0];
+                popup_7316ee18e8206143461cb080d0ea5ce9.setContent(html_2e39b588523a3c3721ccf39324eca56a);
+            
+        
+
+        circle_marker_be9cbb4b27af3642386e6a34d7ed15ae.bindPopup(popup_7316ee18e8206143461cb080d0ea5ce9)
+        ;
+
+        
+    
+    
+            var circle_marker_677c2fa9c415988e9825636cbc6c77e9 = L.circleMarker(
+                [39.36522082, 22.95112601],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_4817aeaa5d8838a3fc26de5fc86dfe9a = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_71aada0717babe5eef0a907242db2980 = $(`<div id="html_71aada0717babe5eef0a907242db2980" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 022<br>         <strong>Boardings:</strong> 5<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>7:43:00 πμ<br>         <strong>Time in Stop:</strong> 12"<br>         <strong>Time Delay:</strong> 3'     </div>     </div>`)[0];
+                popup_4817aeaa5d8838a3fc26de5fc86dfe9a.setContent(html_71aada0717babe5eef0a907242db2980);
+            
+        
+
+        circle_marker_677c2fa9c415988e9825636cbc6c77e9.bindPopup(popup_4817aeaa5d8838a3fc26de5fc86dfe9a)
+        ;
+
+        
+    
+    
+            var circle_marker_f4dd5edae97886bbf3b0e64cfd968e07 = L.circleMarker(
                 [39.36721318, 22.94963057],
                 {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_b6b5f67cc0805fef950d510e2aff73b2);
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
         
     
-        var popup_c091f757e22b7b8d0b51e92c5bba3ceb = L.popup({"maxWidth": 250, "minWidth": 150});
+        var popup_074960e3e9f48fdbea25e9f0fc1fceaa = L.popup({"maxWidth": 250, "minWidth": 150});
 
         
             
-                var html_5322223b03ea7c2f79d3192ac91e3499 = $(`<div id="html_5322223b03ea7c2f79d3192ac91e3499" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 032<br>         <strong>Boardings:</strong> 1<br>         <strong>Unboardings:</strong> 1<br>         <strong>Time in Stop:</strong> 18<br>         <strong>Time Delay:</strong> 1'      </div>     </div>`)[0];
-                popup_c091f757e22b7b8d0b51e92c5bba3ceb.setContent(html_5322223b03ea7c2f79d3192ac91e3499);
+                var html_ffd0b555e9499de0be800f085ec00916 = $(`<div id="html_ffd0b555e9499de0be800f085ec00916" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 108<br>         <strong>Boardings:</strong> 2<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>7:44:00 πμ<br>         <strong>Time in Stop:</strong> 10"<br>         <strong>Time Delay:</strong> 2'     </div>     </div>`)[0];
+                popup_074960e3e9f48fdbea25e9f0fc1fceaa.setContent(html_ffd0b555e9499de0be800f085ec00916);
             
         
 
-        circle_marker_c7aaee2a0db3f952b0ca5e322a3635d9.bindPopup(popup_c091f757e22b7b8d0b51e92c5bba3ceb)
+        circle_marker_f4dd5edae97886bbf3b0e64cfd968e07.bindPopup(popup_074960e3e9f48fdbea25e9f0fc1fceaa)
         ;
 
         
     
     
-            var circle_marker_fe1cf572965d89a64dc7a6e11e0189cd = L.circleMarker(
+            var circle_marker_7e87808fa41bbe7ecae7a9bcc9b80a47 = L.circleMarker(
                 [39.36803915, 22.94814557],
-                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_b6b5f67cc0805fef950d510e2aff73b2);
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
         
     
-        var popup_1095be76f589d2d470b455fba47a24e0 = L.popup({"maxWidth": 250, "minWidth": 150});
+        var popup_505b284c4808483b44bad2e5df09436a = L.popup({"maxWidth": 250, "minWidth": 150});
 
         
             
-                var html_031eec238e40c2c2b98a73bd4087a004 = $(`<div id="html_031eec238e40c2c2b98a73bd4087a004" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 033<br>         <strong>Boardings:</strong> 1<br>         <strong>Unboardings:</strong> 1<br>         <strong>Time in Stop:</strong> 23<br>         <strong>Time Delay:</strong> 0'      </div>     </div>`)[0];
-                popup_1095be76f589d2d470b455fba47a24e0.setContent(html_031eec238e40c2c2b98a73bd4087a004);
+                var html_b795020aea40791bb68130b9c804202a = $(`<div id="html_b795020aea40791bb68130b9c804202a" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 080<br>         <strong>Boardings:</strong> 1<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>7:45:00 πμ<br>         <strong>Time in Stop:</strong> 9"<br>         <strong>Time Delay:</strong> 2'     </div>     </div>`)[0];
+                popup_505b284c4808483b44bad2e5df09436a.setContent(html_b795020aea40791bb68130b9c804202a);
             
         
 
-        circle_marker_fe1cf572965d89a64dc7a6e11e0189cd.bindPopup(popup_1095be76f589d2d470b455fba47a24e0)
+        circle_marker_7e87808fa41bbe7ecae7a9bcc9b80a47.bindPopup(popup_505b284c4808483b44bad2e5df09436a)
         ;
 
         
     
     
-            var circle_marker_f395bb47acc22d19de8d4fa8a312c187 = L.circleMarker(
+            var circle_marker_f02c9aaf574dc865b5340f52f1711ed1 = L.circleMarker(
                 [39.369183, 22.94608085],
-                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_b6b5f67cc0805fef950d510e2aff73b2);
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
         
     
-        var popup_40f8f5adf674f26bea3167e3aee2f814 = L.popup({"maxWidth": 250, "minWidth": 150});
+        var popup_a278faff80888fa562fa4040652407fa = L.popup({"maxWidth": 250, "minWidth": 150});
 
         
             
-                var html_cb0a794973837ca10672a8c07a4e643a = $(`<div id="html_cb0a794973837ca10672a8c07a4e643a" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 035<br>         <strong>Boardings:</strong> 13<br>         <strong>Unboardings:</strong> 13<br>         <strong>Time in Stop:</strong> 19<br>         <strong>Time Delay:</strong> 3'      </div>     </div>`)[0];
-                popup_40f8f5adf674f26bea3167e3aee2f814.setContent(html_cb0a794973837ca10672a8c07a4e643a);
+                var html_21013c4de0850a45128c588ec070904e = $(`<div id="html_21013c4de0850a45128c588ec070904e" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 081<br>         <strong>Boardings:</strong> 1<br>         <strong>Unboardings:</strong> 1<br>         <strong>Arrival Time:</strong>7:45:00 πμ<br>         <strong>Time in Stop:</strong> 9"<br>         <strong>Time Delay:</strong> 3'     </div>     </div>`)[0];
+                popup_a278faff80888fa562fa4040652407fa.setContent(html_21013c4de0850a45128c588ec070904e);
             
         
 
-        circle_marker_f395bb47acc22d19de8d4fa8a312c187.bindPopup(popup_40f8f5adf674f26bea3167e3aee2f814)
+        circle_marker_f02c9aaf574dc865b5340f52f1711ed1.bindPopup(popup_a278faff80888fa562fa4040652407fa)
         ;
 
         
     
     
-            var circle_marker_44b7e306283784d0e838868a1b4d1da4 = L.circleMarker(
+            var circle_marker_99b0ec3513270bc48e5deab4936fab6b = L.circleMarker(
                 [39.37034003, 22.9439822],
-                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_b6b5f67cc0805fef950d510e2aff73b2);
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
         
     
-        var popup_c43cede8fe26e9b6545accccb16c2575 = L.popup({"maxWidth": 250, "minWidth": 150});
+        var popup_715b4fad407547d1be25c50eaa94ec79 = L.popup({"maxWidth": 250, "minWidth": 150});
 
         
             
-                var html_7776af4b8242c716d6bfb03e6651ad98 = $(`<div id="html_7776af4b8242c716d6bfb03e6651ad98" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 080<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Time in Stop:</strong> 18<br>         <strong>Time Delay:</strong> 2'      </div>     </div>`)[0];
-                popup_c43cede8fe26e9b6545accccb16c2575.setContent(html_7776af4b8242c716d6bfb03e6651ad98);
+                var html_084c14e154f32fe886bc25c1aa62d187 = $(`<div id="html_084c14e154f32fe886bc25c1aa62d187" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 082<br>         <strong>Boardings:</strong> 2<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>7:46:00 πμ<br>         <strong>Time in Stop:</strong> 8"<br>         <strong>Time Delay:</strong> 2'     </div>     </div>`)[0];
+                popup_715b4fad407547d1be25c50eaa94ec79.setContent(html_084c14e154f32fe886bc25c1aa62d187);
             
         
 
-        circle_marker_44b7e306283784d0e838868a1b4d1da4.bindPopup(popup_c43cede8fe26e9b6545accccb16c2575)
+        circle_marker_99b0ec3513270bc48e5deab4936fab6b.bindPopup(popup_715b4fad407547d1be25c50eaa94ec79)
         ;
 
         
     
     
-            var circle_marker_cf4a0f210b42d990dd7c26a2c4fd7c24 = L.circleMarker(
+            var circle_marker_c40e5c06377a6470508ed4e00f193650 = L.circleMarker(
                 [39.36989698, 22.94223892],
-                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_b6b5f67cc0805fef950d510e2aff73b2);
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
         
     
-        var popup_cf32274f63aee56fddef7cb8a9b935b0 = L.popup({"maxWidth": 250, "minWidth": 150});
+        var popup_bf8acb6a71ad04bd2ca27afd43a6e3c0 = L.popup({"maxWidth": 250, "minWidth": 150});
 
         
             
-                var html_54d893e4b3491024e9c61a546cb32f70 = $(`<div id="html_54d893e4b3491024e9c61a546cb32f70" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 081<br>         <strong>Boardings:</strong> 1<br>         <strong>Unboardings:</strong> 1<br>         <strong>Time in Stop:</strong> 17<br>         <strong>Time Delay:</strong> 3'      </div>     </div>`)[0];
-                popup_cf32274f63aee56fddef7cb8a9b935b0.setContent(html_54d893e4b3491024e9c61a546cb32f70);
+                var html_5e00f47b0825e20006531b2ef9f6ee9b = $(`<div id="html_5e00f47b0825e20006531b2ef9f6ee9b" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 106<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 1<br>         <strong>Arrival Time:</strong>7:47:00 πμ<br>         <strong>Time in Stop:</strong> 8"<br>         <strong>Time Delay:</strong> 2'     </div>     </div>`)[0];
+                popup_bf8acb6a71ad04bd2ca27afd43a6e3c0.setContent(html_5e00f47b0825e20006531b2ef9f6ee9b);
             
         
 
-        circle_marker_cf4a0f210b42d990dd7c26a2c4fd7c24.bindPopup(popup_cf32274f63aee56fddef7cb8a9b935b0)
+        circle_marker_c40e5c06377a6470508ed4e00f193650.bindPopup(popup_bf8acb6a71ad04bd2ca27afd43a6e3c0)
         ;
 
         
     
     
-            var circle_marker_20edea4d2430cac96085857e39ccc2fe = L.circleMarker(
+            var circle_marker_b196898e0d67ff41edd9d3c7fbd023b8 = L.circleMarker(
                 [39.36916288, 22.94034177],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_b6b5f67cc0805fef950d510e2aff73b2);
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
         
     
-        var popup_24749b8b353ff198498ef30bf33b3972 = L.popup({"maxWidth": 250, "minWidth": 150});
+        var popup_71922e9e45432a56f5768d1be86c3c2b = L.popup({"maxWidth": 250, "minWidth": 150});
 
         
             
-                var html_7435ecefd6bdb44609117424f5f3aef5 = $(`<div id="html_7435ecefd6bdb44609117424f5f3aef5" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 082<br>         <strong>Boardings:</strong> 1<br>         <strong>Unboardings:</strong> 1<br>         <strong>Time in Stop:</strong> 13<br>         <strong>Time Delay:</strong> 2'      </div>     </div>`)[0];
-                popup_24749b8b353ff198498ef30bf33b3972.setContent(html_7435ecefd6bdb44609117424f5f3aef5);
+                var html_5134ad2bf3f2b59066d17c74db1147f6 = $(`<div id="html_5134ad2bf3f2b59066d17c74db1147f6" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 110<br>         <strong>Boardings:</strong> 1<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>7:48:00 πμ<br>         <strong>Time in Stop:</strong> 8"<br>         <strong>Time Delay:</strong> 1'     </div>     </div>`)[0];
+                popup_71922e9e45432a56f5768d1be86c3c2b.setContent(html_5134ad2bf3f2b59066d17c74db1147f6);
             
         
 
-        circle_marker_20edea4d2430cac96085857e39ccc2fe.bindPopup(popup_24749b8b353ff198498ef30bf33b3972)
+        circle_marker_b196898e0d67ff41edd9d3c7fbd023b8.bindPopup(popup_71922e9e45432a56f5768d1be86c3c2b)
         ;
 
         
     
     
-            var circle_marker_469e54588acabc9d85fd2aceebffa5ec = L.circleMarker(
+            var circle_marker_e08c65242a7c05d77ba4a6e580e5261f = L.circleMarker(
                 [39.37081106, 22.93966016],
-                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_b6b5f67cc0805fef950d510e2aff73b2);
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
         
     
-        var popup_50d123091f61a26972ffd86dad1b3bb4 = L.popup({"maxWidth": 250, "minWidth": 150});
+        var popup_16cd81adabdd54c01be74df7e2065cd5 = L.popup({"maxWidth": 250, "minWidth": 150});
 
         
             
-                var html_62b040edac0cdd125ef7496bd0f56ed0 = $(`<div id="html_62b040edac0cdd125ef7496bd0f56ed0" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 083<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Time in Stop:</strong> 14<br>         <strong>Time Delay:</strong> 3'      </div>     </div>`)[0];
-                popup_50d123091f61a26972ffd86dad1b3bb4.setContent(html_62b040edac0cdd125ef7496bd0f56ed0);
+                var html_4bab114b8f3c0de4e2e638a177828659 = $(`<div id="html_4bab114b8f3c0de4e2e638a177828659" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 105<br>         <strong>Boardings:</strong> 3<br>         <strong>Unboardings:</strong> 3<br>         <strong>Arrival Time:</strong>7:48:00 πμ<br>         <strong>Time in Stop:</strong> 11"<br>         <strong>Time Delay:</strong> 2'     </div>     </div>`)[0];
+                popup_16cd81adabdd54c01be74df7e2065cd5.setContent(html_4bab114b8f3c0de4e2e638a177828659);
             
         
 
-        circle_marker_469e54588acabc9d85fd2aceebffa5ec.bindPopup(popup_50d123091f61a26972ffd86dad1b3bb4)
+        circle_marker_e08c65242a7c05d77ba4a6e580e5261f.bindPopup(popup_16cd81adabdd54c01be74df7e2065cd5)
         ;
 
         
     
     
-            var circle_marker_d5bd8c1aad53e2f527c8bb4762c5686c = L.circleMarker(
+            var circle_marker_9b3cf1fd13fe124ef11fdd92e5a12c1c = L.circleMarker(
                 [39.37217403, 22.93938541],
-                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_b6b5f67cc0805fef950d510e2aff73b2);
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
         
     
-        var popup_c84e81ea450477c4f80db448cc205155 = L.popup({"maxWidth": 250, "minWidth": 150});
+        var popup_e5257bdde857c2a5adc1e583000ba8b4 = L.popup({"maxWidth": 250, "minWidth": 150});
 
         
             
-                var html_7e6f2f223539869b7395797e3a715535 = $(`<div id="html_7e6f2f223539869b7395797e3a715535" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 085<br>         <strong>Boardings:</strong> 2<br>         <strong>Unboardings:</strong> 2<br>         <strong>Time in Stop:</strong> 12<br>         <strong>Time Delay:</strong> 1'      </div>     </div>`)[0];
-                popup_c84e81ea450477c4f80db448cc205155.setContent(html_7e6f2f223539869b7395797e3a715535);
+                var html_f5211886cb238dc3cff652f982d039d8 = $(`<div id="html_f5211886cb238dc3cff652f982d039d8" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 537<br>         <strong>Boardings:</strong> 2<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>7:49:00 πμ<br>         <strong>Time in Stop:</strong> 10"<br>         <strong>Time Delay:</strong> 2'     </div>     </div>`)[0];
+                popup_e5257bdde857c2a5adc1e583000ba8b4.setContent(html_f5211886cb238dc3cff652f982d039d8);
             
         
 
-        circle_marker_d5bd8c1aad53e2f527c8bb4762c5686c.bindPopup(popup_c84e81ea450477c4f80db448cc205155)
+        circle_marker_9b3cf1fd13fe124ef11fdd92e5a12c1c.bindPopup(popup_e5257bdde857c2a5adc1e583000ba8b4)
         ;
 
         
     
     
-            var circle_marker_2d2763a8da7976d49337ab2fec6c24e5 = L.circleMarker(
+            var circle_marker_f320d7430a7737c4e94a15f7edc59e71 = L.circleMarker(
                 [39.37416168, 22.93900266],
-                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_b6b5f67cc0805fef950d510e2aff73b2);
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
         
     
-        var popup_669b12dced022d9c5eb45d83869ea0ec = L.popup({"maxWidth": 250, "minWidth": 150});
+        var popup_b11f86f6d4d5befdb4e9720e06d7c440 = L.popup({"maxWidth": 250, "minWidth": 150});
 
         
             
-                var html_4967c9f29bfab8cfd5515e6f573c11f9 = $(`<div id="html_4967c9f29bfab8cfd5515e6f573c11f9" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 088<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Time in Stop:</strong> 6<br>         <strong>Time Delay:</strong> 5'      </div>     </div>`)[0];
-                popup_669b12dced022d9c5eb45d83869ea0ec.setContent(html_4967c9f29bfab8cfd5515e6f573c11f9);
+                var html_683e43ba76e0e7b40eeb3c06a0c75a26 = $(`<div id="html_683e43ba76e0e7b40eeb3c06a0c75a26" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 085<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 2<br>         <strong>Arrival Time:</strong>7:51:00 πμ<br>         <strong>Time in Stop:</strong> 11"<br>         <strong>Time Delay:</strong> 1'     </div>     </div>`)[0];
+                popup_b11f86f6d4d5befdb4e9720e06d7c440.setContent(html_683e43ba76e0e7b40eeb3c06a0c75a26);
             
         
 
-        circle_marker_2d2763a8da7976d49337ab2fec6c24e5.bindPopup(popup_669b12dced022d9c5eb45d83869ea0ec)
+        circle_marker_f320d7430a7737c4e94a15f7edc59e71.bindPopup(popup_b11f86f6d4d5befdb4e9720e06d7c440)
         ;
 
         
     
     
-            var circle_marker_7ac08a0e4ec419889a88efb523ebed8b = L.circleMarker(
+            var circle_marker_c79d3437fffeb8146da9ade7ee57f3cb = L.circleMarker(
                 [39.37624293, 22.93898265],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_b6b5f67cc0805fef950d510e2aff73b2);
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
         
     
-        var popup_ed10adc5c6a2300a586694264a40852d = L.popup({"maxWidth": 250, "minWidth": 150});
+        var popup_7e68cbaf08d0c14f8282445dee1be591 = L.popup({"maxWidth": 250, "minWidth": 150});
 
         
             
-                var html_378b1265611b03973bdf98ed7216e562 = $(`<div id="html_378b1265611b03973bdf98ed7216e562" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 089<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Time in Stop:</strong> 11<br>         <strong>Time Delay:</strong> 0'      </div>     </div>`)[0];
-                popup_ed10adc5c6a2300a586694264a40852d.setContent(html_378b1265611b03973bdf98ed7216e562);
+                var html_bbd9a4d1436089e659f2d9970821ff93 = $(`<div id="html_bbd9a4d1436089e659f2d9970821ff93" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 104<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 1<br>         <strong>Arrival Time:</strong>7:53:00 πμ<br>         <strong>Time in Stop:</strong> 9"<br>         <strong>Time Delay:</strong> 0'     </div>     </div>`)[0];
+                popup_7e68cbaf08d0c14f8282445dee1be591.setContent(html_bbd9a4d1436089e659f2d9970821ff93);
             
         
 
-        circle_marker_7ac08a0e4ec419889a88efb523ebed8b.bindPopup(popup_ed10adc5c6a2300a586694264a40852d)
+        circle_marker_c79d3437fffeb8146da9ade7ee57f3cb.bindPopup(popup_7e68cbaf08d0c14f8282445dee1be591)
         ;
 
         
     
     
-            var circle_marker_8f2553b3d704611dea60be65f117f66e = L.circleMarker(
+            var circle_marker_4a1965c68b1be9e2192d49bee5a00b78 = L.circleMarker(
                 [39.37798738, 22.94127424],
-                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_b6b5f67cc0805fef950d510e2aff73b2);
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
         
     
-        var popup_c4e54a817a2092117a6edb312448d9f7 = L.popup({"maxWidth": 250, "minWidth": 150});
+        var popup_6e475d0f949070a17596490684dd798b = L.popup({"maxWidth": 250, "minWidth": 150});
 
         
             
-                var html_94c8f17f59e03cacfa160eda91c8c7d8 = $(`<div id="html_94c8f17f59e03cacfa160eda91c8c7d8" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 090<br>         <strong>Boardings:</strong> 1<br>         <strong>Unboardings:</strong> 1<br>         <strong>Time in Stop:</strong> 6<br>         <strong>Time Delay:</strong> 1'      </div>     </div>`)[0];
-                popup_c4e54a817a2092117a6edb312448d9f7.setContent(html_94c8f17f59e03cacfa160eda91c8c7d8);
+                var html_c669096e62248b9df44a24539caafd0f = $(`<div id="html_c669096e62248b9df44a24539caafd0f" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 245<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 2<br>         <strong>Arrival Time:</strong>7:54:00 πμ<br>         <strong>Time in Stop:</strong> 10"<br>         <strong>Time Delay:</strong> 0'     </div>     </div>`)[0];
+                popup_6e475d0f949070a17596490684dd798b.setContent(html_c669096e62248b9df44a24539caafd0f);
             
         
 
-        circle_marker_8f2553b3d704611dea60be65f117f66e.bindPopup(popup_c4e54a817a2092117a6edb312448d9f7)
+        circle_marker_4a1965c68b1be9e2192d49bee5a00b78.bindPopup(popup_6e475d0f949070a17596490684dd798b)
         ;
 
         
     
     
-            var circle_marker_5ae753af62eb0f2ed184830012fcd791 = L.circleMarker(
+            var circle_marker_6a58edecd35f03835fb777c2d1676b7a = L.circleMarker(
                 [39.37999549, 22.94007524],
                 {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_b6b5f67cc0805fef950d510e2aff73b2);
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
         
     
-        var popup_b2fe95b3bb152245170ef28566dbc2e7 = L.popup({"maxWidth": 250, "minWidth": 150});
+        var popup_963bfc5e722fd4d3824824e3eadc926b = L.popup({"maxWidth": 250, "minWidth": 150});
 
         
             
-                var html_a2bb675ce337c767216a85064c8822d4 = $(`<div id="html_a2bb675ce337c767216a85064c8822d4" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 091<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Time in Stop:</strong> 15<br>         <strong>Time Delay:</strong> 1'      </div>     </div>`)[0];
-                popup_b2fe95b3bb152245170ef28566dbc2e7.setContent(html_a2bb675ce337c767216a85064c8822d4);
+                var html_0da64204c0613e67cb741bd879778230 = $(`<div id="html_0da64204c0613e67cb741bd879778230" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 406<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 4<br>         <strong>Arrival Time:</strong>7:54:00 πμ<br>         <strong>Time in Stop:</strong> 11"<br>         <strong>Time Delay:</strong> 0'     </div>     </div>`)[0];
+                popup_963bfc5e722fd4d3824824e3eadc926b.setContent(html_0da64204c0613e67cb741bd879778230);
             
         
 
-        circle_marker_5ae753af62eb0f2ed184830012fcd791.bindPopup(popup_b2fe95b3bb152245170ef28566dbc2e7)
+        circle_marker_6a58edecd35f03835fb777c2d1676b7a.bindPopup(popup_963bfc5e722fd4d3824824e3eadc926b)
         ;
 
         
     
     
-            var circle_marker_1b607c4455e948413d585deff6c5d22a = L.circleMarker(
+            var circle_marker_63b45c08f37a3ecf0c059a7691d22c12 = L.circleMarker(
                 [39.38178195, 22.93984634],
-                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_b6b5f67cc0805fef950d510e2aff73b2);
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
         
     
-        var popup_15c8f7ca6b68b1bdf7839f948fccbc47 = L.popup({"maxWidth": 250, "minWidth": 150});
+        var popup_9ee5eb80e9625c33e4728d5083aed490 = L.popup({"maxWidth": 250, "minWidth": 150});
 
         
             
-                var html_784322090575028a45ced09922cdc6cc = $(`<div id="html_784322090575028a45ced09922cdc6cc" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 092<br>         <strong>Boardings:</strong> 4<br>         <strong>Unboardings:</strong> 4<br>         <strong>Time in Stop:</strong> 25<br>         <strong>Time Delay:</strong> 1'      </div>     </div>`)[0];
-                popup_15c8f7ca6b68b1bdf7839f948fccbc47.setContent(html_784322090575028a45ced09922cdc6cc);
+                var html_2a532003a293d9f1eb5c652cf78627af = $(`<div id="html_2a532003a293d9f1eb5c652cf78627af" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 089<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>7:55:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 0'     </div>     </div>`)[0];
+                popup_9ee5eb80e9625c33e4728d5083aed490.setContent(html_2a532003a293d9f1eb5c652cf78627af);
             
         
 
-        circle_marker_1b607c4455e948413d585deff6c5d22a.bindPopup(popup_15c8f7ca6b68b1bdf7839f948fccbc47)
+        circle_marker_63b45c08f37a3ecf0c059a7691d22c12.bindPopup(popup_9ee5eb80e9625c33e4728d5083aed490)
         ;
 
         
     
     
-            var circle_marker_9a50e727da7f05ccadb0b38c6eefa5d2 = L.circleMarker(
+            var circle_marker_02ce0a509c96d54b0a10137bcb2bec5f = L.circleMarker(
                 [39.3841153, 22.93915303],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_b6b5f67cc0805fef950d510e2aff73b2);
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
         
     
-        var popup_b84090fa17e3e1d391d4ad552e835217 = L.popup({"maxWidth": 250, "minWidth": 150});
+        var popup_49a0c074570f6e41e29127c9fdd904a7 = L.popup({"maxWidth": 250, "minWidth": 150});
 
         
             
-                var html_adf84a6c87904bb2f87dde0273bbd4d7 = $(`<div id="html_adf84a6c87904bb2f87dde0273bbd4d7" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 093<br>         <strong>Boardings:</strong> 6<br>         <strong>Unboardings:</strong> 6<br>         <strong>Time in Stop:</strong> 12<br>         <strong>Time Delay:</strong> 1'      </div>     </div>`)[0];
-                popup_b84090fa17e3e1d391d4ad552e835217.setContent(html_adf84a6c87904bb2f87dde0273bbd4d7);
+                var html_8e052f63b4ece507b97f54b43d976d6f = $(`<div id="html_8e052f63b4ece507b97f54b43d976d6f" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 090<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 1<br>         <strong>Arrival Time:</strong>7:55:00 πμ<br>         <strong>Time in Stop:</strong> 8"<br>         <strong>Time Delay:</strong> 1'     </div>     </div>`)[0];
+                popup_49a0c074570f6e41e29127c9fdd904a7.setContent(html_8e052f63b4ece507b97f54b43d976d6f);
             
         
 
-        circle_marker_9a50e727da7f05ccadb0b38c6eefa5d2.bindPopup(popup_b84090fa17e3e1d391d4ad552e835217)
+        circle_marker_02ce0a509c96d54b0a10137bcb2bec5f.bindPopup(popup_49a0c074570f6e41e29127c9fdd904a7)
         ;
 
         
     
     
-            var circle_marker_15a70700e122dc5f7d6196050c8fdb11 = L.circleMarker(
+            var circle_marker_3f765dae99395d85e7e878f82edac966 = L.circleMarker(
                 [39.38302064, 22.93668618],
-                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_b6b5f67cc0805fef950d510e2aff73b2);
-        
-    
-        var popup_f1041e6745e318209a7c5e4a55acd8f7 = L.popup({"maxWidth": 250, "minWidth": 150});
-
-        
-            
-                var html_8dbf9a66e09d2c9ba30024dc7fe1d548 = $(`<div id="html_8dbf9a66e09d2c9ba30024dc7fe1d548" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 094<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Time in Stop:</strong> 24<br>         <strong>Time Delay:</strong> 6'      </div>     </div>`)[0];
-                popup_f1041e6745e318209a7c5e4a55acd8f7.setContent(html_8dbf9a66e09d2c9ba30024dc7fe1d548);
-            
-        
-
-        circle_marker_15a70700e122dc5f7d6196050c8fdb11.bindPopup(popup_f1041e6745e318209a7c5e4a55acd8f7)
-        ;
-
-        
-    
-    
-            var circle_marker_882f8ab63464b829ac99fb5ff6915c84 = L.circleMarker(
-                [39.38201068, 22.9349274],
-                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_b6b5f67cc0805fef950d510e2aff73b2);
-        
-    
-        var popup_73d8b145aa6207dfa90c03966a0ec0b8 = L.popup({"maxWidth": 250, "minWidth": 150});
-
-        
-            
-                var html_931de639557669c9e483d55c59c0fb22 = $(`<div id="html_931de639557669c9e483d55c59c0fb22" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 095<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Time in Stop:</strong> 25<br>         <strong>Time Delay:</strong> 6'      </div>     </div>`)[0];
-                popup_73d8b145aa6207dfa90c03966a0ec0b8.setContent(html_931de639557669c9e483d55c59c0fb22);
-            
-        
-
-        circle_marker_882f8ab63464b829ac99fb5ff6915c84.bindPopup(popup_73d8b145aa6207dfa90c03966a0ec0b8)
-        ;
-
-        
-    
-    
-            var circle_marker_d43c9ecbaa8fb89cd02aedb15dff731d = L.circleMarker(
-                [39.38234629, 22.93402973],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_b6b5f67cc0805fef950d510e2aff73b2);
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
         
     
-        var popup_4cd8fcade1e10b42f187de2c449909a0 = L.popup({"maxWidth": 250, "minWidth": 150});
+        var popup_6ae48973c0b93fa87f8248b4e4dacb35 = L.popup({"maxWidth": 250, "minWidth": 150});
 
         
             
-                var html_9c765ce94cd444c1b7875bd9bb59d8c0 = $(`<div id="html_9c765ce94cd444c1b7875bd9bb59d8c0" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 096<br>         <strong>Boardings:</strong> 21<br>         <strong>Unboardings:</strong> 21<br>         <strong>Time in Stop:</strong> 6<br>         <strong>Time Delay:</strong> 1'      </div>     </div>`)[0];
-                popup_4cd8fcade1e10b42f187de2c449909a0.setContent(html_9c765ce94cd444c1b7875bd9bb59d8c0);
+                var html_d2cbce46f008601206ba327ed7324184 = $(`<div id="html_d2cbce46f008601206ba327ed7324184" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 091<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>7:56:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 1'     </div>     </div>`)[0];
+                popup_6ae48973c0b93fa87f8248b4e4dacb35.setContent(html_d2cbce46f008601206ba327ed7324184);
             
         
 
-        circle_marker_d43c9ecbaa8fb89cd02aedb15dff731d.bindPopup(popup_4cd8fcade1e10b42f187de2c449909a0)
+        circle_marker_3f765dae99395d85e7e878f82edac966.bindPopup(popup_6ae48973c0b93fa87f8248b4e4dacb35)
         ;
 
         
     
     
-            var circle_marker_7e15f84557fa6e7e55820d452032db94 = L.circleMarker(
+            var circle_marker_c55656b3568f2ea2260144b38d4c5459 = L.circleMarker(
+                [39.38201068, 22.9349274],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_73611e1bb52eb5bce22e30375bbc0dbd = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_166d93dc1c6c20227934098e00754894 = $(`<div id="html_166d93dc1c6c20227934098e00754894" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 092<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 4<br>         <strong>Arrival Time:</strong>7:56:00 πμ<br>         <strong>Time in Stop:</strong> 12"<br>         <strong>Time Delay:</strong> 1'     </div>     </div>`)[0];
+                popup_73611e1bb52eb5bce22e30375bbc0dbd.setContent(html_166d93dc1c6c20227934098e00754894);
+            
+        
+
+        circle_marker_c55656b3568f2ea2260144b38d4c5459.bindPopup(popup_73611e1bb52eb5bce22e30375bbc0dbd)
+        ;
+
+        
+    
+    
+            var circle_marker_97a53432160703cfaf16eec9cce50adc = L.circleMarker(
+                [39.38234629, 22.93402973],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_244c35b2211bec180bc1d222718e02d2 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_0131dac5def5ef8842eff5aa850c9d1f = $(`<div id="html_0131dac5def5ef8842eff5aa850c9d1f" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 093<br>         <strong>Boardings:</strong> 9<br>         <strong>Unboardings:</strong> 6<br>         <strong>Arrival Time:</strong>7:57:00 πμ<br>         <strong>Time in Stop:</strong> 16"<br>         <strong>Time Delay:</strong> 1'     </div>     </div>`)[0];
+                popup_244c35b2211bec180bc1d222718e02d2.setContent(html_0131dac5def5ef8842eff5aa850c9d1f);
+            
+        
+
+        circle_marker_97a53432160703cfaf16eec9cce50adc.bindPopup(popup_244c35b2211bec180bc1d222718e02d2)
+        ;
+
+        
+    
+    
+            var circle_marker_4c36af00e4180d91db8e9b3f9e27e50b = L.circleMarker(
                 [39.38403872, 22.93431822],
                 {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_b6b5f67cc0805fef950d510e2aff73b2);
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
         
     
-        var popup_23f8dc5aceb008d4c0fb354b5a2b300e = L.popup({"maxWidth": 250, "minWidth": 150});
+        var popup_d765413aa5c28d18ac08758dff4caa87 = L.popup({"maxWidth": 250, "minWidth": 150});
 
         
             
-                var html_cc3a60261d433a30c61929e34febe7e7 = $(`<div id="html_cc3a60261d433a30c61929e34febe7e7" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 097<br>         <strong>Boardings:</strong> 30<br>         <strong>Unboardings:</strong> 30<br>         <strong>Time in Stop:</strong> 12<br>         <strong>Time Delay:</strong> 10'      </div>     </div>`)[0];
-                popup_23f8dc5aceb008d4c0fb354b5a2b300e.setContent(html_cc3a60261d433a30c61929e34febe7e7);
+                var html_ed378e046b5298ad2e8ca519fff628f6 = $(`<div id="html_ed378e046b5298ad2e8ca519fff628f6" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 538<br>         <strong>Boardings:</strong> 1<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>7:57:00 πμ<br>         <strong>Time in Stop:</strong> 9"<br>         <strong>Time Delay:</strong> 1'     </div>     </div>`)[0];
+                popup_d765413aa5c28d18ac08758dff4caa87.setContent(html_ed378e046b5298ad2e8ca519fff628f6);
             
         
 
-        circle_marker_7e15f84557fa6e7e55820d452032db94.bindPopup(popup_23f8dc5aceb008d4c0fb354b5a2b300e)
+        circle_marker_4c36af00e4180d91db8e9b3f9e27e50b.bindPopup(popup_d765413aa5c28d18ac08758dff4caa87)
         ;
 
         
     
     
-            var circle_marker_d928e1d2ebfb99e1297c9a135d9eb30e = L.circleMarker(
+            var circle_marker_4e0cab84b46d575ed45c4193575adbde = L.circleMarker(
                 [39.38509346, 22.9361411],
-                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_b6b5f67cc0805fef950d510e2aff73b2);
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
         
     
-        var popup_cbcfc4158e4ca81d83fae0f7d1a6f725 = L.popup({"maxWidth": 250, "minWidth": 150});
+        var popup_a7ae27ee9757ea435c4df9b91e3fedca = L.popup({"maxWidth": 250, "minWidth": 150});
 
         
             
-                var html_409099bc8b80994bdae00456d4bfbbb6 = $(`<div id="html_409099bc8b80994bdae00456d4bfbbb6" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 103<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Time in Stop:</strong> 21<br>         <strong>Time Delay:</strong> 1'      </div>     </div>`)[0];
-                popup_cbcfc4158e4ca81d83fae0f7d1a6f725.setContent(html_409099bc8b80994bdae00456d4bfbbb6);
+                var html_cca3c92745fc845e0efc30dd27a9aaae = $(`<div id="html_cca3c92745fc845e0efc30dd27a9aaae" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 103<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>7:58:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 1'     </div>     </div>`)[0];
+                popup_a7ae27ee9757ea435c4df9b91e3fedca.setContent(html_cca3c92745fc845e0efc30dd27a9aaae);
             
         
 
-        circle_marker_d928e1d2ebfb99e1297c9a135d9eb30e.bindPopup(popup_cbcfc4158e4ca81d83fae0f7d1a6f725)
+        circle_marker_4e0cab84b46d575ed45c4193575adbde.bindPopup(popup_a7ae27ee9757ea435c4df9b91e3fedca)
         ;
 
         
     
     
-            var circle_marker_26d1e73dc90006d31d82934d8bde7a2f = L.circleMarker(
+            var circle_marker_2035e87fae7d5206a71214a594f921c8 = L.circleMarker(
                 [39.38605962, 22.93839027],
-                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_b6b5f67cc0805fef950d510e2aff73b2);
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
         
     
-        var popup_31bd144ae95e79feceb9376afc2362b1 = L.popup({"maxWidth": 250, "minWidth": 150});
+        var popup_5043d27d9d35d5527c5c831727eae991 = L.popup({"maxWidth": 250, "minWidth": 150});
 
         
             
-                var html_e8ecab509f25b9adf9c6afaa094016d6 = $(`<div id="html_e8ecab509f25b9adf9c6afaa094016d6" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 104<br>         <strong>Boardings:</strong> 1<br>         <strong>Unboardings:</strong> 1<br>         <strong>Time in Stop:</strong> 16<br>         <strong>Time Delay:</strong> 0'      </div>     </div>`)[0];
-                popup_31bd144ae95e79feceb9376afc2362b1.setContent(html_e8ecab509f25b9adf9c6afaa094016d6);
+                var html_bd0780fabad3db55494f403da821cc46 = $(`<div id="html_bd0780fabad3db55494f403da821cc46" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 095<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>7:58:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 1'     </div>     </div>`)[0];
+                popup_5043d27d9d35d5527c5c831727eae991.setContent(html_bd0780fabad3db55494f403da821cc46);
             
         
 
-        circle_marker_26d1e73dc90006d31d82934d8bde7a2f.bindPopup(popup_31bd144ae95e79feceb9376afc2362b1)
+        circle_marker_2035e87fae7d5206a71214a594f921c8.bindPopup(popup_5043d27d9d35d5527c5c831727eae991)
         ;
 
         
     
     
-            var circle_marker_15379326097fd8afe8af44b1495d50ba = L.circleMarker(
+            var circle_marker_94496d54ea6da616a44c842952c1f976 = L.circleMarker(
+                [39.38757297, 22.93891077],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_1f88e949b2eaa97260765a42004793d7 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_c98352a2fec931d10dc52c7000a1c127 = $(`<div id="html_c98352a2fec931d10dc52c7000a1c127" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 096<br>         <strong>Boardings:</strong> 1<br>         <strong>Unboardings:</strong> 1<br>         <strong>Arrival Time:</strong>7:59:00 πμ<br>         <strong>Time in Stop:</strong> 9"<br>         <strong>Time Delay:</strong> 1'     </div>     </div>`)[0];
+                popup_1f88e949b2eaa97260765a42004793d7.setContent(html_c98352a2fec931d10dc52c7000a1c127);
+            
+        
+
+        circle_marker_94496d54ea6da616a44c842952c1f976.bindPopup(popup_1f88e949b2eaa97260765a42004793d7)
+        ;
+
+        
+    
+    
+            var circle_marker_2cae75b4b0f4dd65246c1ec225009587 = L.circleMarker(
+                [39.38681581, 22.94170417],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_f2c7fdc2ffe7308a68a88680fe0a16d7 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_1ad7a2b3f50355143765e5017544b1af = $(`<div id="html_1ad7a2b3f50355143765e5017544b1af" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 097<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 28<br>         <strong>Arrival Time:</strong>8:00:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 10'     </div>     </div>`)[0];
+                popup_f2c7fdc2ffe7308a68a88680fe0a16d7.setContent(html_1ad7a2b3f50355143765e5017544b1af);
+            
+        
+
+        circle_marker_2cae75b4b0f4dd65246c1ec225009587.bindPopup(popup_f2c7fdc2ffe7308a68a88680fe0a16d7)
+        ;
+
+        
+    
+    
+            var circle_marker_c75e2ba10c1801a6b75df4dc46db8e56 = L.circleMarker(
+                [39.36136106, 22.9328832],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_70128e969bf60be84eba08281e193b73 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_5d3e6101f1f4ddaf83b8f37cfaf754d1 = $(`<div id="html_5d3e6101f1f4ddaf83b8f37cfaf754d1" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 097<br>         <strong>Boardings:</strong> 1<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:05:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 0'     </div>     </div>`)[0];
+                popup_70128e969bf60be84eba08281e193b73.setContent(html_5d3e6101f1f4ddaf83b8f37cfaf754d1);
+            
+        
+
+        circle_marker_c75e2ba10c1801a6b75df4dc46db8e56.bindPopup(popup_70128e969bf60be84eba08281e193b73)
+        ;
+
+        
+    
+    
+            var circle_marker_2d13cb99a500280640d06bda063c0490 = L.circleMarker(
+                [39.36077844, 22.93343187],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_cec79568f1837b64826a7cc8f8d2997e = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_89acc553ee95827c3d275160fabcdf26 = $(`<div id="html_89acc553ee95827c3d275160fabcdf26" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 498<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:05:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 6'     </div>     </div>`)[0];
+                popup_cec79568f1837b64826a7cc8f8d2997e.setContent(html_89acc553ee95827c3d275160fabcdf26);
+            
+        
+
+        circle_marker_2d13cb99a500280640d06bda063c0490.bindPopup(popup_cec79568f1837b64826a7cc8f8d2997e)
+        ;
+
+        
+    
+    
+            var circle_marker_d0773da92f7490a8abc8c1222276e59d = L.circleMarker(
+                [39.36214198, 22.93490889],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_99bf879bc343aa20a81e64f502fb7fd4 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_2e9c7d3989c6e40964778fb74d828433 = $(`<div id="html_2e9c7d3989c6e40964778fb74d828433" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 095<br>         <strong>Boardings:</strong> 1<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:06:00 πμ<br>         <strong>Time in Stop:</strong> 8"<br>         <strong>Time Delay:</strong> 6'     </div>     </div>`)[0];
+                popup_99bf879bc343aa20a81e64f502fb7fd4.setContent(html_2e9c7d3989c6e40964778fb74d828433);
+            
+        
+
+        circle_marker_d0773da92f7490a8abc8c1222276e59d.bindPopup(popup_99bf879bc343aa20a81e64f502fb7fd4)
+        ;
+
+        
+    
+    
+            var circle_marker_cf233a443da61a0bc1c280c201fc3500 = L.circleMarker(
+                [39.36231483, 22.94010927],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_7aea3388eb4cf7f9199faa20cfb46c02 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_017126aed2b5ba409e75cbb0ac71244d = $(`<div id="html_017126aed2b5ba409e75cbb0ac71244d" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 094<br>         <strong>Boardings:</strong> 1<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:06:00 πμ<br>         <strong>Time in Stop:</strong> 9"<br>         <strong>Time Delay:</strong> 6'     </div>     </div>`)[0];
+                popup_7aea3388eb4cf7f9199faa20cfb46c02.setContent(html_017126aed2b5ba409e75cbb0ac71244d);
+            
+        
+
+        circle_marker_cf233a443da61a0bc1c280c201fc3500.bindPopup(popup_7aea3388eb4cf7f9199faa20cfb46c02)
+        ;
+
+        
+    
+    
+            var circle_marker_b10db76ae5270c39ae4da4e23c502cca = L.circleMarker(
+                [39.36211532, 22.94351001],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_a7f0ca8e2b30395617342464f5bfdba9 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_3f5b48aca08c6e240eece6a45f10fd44 = $(`<div id="html_3f5b48aca08c6e240eece6a45f10fd44" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 539<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:06:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 7'     </div>     </div>`)[0];
+                popup_a7f0ca8e2b30395617342464f5bfdba9.setContent(html_3f5b48aca08c6e240eece6a45f10fd44);
+            
+        
+
+        circle_marker_b10db76ae5270c39ae4da4e23c502cca.bindPopup(popup_a7f0ca8e2b30395617342464f5bfdba9)
+        ;
+
+        
+    
+    
+            var circle_marker_c735ed0efe7b3ed1a4ddd60feb6b1a22 = L.circleMarker(
+                [39.36151356, 22.94484682],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_354b90596a9983cb7c6b28da98ef74a5 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_c6373deaaa10d24a0bd6cc8901ee028f = $(`<div id="html_c6373deaaa10d24a0bd6cc8901ee028f" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 514<br>         <strong>Boardings:</strong> 1<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:08:00 πμ<br>         <strong>Time in Stop:</strong> 9"<br>         <strong>Time Delay:</strong> 5'     </div>     </div>`)[0];
+                popup_354b90596a9983cb7c6b28da98ef74a5.setContent(html_c6373deaaa10d24a0bd6cc8901ee028f);
+            
+        
+
+        circle_marker_c735ed0efe7b3ed1a4ddd60feb6b1a22.bindPopup(popup_354b90596a9983cb7c6b28da98ef74a5)
+        ;
+
+        
+    
+    
+            var circle_marker_ac495ac2516985cd080db7fb2c201539 = L.circleMarker(
+                [39.36178413, 22.9462843],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_005a1e74a43fe9962828ea4206da071d = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_5e14d372f4284c821e8652faca9e0478 = $(`<div id="html_5e14d372f4284c821e8652faca9e0478" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 518<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:08:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 6'     </div>     </div>`)[0];
+                popup_005a1e74a43fe9962828ea4206da071d.setContent(html_5e14d372f4284c821e8652faca9e0478);
+            
+        
+
+        circle_marker_ac495ac2516985cd080db7fb2c201539.bindPopup(popup_005a1e74a43fe9962828ea4206da071d)
+        ;
+
+        
+    
+    
+            var circle_marker_f4c868c872d4f0b7061f149db9b182e8 = L.circleMarker(
+                [39.36498898, 22.9491458],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_ff8f4fe5449aa4908e5fa9af5fd885ae = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_f0e81c19b94bf23031bad2a98187a23f = $(`<div id="html_f0e81c19b94bf23031bad2a98187a23f" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 458<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:09:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 6'     </div>     </div>`)[0];
+                popup_ff8f4fe5449aa4908e5fa9af5fd885ae.setContent(html_f0e81c19b94bf23031bad2a98187a23f);
+            
+        
+
+        circle_marker_f4c868c872d4f0b7061f149db9b182e8.bindPopup(popup_ff8f4fe5449aa4908e5fa9af5fd885ae)
+        ;
+
+        
+    
+    
+            var circle_marker_dc2c54166ce8450927018da94333cfe1 = L.circleMarker(
+                [39.36708182, 22.94968852],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_b074f26333bd610a341d49c10f8bc624 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_5663fe26d63884ad0c71ce25ca2fe0ab = $(`<div id="html_5663fe26d63884ad0c71ce25ca2fe0ab" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 395<br>         <strong>Boardings:</strong> 1<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:10:00 πμ<br>         <strong>Time in Stop:</strong> 9"<br>         <strong>Time Delay:</strong> 6'     </div>     </div>`)[0];
+                popup_b074f26333bd610a341d49c10f8bc624.setContent(html_5663fe26d63884ad0c71ce25ca2fe0ab);
+            
+        
+
+        circle_marker_dc2c54166ce8450927018da94333cfe1.bindPopup(popup_b074f26333bd610a341d49c10f8bc624)
+        ;
+
+        
+    
+    
+            var circle_marker_47a21339e68719060903faf89e450133 = L.circleMarker(
+                [39.36794196, 22.94818737],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_6b4df5cae425dfdff40f0da32d8b5c6e = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_3f57b6676a3bc19dc22a138dc9e82cd0 = $(`<div id="html_3f57b6676a3bc19dc22a138dc9e82cd0" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 476<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:11:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 5'     </div>     </div>`)[0];
+                popup_6b4df5cae425dfdff40f0da32d8b5c6e.setContent(html_3f57b6676a3bc19dc22a138dc9e82cd0);
+            
+        
+
+        circle_marker_47a21339e68719060903faf89e450133.bindPopup(popup_6b4df5cae425dfdff40f0da32d8b5c6e)
+        ;
+
+        
+    
+    
+            var circle_marker_158fc858069bc112c1323b4b4af7a838 = L.circleMarker(
+                [39.36894837, 22.94634166],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_b4645c4391f335ef108b43a112de027c = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_00b7497b47bee5088942c49947abe9f3 = $(`<div id="html_00b7497b47bee5088942c49947abe9f3" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 088<br>         <strong>Boardings:</strong> 1<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:12:00 πμ<br>         <strong>Time in Stop:</strong> 9"<br>         <strong>Time Delay:</strong> 5'     </div>     </div>`)[0];
+                popup_b4645c4391f335ef108b43a112de027c.setContent(html_00b7497b47bee5088942c49947abe9f3);
+            
+        
+
+        circle_marker_158fc858069bc112c1323b4b4af7a838.bindPopup(popup_b4645c4391f335ef108b43a112de027c)
+        ;
+
+        
+    
+    
+            var circle_marker_54b15497a15eafec22772c2f6fa7a278 = L.circleMarker(
+                [39.3701421, 22.94415983],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_d35d1922dc18d0652708305298980499 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_38f13dfad9f0d40229649f943099a09d = $(`<div id="html_38f13dfad9f0d40229649f943099a09d" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 295<br>         <strong>Boardings:</strong> 4<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:13:00 πμ<br>         <strong>Time in Stop:</strong> 12"<br>         <strong>Time Delay:</strong> 5'     </div>     </div>`)[0];
+                popup_d35d1922dc18d0652708305298980499.setContent(html_38f13dfad9f0d40229649f943099a09d);
+            
+        
+
+        circle_marker_54b15497a15eafec22772c2f6fa7a278.bindPopup(popup_d35d1922dc18d0652708305298980499)
+        ;
+
+        
+    
+    
+            var circle_marker_32c36fcd7a17f25c0e4b4aed68fa3057 = L.circleMarker(
+                [39.36984994, 22.94231831],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_113b39f6636cb4e4ba9de5b1e83b4215 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_85fb48b0f325d2d29ac2d545b9197d4a = $(`<div id="html_85fb48b0f325d2d29ac2d545b9197d4a" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 297<br>         <strong>Boardings:</strong> 4<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:14:00 πμ<br>         <strong>Time in Stop:</strong> 12"<br>         <strong>Time Delay:</strong> 5'     </div>     </div>`)[0];
+                popup_113b39f6636cb4e4ba9de5b1e83b4215.setContent(html_85fb48b0f325d2d29ac2d545b9197d4a);
+            
+        
+
+        circle_marker_32c36fcd7a17f25c0e4b4aed68fa3057.bindPopup(popup_113b39f6636cb4e4ba9de5b1e83b4215)
+        ;
+
+        
+    
+    
+            var circle_marker_261754bdfe98d3f345b23ee7d7c2be02 = L.circleMarker(
+                [39.36932386, 22.94092933],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_619955b4ed3b5b4c447d98f5d769e1fa = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_d7ea99dac47c9ffc23b9ef01862d62eb = $(`<div id="html_d7ea99dac47c9ffc23b9ef01862d62eb" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 501<br>         <strong>Boardings:</strong> 4<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:16:00 πμ<br>         <strong>Time in Stop:</strong> 11"<br>         <strong>Time Delay:</strong> 4'     </div>     </div>`)[0];
+                popup_619955b4ed3b5b4c447d98f5d769e1fa.setContent(html_d7ea99dac47c9ffc23b9ef01862d62eb);
+            
+        
+
+        circle_marker_261754bdfe98d3f345b23ee7d7c2be02.bindPopup(popup_619955b4ed3b5b4c447d98f5d769e1fa)
+        ;
+
+        
+    
+    
+            var circle_marker_b9bd5fd51786b1d494e84ec3512db163 = L.circleMarker(
+                [39.36998164, 22.93979662],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_e5f7d6a90cb493f9b8f8c63cfa8db40a = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_b7273733e1bc81aebef6b3362db56f7f = $(`<div id="html_b7273733e1bc81aebef6b3362db56f7f" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 481<br>         <strong>Boardings:</strong> 1<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:17:00 πμ<br>         <strong>Time in Stop:</strong> 9"<br>         <strong>Time Delay:</strong> 4'     </div>     </div>`)[0];
+                popup_e5f7d6a90cb493f9b8f8c63cfa8db40a.setContent(html_b7273733e1bc81aebef6b3362db56f7f);
+            
+        
+
+        circle_marker_b9bd5fd51786b1d494e84ec3512db163.bindPopup(popup_e5f7d6a90cb493f9b8f8c63cfa8db40a)
+        ;
+
+        
+    
+    
+            var circle_marker_2c1930b992e8299f640a572f02b3881f = L.circleMarker(
+                [39.37216122, 22.93934571],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_f6c8ff2c043b4821e09a88e0128d6774 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_194fd468d18f82541ed18f0dffc2a5e1 = $(`<div id="html_194fd468d18f82541ed18f0dffc2a5e1" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 083<br>         <strong>Boardings:</strong> 2<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:18:00 πμ<br>         <strong>Time in Stop:</strong> 10"<br>         <strong>Time Delay:</strong> 3'     </div>     </div>`)[0];
+                popup_f6c8ff2c043b4821e09a88e0128d6774.setContent(html_194fd468d18f82541ed18f0dffc2a5e1);
+            
+        
+
+        circle_marker_2c1930b992e8299f640a572f02b3881f.bindPopup(popup_f6c8ff2c043b4821e09a88e0128d6774)
+        ;
+
+        
+    
+    
+            var circle_marker_1c2e76a78a49d25e2e02970345b995e8 = L.circleMarker(
+                [39.37416484, 22.93979662],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_88f42b0c125a6662d9d334d314473fe4 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_ad381cb96a69589310730bd5ce5c261c = $(`<div id="html_ad381cb96a69589310730bd5ce5c261c" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 369<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 1<br>         <strong>Arrival Time:</strong>8:18:00 πμ<br>         <strong>Time in Stop:</strong> 8"<br>         <strong>Time Delay:</strong> 4'     </div>     </div>`)[0];
+                popup_88f42b0c125a6662d9d334d314473fe4.setContent(html_ad381cb96a69589310730bd5ce5c261c);
+            
+        
+
+        circle_marker_1c2e76a78a49d25e2e02970345b995e8.bindPopup(popup_88f42b0c125a6662d9d334d314473fe4)
+        ;
+
+        
+    
+    
+            var circle_marker_0713a83e5d71d6742f4ee25a6294e1ab = L.circleMarker(
+                [39.37586258, 22.93896948],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_ff27565cc834d0c7c435e24ab709de3c = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_64d9caec2b2b7ee2075fd7b94da7f63d = $(`<div id="html_64d9caec2b2b7ee2075fd7b94da7f63d" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 370<br>         <strong>Boardings:</strong> 1<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:19:00 πμ<br>         <strong>Time in Stop:</strong> 9"<br>         <strong>Time Delay:</strong> 3'     </div>     </div>`)[0];
+                popup_ff27565cc834d0c7c435e24ab709de3c.setContent(html_64d9caec2b2b7ee2075fd7b94da7f63d);
+            
+        
+
+        circle_marker_0713a83e5d71d6742f4ee25a6294e1ab.bindPopup(popup_ff27565cc834d0c7c435e24ab709de3c)
+        ;
+
+        
+    
+    
+            var circle_marker_57fe10b8a8aba444a79db6d602ee0b1c = L.circleMarker(
+                [39.37812275, 22.94108833],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_c800a01492472f4e81c8993d3c4e8e40 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_4c7ca996dda9a05805b0895df5f4676e = $(`<div id="html_4c7ca996dda9a05805b0895df5f4676e" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 493<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:20:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 3'     </div>     </div>`)[0];
+                popup_c800a01492472f4e81c8993d3c4e8e40.setContent(html_4c7ca996dda9a05805b0895df5f4676e);
+            
+        
+
+        circle_marker_57fe10b8a8aba444a79db6d602ee0b1c.bindPopup(popup_c800a01492472f4e81c8993d3c4e8e40)
+        ;
+
+        
+    
+    
+            var circle_marker_2f9fe61c622ec49234dfda22b0ec225d = L.circleMarker(
+                [39.37990869, 22.94003079],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_1fafd9dd6204059f2fdd0cecca24fa95 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_df756d82dccce8e256fa899e33f554c2 = $(`<div id="html_df756d82dccce8e256fa899e33f554c2" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 372<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:20:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 4'     </div>     </div>`)[0];
+                popup_1fafd9dd6204059f2fdd0cecca24fa95.setContent(html_df756d82dccce8e256fa899e33f554c2);
+            
+        
+
+        circle_marker_2f9fe61c622ec49234dfda22b0ec225d.bindPopup(popup_1fafd9dd6204059f2fdd0cecca24fa95)
+        ;
+
+        
+    
+    
+            var circle_marker_379669886ded051b12f3f7de2772478a = L.circleMarker(
+                [39.38179698, 22.93980353],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_4ad7ed45e951f15563cac4f910c48a33 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_19d62586bee0bb0518f62555deba3752 = $(`<div id="html_19d62586bee0bb0518f62555deba3752" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 373<br>         <strong>Boardings:</strong> 1<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:21:00 πμ<br>         <strong>Time in Stop:</strong> 9"<br>         <strong>Time Delay:</strong> 3'     </div>     </div>`)[0];
+                popup_4ad7ed45e951f15563cac4f910c48a33.setContent(html_19d62586bee0bb0518f62555deba3752);
+            
+        
+
+        circle_marker_379669886ded051b12f3f7de2772478a.bindPopup(popup_4ad7ed45e951f15563cac4f910c48a33)
+        ;
+
+        
+    
+    
+            var circle_marker_06ba3b1030257f785f9d66a076028a9a = L.circleMarker(
+                [39.38407013, 22.93915795],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_ea084076ec7191e1b5f1d3f990c1291b = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_6cc9700a47919e38bb794109bf8cc9f3 = $(`<div id="html_6cc9700a47919e38bb794109bf8cc9f3" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 374<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 2<br>         <strong>Arrival Time:</strong>8:22:00 πμ<br>         <strong>Time in Stop:</strong> 8"<br>         <strong>Time Delay:</strong> 3'     </div>     </div>`)[0];
+                popup_ea084076ec7191e1b5f1d3f990c1291b.setContent(html_6cc9700a47919e38bb794109bf8cc9f3);
+            
+        
+
+        circle_marker_06ba3b1030257f785f9d66a076028a9a.bindPopup(popup_ea084076ec7191e1b5f1d3f990c1291b)
+        ;
+
+        
+    
+    
+            var circle_marker_3659f02c317e2adc0d7e0d0b805c5010 = L.circleMarker(
+                [39.38298429, 22.93671654],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_b11983ec8a8178f4b8a2a3d52382db62 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_6134a17ce431350ecd2c2452b50c4ccb = $(`<div id="html_6134a17ce431350ecd2c2452b50c4ccb" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 035<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 12<br>         <strong>Arrival Time:</strong>8:23:00 πμ<br>         <strong>Time in Stop:</strong> 13"<br>         <strong>Time Delay:</strong> 3'     </div>     </div>`)[0];
+                popup_b11983ec8a8178f4b8a2a3d52382db62.setContent(html_6134a17ce431350ecd2c2452b50c4ccb);
+            
+        
+
+        circle_marker_3659f02c317e2adc0d7e0d0b805c5010.bindPopup(popup_b11983ec8a8178f4b8a2a3d52382db62)
+        ;
+
+        
+    
+    
+            var circle_marker_7d317d7630a0bb9526c38d55d709c97a = L.circleMarker(
+                [39.38195998, 22.93492312],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_35d4f3b9aea052c1101607ab33f688b6 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_28d5eb0aa8539f8f5c24220f15d5d4e7 = $(`<div id="html_28d5eb0aa8539f8f5c24220f15d5d4e7" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 157<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 1<br>         <strong>Arrival Time:</strong>8:26:00 πμ<br>         <strong>Time in Stop:</strong> 9"<br>         <strong>Time Delay:</strong> 2'     </div>     </div>`)[0];
+                popup_35d4f3b9aea052c1101607ab33f688b6.setContent(html_28d5eb0aa8539f8f5c24220f15d5d4e7);
+            
+        
+
+        circle_marker_7d317d7630a0bb9526c38d55d709c97a.bindPopup(popup_35d4f3b9aea052c1101607ab33f688b6)
+        ;
+
+        
+    
+    
+            var circle_marker_ee60ce1dc56130281402d25d33638d78 = L.circleMarker(
+                [39.38232453, 22.93397525],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_b6555249acc5af3e834167e72032ec20 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_18eedf5e1fb4e9bd0c3807014d81d8e3 = $(`<div id="html_18eedf5e1fb4e9bd0c3807014d81d8e3" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 033<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 1<br>         <strong>Arrival Time:</strong>8:29:00 πμ<br>         <strong>Time in Stop:</strong> 9"<br>         <strong>Time Delay:</strong> 0'     </div>     </div>`)[0];
+                popup_b6555249acc5af3e834167e72032ec20.setContent(html_18eedf5e1fb4e9bd0c3807014d81d8e3);
+            
+        
+
+        circle_marker_ee60ce1dc56130281402d25d33638d78.bindPopup(popup_b6555249acc5af3e834167e72032ec20)
+        ;
+
+        
+    
+    
+            var circle_marker_6189512a4d831afb1a51e41dc2777315 = L.circleMarker(
+                [39.38409265, 22.93431884],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_3ef0c1e8cb56ed821e850d9bd12c5c94 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_a9a085f58d56793c677ec763922a99d3 = $(`<div id="html_a9a085f58d56793c677ec763922a99d3" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 032<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:29:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 1'     </div>     </div>`)[0];
+                popup_3ef0c1e8cb56ed821e850d9bd12c5c94.setContent(html_a9a085f58d56793c677ec763922a99d3);
+            
+        
+
+        circle_marker_6189512a4d831afb1a51e41dc2777315.bindPopup(popup_3ef0c1e8cb56ed821e850d9bd12c5c94)
+        ;
+
+        
+    
+    
+            var circle_marker_96b4ec61f70ba7be1219763be476495e = L.circleMarker(
+                [39.38505766, 22.93598064],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_23389a0b51032e98f8cf2d6891f23b89 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_10cdc8a53d9fd92cac442dac4da64162 = $(`<div id="html_10cdc8a53d9fd92cac442dac4da64162" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 031<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:30:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 0'     </div>     </div>`)[0];
+                popup_23389a0b51032e98f8cf2d6891f23b89.setContent(html_10cdc8a53d9fd92cac442dac4da64162);
+            
+        
+
+        circle_marker_96b4ec61f70ba7be1219763be476495e.bindPopup(popup_23389a0b51032e98f8cf2d6891f23b89)
+        ;
+
+        
+    
+    
+            var circle_marker_cfdbbe3054f017c31a51855714089706 = L.circleMarker(
+                [39.38610022, 22.93838232],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_a3acef9b6aed559110066c67cdcf0942 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_356d45b404201372df1ac6572967fb7e = $(`<div id="html_356d45b404201372df1ac6572967fb7e" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 030<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:31:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 1'     </div>     </div>`)[0];
+                popup_a3acef9b6aed559110066c67cdcf0942.setContent(html_356d45b404201372df1ac6572967fb7e);
+            
+        
+
+        circle_marker_cfdbbe3054f017c31a51855714089706.bindPopup(popup_a3acef9b6aed559110066c67cdcf0942)
+        ;
+
+        
+    
+    
+            var circle_marker_5bb1b5eb629507e29dba7bbf7adb7262 = L.circleMarker(
+                [39.38768229, 22.93893073],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_71e501e7c17aa3f547d2cf989e08510e = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_0acf12e502583346e5953cac147e134f = $(`<div id="html_0acf12e502583346e5953cac147e134f" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 139<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 2<br>         <strong>Arrival Time:</strong>8:32:00 πμ<br>         <strong>Time in Stop:</strong> 9"<br>         <strong>Time Delay:</strong> 1'     </div>     </div>`)[0];
+                popup_71e501e7c17aa3f547d2cf989e08510e.setContent(html_0acf12e502583346e5953cac147e134f);
+            
+        
+
+        circle_marker_5bb1b5eb629507e29dba7bbf7adb7262.bindPopup(popup_71e501e7c17aa3f547d2cf989e08510e)
+        ;
+
+        
+    
+    
+            var circle_marker_d23e4b67c74fafc9e6a7a4df2d80b078 = L.circleMarker(
+                [39.38681581, 22.94170417],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_366f9bba34fdde6590f26b60bb9053b6);
+        
+    
+        var popup_044c9d56e85d1384392f2d70d1fec86a = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_d19cdad56a5f95fb3ab86f12caab0fb6 = $(`<div id="html_d19cdad56a5f95fb3ab86f12caab0fb6" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 009<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:33:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 2'     </div>     </div>`)[0];
+                popup_044c9d56e85d1384392f2d70d1fec86a.setContent(html_d19cdad56a5f95fb3ab86f12caab0fb6);
+            
+        
+
+        circle_marker_d23e4b67c74fafc9e6a7a4df2d80b078.bindPopup(popup_044c9d56e85d1384392f2d70d1fec86a)
+        ;
+
+        
+    
+    
+            feature_group_366f9bba34fdde6590f26b60bb9053b6.addTo(map_f2fbd2a733a3165fba983f97892f2a44);
+        
+    
+            var feature_group_19cf95b14e870846293636ec42afce83 = L.featureGroup(
+                {}
+            );
+        
+    
+            var circle_marker_3bc35d4964e78afe3b124ee2938796a0 = L.circleMarker(
+                [39.36136106, 22.9328832],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_3859d1c564cb497c1ff4db97dbce7919 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_e2a819f6d1be352fa6d90088b081e59d = $(`<div id="html_e2a819f6d1be352fa6d90088b081e59d" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 009<br>         <strong>Boardings:</strong> 8<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:35:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 0'     </div>     </div>`)[0];
+                popup_3859d1c564cb497c1ff4db97dbce7919.setContent(html_e2a819f6d1be352fa6d90088b081e59d);
+            
+        
+
+        circle_marker_3bc35d4964e78afe3b124ee2938796a0.bindPopup(popup_3859d1c564cb497c1ff4db97dbce7919)
+        ;
+
+        
+    
+    
+            var circle_marker_1c573182568f7d20bc93bbfc815c38aa = L.circleMarker(
+                [39.36215812, 22.9351447],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_5d1fbe510f17d967040be486dc5898c9 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_5fef9a58612a566acf639ade6f3ce738 = $(`<div id="html_5fef9a58612a566acf639ade6f3ce738" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 111<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:36:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 4'     </div>     </div>`)[0];
+                popup_5d1fbe510f17d967040be486dc5898c9.setContent(html_5fef9a58612a566acf639ade6f3ce738);
+            
+        
+
+        circle_marker_1c573182568f7d20bc93bbfc815c38aa.bindPopup(popup_5d1fbe510f17d967040be486dc5898c9)
+        ;
+
+        
+    
+    
+            var circle_marker_5c669780f33841fcddd72c9e89556c26 = L.circleMarker(
+                [39.36216762, 22.9397343],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_8f61237950304881d7d7e1c802c7e684 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_aafdb0048a633920b56ba1b584ec49a6 = $(`<div id="html_aafdb0048a633920b56ba1b584ec49a6" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 109<br>         <strong>Boardings:</strong> 1<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:37:00 πμ<br>         <strong>Time in Stop:</strong> 8"<br>         <strong>Time Delay:</strong> 3'     </div>     </div>`)[0];
+                popup_8f61237950304881d7d7e1c802c7e684.setContent(html_aafdb0048a633920b56ba1b584ec49a6);
+            
+        
+
+        circle_marker_5c669780f33841fcddd72c9e89556c26.bindPopup(popup_8f61237950304881d7d7e1c802c7e684)
+        ;
+
+        
+    
+    
+            var circle_marker_46af1a77901e79f64481eb98168c668c = L.circleMarker(
+                [39.36137758, 22.94332156],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_1d1f4eba8d427a283204268d5c95d8d1 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_16c6f78eec2e39fa9f319fd8f8dfb416 = $(`<div id="html_16c6f78eec2e39fa9f319fd8f8dfb416" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 024<br>         <strong>Boardings:</strong> 2<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:37:00 πμ<br>         <strong>Time in Stop:</strong> 10"<br>         <strong>Time Delay:</strong> 2'     </div>     </div>`)[0];
+                popup_1d1f4eba8d427a283204268d5c95d8d1.setContent(html_16c6f78eec2e39fa9f319fd8f8dfb416);
+            
+        
+
+        circle_marker_46af1a77901e79f64481eb98168c668c.bindPopup(popup_1d1f4eba8d427a283204268d5c95d8d1)
+        ;
+
+        
+    
+    
+            var circle_marker_8e4e04c80a0323bd1a0d44ef479505cb = L.circleMarker(
+                [39.36088393, 22.94709222],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_ed38dbb7c53fc4a7f8beebf814ba7d01 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_4a5386cfc1082c82c99b5537a41490f9 = $(`<div id="html_4a5386cfc1082c82c99b5537a41490f9" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 023<br>         <strong>Boardings:</strong> 7<br>         <strong>Unboardings:</strong> 4<br>         <strong>Arrival Time:</strong>8:40:00 πμ<br>         <strong>Time in Stop:</strong> 13"<br>         <strong>Time Delay:</strong> 3'     </div>     </div>`)[0];
+                popup_ed38dbb7c53fc4a7f8beebf814ba7d01.setContent(html_4a5386cfc1082c82c99b5537a41490f9);
+            
+        
+
+        circle_marker_8e4e04c80a0323bd1a0d44ef479505cb.bindPopup(popup_ed38dbb7c53fc4a7f8beebf814ba7d01)
+        ;
+
+        
+    
+    
+            var circle_marker_a9a9f89d580624ebd8c29bb290ef6fdc = L.circleMarker(
+                [39.36357456, 22.94957881],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_a6608d71df197281e8e59dbd86df3053 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_b6f8b188a1b00c70aee44341a1ef81e5 = $(`<div id="html_b6f8b188a1b00c70aee44341a1ef81e5" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 021<br>         <strong>Boardings:</strong> 2<br>         <strong>Unboardings:</strong> 1<br>         <strong>Arrival Time:</strong>8:42:00 πμ<br>         <strong>Time in Stop:</strong> 11"<br>         <strong>Time Delay:</strong> 4'     </div>     </div>`)[0];
+                popup_a6608d71df197281e8e59dbd86df3053.setContent(html_b6f8b188a1b00c70aee44341a1ef81e5);
+            
+        
+
+        circle_marker_a9a9f89d580624ebd8c29bb290ef6fdc.bindPopup(popup_a6608d71df197281e8e59dbd86df3053)
+        ;
+
+        
+    
+    
+            var circle_marker_9990aec5ac6d474c96785f42855d98ce = L.circleMarker(
+                [39.36522082, 22.95112601],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_d4664be4629aea92732c3fc54fdd2d66 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_b454bf93f885e4aa606c973ff838c4a6 = $(`<div id="html_b454bf93f885e4aa606c973ff838c4a6" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 022<br>         <strong>Boardings:</strong> 6<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:43:00 πμ<br>         <strong>Time in Stop:</strong> 12"<br>         <strong>Time Delay:</strong> 2'     </div>     </div>`)[0];
+                popup_d4664be4629aea92732c3fc54fdd2d66.setContent(html_b454bf93f885e4aa606c973ff838c4a6);
+            
+        
+
+        circle_marker_9990aec5ac6d474c96785f42855d98ce.bindPopup(popup_d4664be4629aea92732c3fc54fdd2d66)
+        ;
+
+        
+    
+    
+            var circle_marker_ed555842ab471b2b5052596c4742e0a0 = L.circleMarker(
+                [39.36721318, 22.94963057],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_6a71b309ebb886c16804937033b5311e = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_36495781ea5f18343062cc4be7b99483 = $(`<div id="html_36495781ea5f18343062cc4be7b99483" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 108<br>         <strong>Boardings:</strong> 5<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:45:00 πμ<br>         <strong>Time in Stop:</strong> 11"<br>         <strong>Time Delay:</strong> 3'     </div>     </div>`)[0];
+                popup_6a71b309ebb886c16804937033b5311e.setContent(html_36495781ea5f18343062cc4be7b99483);
+            
+        
+
+        circle_marker_ed555842ab471b2b5052596c4742e0a0.bindPopup(popup_6a71b309ebb886c16804937033b5311e)
+        ;
+
+        
+    
+    
+            var circle_marker_bcc255fc01aaafaca2f2474314157bd6 = L.circleMarker(
+                [39.36803915, 22.94814557],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_0e04335cda37a752ddb9c654732bb717 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_4d070c6c5772f4375d308083f2bc298f = $(`<div id="html_4d070c6c5772f4375d308083f2bc298f" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 080<br>         <strong>Boardings:</strong> 2<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:46:00 πμ<br>         <strong>Time in Stop:</strong> 10"<br>         <strong>Time Delay:</strong> 2'     </div>     </div>`)[0];
+                popup_0e04335cda37a752ddb9c654732bb717.setContent(html_4d070c6c5772f4375d308083f2bc298f);
+            
+        
+
+        circle_marker_bcc255fc01aaafaca2f2474314157bd6.bindPopup(popup_0e04335cda37a752ddb9c654732bb717)
+        ;
+
+        
+    
+    
+            var circle_marker_65abf8a68d8aa6f3ac82cbc8144530f4 = L.circleMarker(
+                [39.369183, 22.94608085],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_abbabff2c2b6e29ad4166a30a18327da = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_f9fcda38a631d2eaeea4a4190b4165bc = $(`<div id="html_f9fcda38a631d2eaeea4a4190b4165bc" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 081<br>         <strong>Boardings:</strong> 1<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:47:00 πμ<br>         <strong>Time in Stop:</strong> 9"<br>         <strong>Time Delay:</strong> 3'     </div>     </div>`)[0];
+                popup_abbabff2c2b6e29ad4166a30a18327da.setContent(html_f9fcda38a631d2eaeea4a4190b4165bc);
+            
+        
+
+        circle_marker_65abf8a68d8aa6f3ac82cbc8144530f4.bindPopup(popup_abbabff2c2b6e29ad4166a30a18327da)
+        ;
+
+        
+    
+    
+            var circle_marker_7ebd309bc7ffe4eb423a53938a73d344 = L.circleMarker(
+                [39.37034003, 22.9439822],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_5af002e66625536d0b6caf7f9b165905 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_ea5be9c423ff63336fd4fe1cf491c31c = $(`<div id="html_ea5be9c423ff63336fd4fe1cf491c31c" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 082<br>         <strong>Boardings:</strong> 1<br>         <strong>Unboardings:</strong> 1<br>         <strong>Arrival Time:</strong>8:47:00 πμ<br>         <strong>Time in Stop:</strong> 9"<br>         <strong>Time Delay:</strong> 2'     </div>     </div>`)[0];
+                popup_5af002e66625536d0b6caf7f9b165905.setContent(html_ea5be9c423ff63336fd4fe1cf491c31c);
+            
+        
+
+        circle_marker_7ebd309bc7ffe4eb423a53938a73d344.bindPopup(popup_5af002e66625536d0b6caf7f9b165905)
+        ;
+
+        
+    
+    
+            var circle_marker_9220c7c3ff8db2956257d1a6f35ff08d = L.circleMarker(
+                [39.36989698, 22.94223892],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_59761801954c7d0d4349a895104f585b = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_eb99aa3f666ad80f9b51cbee62cb5a6a = $(`<div id="html_eb99aa3f666ad80f9b51cbee62cb5a6a" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 106<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 1<br>         <strong>Arrival Time:</strong>8:48:00 πμ<br>         <strong>Time in Stop:</strong> 8"<br>         <strong>Time Delay:</strong> 1'     </div>     </div>`)[0];
+                popup_59761801954c7d0d4349a895104f585b.setContent(html_eb99aa3f666ad80f9b51cbee62cb5a6a);
+            
+        
+
+        circle_marker_9220c7c3ff8db2956257d1a6f35ff08d.bindPopup(popup_59761801954c7d0d4349a895104f585b)
+        ;
+
+        
+    
+    
+            var circle_marker_42b52024c9574529716f037d4f40636a = L.circleMarker(
+                [39.36916288, 22.94034177],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_61b3c5a8e1cb223280dc2e658a160b63 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_324179c03a4219260d1e13aaa2906bc9 = $(`<div id="html_324179c03a4219260d1e13aaa2906bc9" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 110<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 1<br>         <strong>Arrival Time:</strong>8:49:00 πμ<br>         <strong>Time in Stop:</strong> 9"<br>         <strong>Time Delay:</strong> 1'     </div>     </div>`)[0];
+                popup_61b3c5a8e1cb223280dc2e658a160b63.setContent(html_324179c03a4219260d1e13aaa2906bc9);
+            
+        
+
+        circle_marker_42b52024c9574529716f037d4f40636a.bindPopup(popup_61b3c5a8e1cb223280dc2e658a160b63)
+        ;
+
+        
+    
+    
+            var circle_marker_4d05200f2ba58a114d49d9b0edf8a7a2 = L.circleMarker(
+                [39.37081106, 22.93966016],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_3e821ed48b5c2cdc0b160b119fe792b7 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_2b1065072ba0678eaed426ef1354a9f1 = $(`<div id="html_2b1065072ba0678eaed426ef1354a9f1" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 105<br>         <strong>Boardings:</strong> 1<br>         <strong>Unboardings:</strong> 1<br>         <strong>Arrival Time:</strong>8:51:00 πμ<br>         <strong>Time in Stop:</strong> 10"<br>         <strong>Time Delay:</strong> 2'     </div>     </div>`)[0];
+                popup_3e821ed48b5c2cdc0b160b119fe792b7.setContent(html_2b1065072ba0678eaed426ef1354a9f1);
+            
+        
+
+        circle_marker_4d05200f2ba58a114d49d9b0edf8a7a2.bindPopup(popup_3e821ed48b5c2cdc0b160b119fe792b7)
+        ;
+
+        
+    
+    
+            var circle_marker_26307010c531acd90e42f0b3c047b7bd = L.circleMarker(
+                [39.37217403, 22.93938541],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_c9649c70b97b0e480c7033ae72a79da8 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_31453cf2b4373858de033aa27c25df6e = $(`<div id="html_31453cf2b4373858de033aa27c25df6e" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 537<br>         <strong>Boardings:</strong> 1<br>         <strong>Unboardings:</strong> 1<br>         <strong>Arrival Time:</strong>8:52:00 πμ<br>         <strong>Time in Stop:</strong> 10"<br>         <strong>Time Delay:</strong> 3'     </div>     </div>`)[0];
+                popup_c9649c70b97b0e480c7033ae72a79da8.setContent(html_31453cf2b4373858de033aa27c25df6e);
+            
+        
+
+        circle_marker_26307010c531acd90e42f0b3c047b7bd.bindPopup(popup_c9649c70b97b0e480c7033ae72a79da8)
+        ;
+
+        
+    
+    
+            var circle_marker_e928d51b12600e65cac39fe20c48a72e = L.circleMarker(
+                [39.37416168, 22.93900266],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_74d4f6f2894e02bdaff893a0ea6f2b61 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_84cb5e9cf54506ffa4aa3648a858fa83 = $(`<div id="html_84cb5e9cf54506ffa4aa3648a858fa83" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 085<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:53:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 1'     </div>     </div>`)[0];
+                popup_74d4f6f2894e02bdaff893a0ea6f2b61.setContent(html_84cb5e9cf54506ffa4aa3648a858fa83);
+            
+        
+
+        circle_marker_e928d51b12600e65cac39fe20c48a72e.bindPopup(popup_74d4f6f2894e02bdaff893a0ea6f2b61)
+        ;
+
+        
+    
+    
+            var circle_marker_00cfed43e6eb82944639dd0ef7f39c11 = L.circleMarker(
+                [39.37624293, 22.93898265],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_694b96831ceb45cdb942f1c0dcb76fe0 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_7e496a8d31b0e8e715f7881368491d33 = $(`<div id="html_7e496a8d31b0e8e715f7881368491d33" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 104<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:53:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 0'     </div>     </div>`)[0];
+                popup_694b96831ceb45cdb942f1c0dcb76fe0.setContent(html_7e496a8d31b0e8e715f7881368491d33);
+            
+        
+
+        circle_marker_00cfed43e6eb82944639dd0ef7f39c11.bindPopup(popup_694b96831ceb45cdb942f1c0dcb76fe0)
+        ;
+
+        
+    
+    
+            var circle_marker_7c21b7dd9a1dba8a0081ccf68f3210d2 = L.circleMarker(
+                [39.37798738, 22.94127424],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_d323d2a59618738ee456f46b524342e5 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_b013a70a032ded36ae5f650916323cf6 = $(`<div id="html_b013a70a032ded36ae5f650916323cf6" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 245<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:54:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 1'     </div>     </div>`)[0];
+                popup_d323d2a59618738ee456f46b524342e5.setContent(html_b013a70a032ded36ae5f650916323cf6);
+            
+        
+
+        circle_marker_7c21b7dd9a1dba8a0081ccf68f3210d2.bindPopup(popup_d323d2a59618738ee456f46b524342e5)
+        ;
+
+        
+    
+    
+            var circle_marker_44ae79857357547138ae0825629a62e2 = L.circleMarker(
+                [39.37999549, 22.94007524],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_e9f85e5a84cecbcebda7bc5530309155 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_3a3fc624a694bd72d0e24f25a26f8779 = $(`<div id="html_3a3fc624a694bd72d0e24f25a26f8779" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 406<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:56:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 0'     </div>     </div>`)[0];
+                popup_e9f85e5a84cecbcebda7bc5530309155.setContent(html_3a3fc624a694bd72d0e24f25a26f8779);
+            
+        
+
+        circle_marker_44ae79857357547138ae0825629a62e2.bindPopup(popup_e9f85e5a84cecbcebda7bc5530309155)
+        ;
+
+        
+    
+    
+            var circle_marker_39db3c920ed29950286525c0f3f5a49d = L.circleMarker(
+                [39.38178195, 22.93984634],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_e61874f524ed869582c9b8a87c996920 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_afbc82d64f9a78f8e785401136d1b806 = $(`<div id="html_afbc82d64f9a78f8e785401136d1b806" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 089<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:57:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 1'     </div>     </div>`)[0];
+                popup_e61874f524ed869582c9b8a87c996920.setContent(html_afbc82d64f9a78f8e785401136d1b806);
+            
+        
+
+        circle_marker_39db3c920ed29950286525c0f3f5a49d.bindPopup(popup_e61874f524ed869582c9b8a87c996920)
+        ;
+
+        
+    
+    
+            var circle_marker_314859f5373bc2c59cc0f1211c617812 = L.circleMarker(
+                [39.3841153, 22.93915303],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_6d9a1a13e015725cc9c4a429b8a6c606 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_d4e83d4e535fb39d2dfa89a879276cd9 = $(`<div id="html_d4e83d4e535fb39d2dfa89a879276cd9" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 090<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:58:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 0'     </div>     </div>`)[0];
+                popup_6d9a1a13e015725cc9c4a429b8a6c606.setContent(html_d4e83d4e535fb39d2dfa89a879276cd9);
+            
+        
+
+        circle_marker_314859f5373bc2c59cc0f1211c617812.bindPopup(popup_6d9a1a13e015725cc9c4a429b8a6c606)
+        ;
+
+        
+    
+    
+            var circle_marker_ef2816a1a78317b427bf771bdd2bc1dd = L.circleMarker(
+                [39.38302064, 22.93668618],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_22fb8a4e21b40ef072bd8e61b5a43daf = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_9cf8947833f398e12634faeb1563142a = $(`<div id="html_9cf8947833f398e12634faeb1563142a" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 091<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:58:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 1'     </div>     </div>`)[0];
+                popup_22fb8a4e21b40ef072bd8e61b5a43daf.setContent(html_9cf8947833f398e12634faeb1563142a);
+            
+        
+
+        circle_marker_ef2816a1a78317b427bf771bdd2bc1dd.bindPopup(popup_22fb8a4e21b40ef072bd8e61b5a43daf)
+        ;
+
+        
+    
+    
+            var circle_marker_a78f16a78eeadb026130105016e5ac0d = L.circleMarker(
+                [39.38201068, 22.9349274],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_6adc46446ceb91299bdca58be5728904 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_e029298ca179c378ca073b6811275534 = $(`<div id="html_e029298ca179c378ca073b6811275534" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 092<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:59:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 1'     </div>     </div>`)[0];
+                popup_6adc46446ceb91299bdca58be5728904.setContent(html_e029298ca179c378ca073b6811275534);
+            
+        
+
+        circle_marker_a78f16a78eeadb026130105016e5ac0d.bindPopup(popup_6adc46446ceb91299bdca58be5728904)
+        ;
+
+        
+    
+    
+            var circle_marker_e8a6818b8fd76f968230b63e77c0a4f1 = L.circleMarker(
+                [39.38234629, 22.93402973],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_71b5d6645a3136aafdf64859c1828e37 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_e9c75a410ac56c314bae7134ad3a043d = $(`<div id="html_e9c75a410ac56c314bae7134ad3a043d" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 093<br>         <strong>Boardings:</strong> 1<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>8:59:00 πμ<br>         <strong>Time in Stop:</strong> 9"<br>         <strong>Time Delay:</strong> 2'     </div>     </div>`)[0];
+                popup_71b5d6645a3136aafdf64859c1828e37.setContent(html_e9c75a410ac56c314bae7134ad3a043d);
+            
+        
+
+        circle_marker_e8a6818b8fd76f968230b63e77c0a4f1.bindPopup(popup_71b5d6645a3136aafdf64859c1828e37)
+        ;
+
+        
+    
+    
+            var circle_marker_e7bc657ecd6954675a525324375935b1 = L.circleMarker(
+                [39.38403872, 22.93431822],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_a7dd43ad46a6b50a91836eb3d9230b44 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_b72095f1045b799a64656099d19b43ac = $(`<div id="html_b72095f1045b799a64656099d19b43ac" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 538<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 1<br>         <strong>Arrival Time:</strong>8:59:00 πμ<br>         <strong>Time in Stop:</strong> 9"<br>         <strong>Time Delay:</strong> 2'     </div>     </div>`)[0];
+                popup_a7dd43ad46a6b50a91836eb3d9230b44.setContent(html_b72095f1045b799a64656099d19b43ac);
+            
+        
+
+        circle_marker_e7bc657ecd6954675a525324375935b1.bindPopup(popup_a7dd43ad46a6b50a91836eb3d9230b44)
+        ;
+
+        
+    
+    
+            var circle_marker_d09953bd326ca0ade59dfd7f17caeb1b = L.circleMarker(
+                [39.38509346, 22.9361411],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_429aee3060ccb1983f81c99d1e271165 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_b5e3503759f3778fd534a089827a2fc6 = $(`<div id="html_b5e3503759f3778fd534a089827a2fc6" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 103<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>9:00:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 1'     </div>     </div>`)[0];
+                popup_429aee3060ccb1983f81c99d1e271165.setContent(html_b5e3503759f3778fd534a089827a2fc6);
+            
+        
+
+        circle_marker_d09953bd326ca0ade59dfd7f17caeb1b.bindPopup(popup_429aee3060ccb1983f81c99d1e271165)
+        ;
+
+        
+    
+    
+            var circle_marker_500d98f8caabe7c87372306ff80097f9 = L.circleMarker(
+                [39.38605962, 22.93839027],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_72f7e35ba1578e6c75e37fd48b58b8b4 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_c503e5c6d7a476d2df825460aa8fca1b = $(`<div id="html_c503e5c6d7a476d2df825460aa8fca1b" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 095<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>9:01:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 1'     </div>     </div>`)[0];
+                popup_72f7e35ba1578e6c75e37fd48b58b8b4.setContent(html_c503e5c6d7a476d2df825460aa8fca1b);
+            
+        
+
+        circle_marker_500d98f8caabe7c87372306ff80097f9.bindPopup(popup_72f7e35ba1578e6c75e37fd48b58b8b4)
+        ;
+
+        
+    
+    
+            var circle_marker_254faa6d126290f5bd2a714137f8f4e4 = L.circleMarker(
                 [39.38757297, 22.93891077],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_b6b5f67cc0805fef950d510e2aff73b2);
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
         
     
-        var popup_e76cf60ea336f68f3f8bc5497b4f5de8 = L.popup({"maxWidth": 250, "minWidth": 150});
+        var popup_910e78c06ff74e2a4ee2cc6b4f7a04ff = L.popup({"maxWidth": 250, "minWidth": 150});
 
         
             
-                var html_7200db92576695d50c8348419dbf008a = $(`<div id="html_7200db92576695d50c8348419dbf008a" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 105<br>         <strong>Boardings:</strong> 4<br>         <strong>Unboardings:</strong> 4<br>         <strong>Time in Stop:</strong> 21<br>         <strong>Time Delay:</strong> 2'      </div>     </div>`)[0];
-                popup_e76cf60ea336f68f3f8bc5497b4f5de8.setContent(html_7200db92576695d50c8348419dbf008a);
+                var html_299b6e72a8019131181a2ae217038ccb = $(`<div id="html_299b6e72a8019131181a2ae217038ccb" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 096<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 20<br>         <strong>Arrival Time:</strong>9:02:00 πμ<br>         <strong>Time in Stop:</strong> 16"<br>         <strong>Time Delay:</strong> 1'     </div>     </div>`)[0];
+                popup_910e78c06ff74e2a4ee2cc6b4f7a04ff.setContent(html_299b6e72a8019131181a2ae217038ccb);
             
         
 
-        circle_marker_15379326097fd8afe8af44b1495d50ba.bindPopup(popup_e76cf60ea336f68f3f8bc5497b4f5de8)
+        circle_marker_254faa6d126290f5bd2a714137f8f4e4.bindPopup(popup_910e78c06ff74e2a4ee2cc6b4f7a04ff)
         ;
 
         
     
     
-            var circle_marker_4000317d40b4d02de43dcdae0dfc5b24 = L.circleMarker(
+            var circle_marker_5a167910ad84be3ec71025dabfb12014 = L.circleMarker(
                 [39.38681581, 22.94170417],
-                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_b6b5f67cc0805fef950d510e2aff73b2);
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
         
     
-        var popup_58bd1f229ab9cb5835a8a3f90e3e15bf = L.popup({"maxWidth": 250, "minWidth": 150});
+        var popup_8d3e635d0f4c989159fcbcfd864e8f31 = L.popup({"maxWidth": 250, "minWidth": 150});
 
         
             
-                var html_ea4e03b6838e1d4a90a5bc99db5fba30 = $(`<div id="html_ea4e03b6838e1d4a90a5bc99db5fba30" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 106<br>         <strong>Boardings:</strong> 2<br>         <strong>Unboardings:</strong> 2<br>         <strong>Time in Stop:</strong> 11<br>         <strong>Time Delay:</strong> 2'      </div>     </div>`)[0];
-                popup_58bd1f229ab9cb5835a8a3f90e3e15bf.setContent(html_ea4e03b6838e1d4a90a5bc99db5fba30);
+                var html_83d9842d6bc06da1bf26cfa2ef5bf14c = $(`<div id="html_83d9842d6bc06da1bf26cfa2ef5bf14c" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 097<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 1<br>         <strong>Arrival Time:</strong>9:03:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 9'     </div>     </div>`)[0];
+                popup_8d3e635d0f4c989159fcbcfd864e8f31.setContent(html_83d9842d6bc06da1bf26cfa2ef5bf14c);
             
         
 
-        circle_marker_4000317d40b4d02de43dcdae0dfc5b24.bindPopup(popup_58bd1f229ab9cb5835a8a3f90e3e15bf)
+        circle_marker_5a167910ad84be3ec71025dabfb12014.bindPopup(popup_8d3e635d0f4c989159fcbcfd864e8f31)
         ;
 
         
     
+    
+            var circle_marker_baa79fb0e33e69cc693e14b66b68a199 = L.circleMarker(
+                [39.36136106, 22.9328832],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_753a5c19f60915320c88ef9df456a67c = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_f176a4a554aca0ac99bf429ff2702024 = $(`<div id="html_f176a4a554aca0ac99bf429ff2702024" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 097<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 1<br>         <strong>Arrival Time:</strong>9:15:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 0'     </div>     </div>`)[0];
+                popup_753a5c19f60915320c88ef9df456a67c.setContent(html_f176a4a554aca0ac99bf429ff2702024);
+            
+        
+
+        circle_marker_baa79fb0e33e69cc693e14b66b68a199.bindPopup(popup_753a5c19f60915320c88ef9df456a67c)
+        ;
+
+        
+    
+    
+            var circle_marker_61b11429e0e4b83ca44cbc3e1f0ce4b1 = L.circleMarker(
+                [39.36077844, 22.93343187],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_a494ad3e6b75d99b3477225dc455cb23 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_627797ce2acd479624f0c42b8514a524 = $(`<div id="html_627797ce2acd479624f0c42b8514a524" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 498<br>         <strong>Boardings:</strong> 1<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>9:16:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 5'     </div>     </div>`)[0];
+                popup_a494ad3e6b75d99b3477225dc455cb23.setContent(html_627797ce2acd479624f0c42b8514a524);
+            
+        
+
+        circle_marker_61b11429e0e4b83ca44cbc3e1f0ce4b1.bindPopup(popup_a494ad3e6b75d99b3477225dc455cb23)
+        ;
+
+        
+    
+    
+            var circle_marker_325e99b286ec0715067576508d50bd0f = L.circleMarker(
+                [39.36214198, 22.93490889],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_f1f413690038d6a0b36a3bdb8d8b1235 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_0a0dc48997df8ba654c025b621b35f4a = $(`<div id="html_0a0dc48997df8ba654c025b621b35f4a" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 095<br>         <strong>Boardings:</strong> 2<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>9:17:00 πμ<br>         <strong>Time in Stop:</strong> 10"<br>         <strong>Time Delay:</strong> 5'     </div>     </div>`)[0];
+                popup_f1f413690038d6a0b36a3bdb8d8b1235.setContent(html_0a0dc48997df8ba654c025b621b35f4a);
+            
+        
+
+        circle_marker_325e99b286ec0715067576508d50bd0f.bindPopup(popup_f1f413690038d6a0b36a3bdb8d8b1235)
+        ;
+
+        
+    
+    
+            var circle_marker_ced0d4843bf3c80cdf349fcf1e87eb6d = L.circleMarker(
+                [39.36231483, 22.94010927],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_8a0ea4f56043b106e2953514724ad1d7 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_58d0e708b4f2e85258051586ebc46c0d = $(`<div id="html_58d0e708b4f2e85258051586ebc46c0d" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 094<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>9:18:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 5'     </div>     </div>`)[0];
+                popup_8a0ea4f56043b106e2953514724ad1d7.setContent(html_58d0e708b4f2e85258051586ebc46c0d);
+            
+        
+
+        circle_marker_ced0d4843bf3c80cdf349fcf1e87eb6d.bindPopup(popup_8a0ea4f56043b106e2953514724ad1d7)
+        ;
+
+        
+    
+    
+            var circle_marker_416f3e2c5400ae19deeae42f17b7058f = L.circleMarker(
+                [39.36211532, 22.94351001],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_da8698d4cd023246fda91f9317301be1 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_d4c21e3d931655ad7375d7ab545a41b4 = $(`<div id="html_d4c21e3d931655ad7375d7ab545a41b4" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 539<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>9:18:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 6'     </div>     </div>`)[0];
+                popup_da8698d4cd023246fda91f9317301be1.setContent(html_d4c21e3d931655ad7375d7ab545a41b4);
+            
+        
+
+        circle_marker_416f3e2c5400ae19deeae42f17b7058f.bindPopup(popup_da8698d4cd023246fda91f9317301be1)
+        ;
+
+        
+    
+    
+            var circle_marker_0c4f5eb02848b5a5500ffbd7131c0870 = L.circleMarker(
+                [39.36151356, 22.94484682],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_38865d932f0235c408c81a24d1f05843 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_1f758a52e0ae7d311beb9d70f0111b06 = $(`<div id="html_1f758a52e0ae7d311beb9d70f0111b06" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 514<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>9:19:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 6'     </div>     </div>`)[0];
+                popup_38865d932f0235c408c81a24d1f05843.setContent(html_1f758a52e0ae7d311beb9d70f0111b06);
+            
+        
+
+        circle_marker_0c4f5eb02848b5a5500ffbd7131c0870.bindPopup(popup_38865d932f0235c408c81a24d1f05843)
+        ;
+
+        
+    
+    
+            var circle_marker_7d121a430be45213b3c33c52e636d828 = L.circleMarker(
+                [39.36178413, 22.9462843],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_79f39f8b02249e80fab6f3a2224df15c = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_346a8ced8dde412c004b6cc89296de20 = $(`<div id="html_346a8ced8dde412c004b6cc89296de20" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 518<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>9:20:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 4'     </div>     </div>`)[0];
+                popup_79f39f8b02249e80fab6f3a2224df15c.setContent(html_346a8ced8dde412c004b6cc89296de20);
+            
+        
+
+        circle_marker_7d121a430be45213b3c33c52e636d828.bindPopup(popup_79f39f8b02249e80fab6f3a2224df15c)
+        ;
+
+        
+    
+    
+            var circle_marker_308b69b17bf21e06822a5cb399b4dc0f = L.circleMarker(
+                [39.36498898, 22.9491458],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_7c266444767ca20ce4a9618eec8c24b3 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_807b3ad7bc3302072c023aab1b6a6565 = $(`<div id="html_807b3ad7bc3302072c023aab1b6a6565" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 458<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>9:22:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 3'     </div>     </div>`)[0];
+                popup_7c266444767ca20ce4a9618eec8c24b3.setContent(html_807b3ad7bc3302072c023aab1b6a6565);
+            
+        
+
+        circle_marker_308b69b17bf21e06822a5cb399b4dc0f.bindPopup(popup_7c266444767ca20ce4a9618eec8c24b3)
+        ;
+
+        
+    
+    
+            var circle_marker_67bb51d6b899174238799b79eb7beb5c = L.circleMarker(
+                [39.36708182, 22.94968852],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_667e060d3cf585cd3151e0053105829b = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_39bbf4bde20bde03a4cc6eb2bd1c6a29 = $(`<div id="html_39bbf4bde20bde03a4cc6eb2bd1c6a29" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 395<br>         <strong>Boardings:</strong> 1<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>9:23:00 πμ<br>         <strong>Time in Stop:</strong> 8"<br>         <strong>Time Delay:</strong> 5'     </div>     </div>`)[0];
+                popup_667e060d3cf585cd3151e0053105829b.setContent(html_39bbf4bde20bde03a4cc6eb2bd1c6a29);
+            
+        
+
+        circle_marker_67bb51d6b899174238799b79eb7beb5c.bindPopup(popup_667e060d3cf585cd3151e0053105829b)
+        ;
+
+        
+    
+    
+            var circle_marker_2c9d29264e4e573042aa7e72c6b7afd4 = L.circleMarker(
+                [39.36794196, 22.94818737],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_5e7d6b8542b7cb0888e0f3c34a37a6ed = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_4aa0c60ee25b99b0ec08f1779f0c703c = $(`<div id="html_4aa0c60ee25b99b0ec08f1779f0c703c" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 476<br>         <strong>Boardings:</strong> 2<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>9:23:00 πμ<br>         <strong>Time in Stop:</strong> 10"<br>         <strong>Time Delay:</strong> 3'     </div>     </div>`)[0];
+                popup_5e7d6b8542b7cb0888e0f3c34a37a6ed.setContent(html_4aa0c60ee25b99b0ec08f1779f0c703c);
+            
+        
+
+        circle_marker_2c9d29264e4e573042aa7e72c6b7afd4.bindPopup(popup_5e7d6b8542b7cb0888e0f3c34a37a6ed)
+        ;
+
+        
+    
+    
+            var circle_marker_84bf3c9744401619860e14cd0d76540b = L.circleMarker(
+                [39.36894837, 22.94634166],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_c038e3f1a04066ba13aeecf4a98870f1 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_b9fc0d895de701b4f4686a6c95e0f72b = $(`<div id="html_b9fc0d895de701b4f4686a6c95e0f72b" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 088<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>9:24:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 4'     </div>     </div>`)[0];
+                popup_c038e3f1a04066ba13aeecf4a98870f1.setContent(html_b9fc0d895de701b4f4686a6c95e0f72b);
+            
+        
+
+        circle_marker_84bf3c9744401619860e14cd0d76540b.bindPopup(popup_c038e3f1a04066ba13aeecf4a98870f1)
+        ;
+
+        
+    
+    
+            var circle_marker_65e4f89b3a9eca268f16c28a601cc274 = L.circleMarker(
+                [39.3701421, 22.94415983],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_83efe138f8e399ada50aef269ef3e05a = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_c6dcf3ce2ee86f0f3b590a5f93ee9b06 = $(`<div id="html_c6dcf3ce2ee86f0f3b590a5f93ee9b06" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 295<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>9:26:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 3'     </div>     </div>`)[0];
+                popup_83efe138f8e399ada50aef269ef3e05a.setContent(html_c6dcf3ce2ee86f0f3b590a5f93ee9b06);
+            
+        
+
+        circle_marker_65e4f89b3a9eca268f16c28a601cc274.bindPopup(popup_83efe138f8e399ada50aef269ef3e05a)
+        ;
+
+        
+    
+    
+            var circle_marker_95e46b22d5465a1495f61f7bbbcb8809 = L.circleMarker(
+                [39.36984994, 22.94231831],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_b498783def568c35d85c8abd319e3b7f = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_45b45b4c8efe3119a3bc14a5df5f9e51 = $(`<div id="html_45b45b4c8efe3119a3bc14a5df5f9e51" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 297<br>         <strong>Boardings:</strong> 1<br>         <strong>Unboardings:</strong> 1<br>         <strong>Arrival Time:</strong>9:28:00 πμ<br>         <strong>Time in Stop:</strong> 8"<br>         <strong>Time Delay:</strong> 3'     </div>     </div>`)[0];
+                popup_b498783def568c35d85c8abd319e3b7f.setContent(html_45b45b4c8efe3119a3bc14a5df5f9e51);
+            
+        
+
+        circle_marker_95e46b22d5465a1495f61f7bbbcb8809.bindPopup(popup_b498783def568c35d85c8abd319e3b7f)
+        ;
+
+        
+    
+    
+            var circle_marker_29110333c30470845867847c5e6c70a6 = L.circleMarker(
+                [39.36932386, 22.94092933],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_2e6f2b298792e36b6c95095489af1593 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_b038ba9af083b26c5039473444d4c27e = $(`<div id="html_b038ba9af083b26c5039473444d4c27e" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 501<br>         <strong>Boardings:</strong> 2<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>9:29:00 πμ<br>         <strong>Time in Stop:</strong> 10"<br>         <strong>Time Delay:</strong> 3'     </div>     </div>`)[0];
+                popup_2e6f2b298792e36b6c95095489af1593.setContent(html_b038ba9af083b26c5039473444d4c27e);
+            
+        
+
+        circle_marker_29110333c30470845867847c5e6c70a6.bindPopup(popup_2e6f2b298792e36b6c95095489af1593)
+        ;
+
+        
+    
+    
+            var circle_marker_c2ec8c02efbcf95c962c1f9bcf108dd5 = L.circleMarker(
+                [39.36998164, 22.93979662],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_211a764a04fc4fd5658e098e0f660f7c = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_d622d5a2dbc81dd6ca4bc291f93c85fa = $(`<div id="html_d622d5a2dbc81dd6ca4bc291f93c85fa" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 481<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>9:30:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 3'     </div>     </div>`)[0];
+                popup_211a764a04fc4fd5658e098e0f660f7c.setContent(html_d622d5a2dbc81dd6ca4bc291f93c85fa);
+            
+        
+
+        circle_marker_c2ec8c02efbcf95c962c1f9bcf108dd5.bindPopup(popup_211a764a04fc4fd5658e098e0f660f7c)
+        ;
+
+        
+    
+    
+            var circle_marker_a41a2b3af9cb18097e598a08da278fe2 = L.circleMarker(
+                [39.37216122, 22.93934571],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_41994c5dcef7e131cc85162e2b773212 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_318888e9e466b0040d0dd34216918827 = $(`<div id="html_318888e9e466b0040d0dd34216918827" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 083<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>9:30:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 3'     </div>     </div>`)[0];
+                popup_41994c5dcef7e131cc85162e2b773212.setContent(html_318888e9e466b0040d0dd34216918827);
+            
+        
+
+        circle_marker_a41a2b3af9cb18097e598a08da278fe2.bindPopup(popup_41994c5dcef7e131cc85162e2b773212)
+        ;
+
+        
+    
+    
+            var circle_marker_7404154bcd60264721c432e59060204a = L.circleMarker(
+                [39.37416484, 22.93979662],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_3ea3abca92be51b963f48d5ace3f6ee1 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_499ed27b4c38c7805b36d2e823501006 = $(`<div id="html_499ed27b4c38c7805b36d2e823501006" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 369<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>9:31:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 2'     </div>     </div>`)[0];
+                popup_3ea3abca92be51b963f48d5ace3f6ee1.setContent(html_499ed27b4c38c7805b36d2e823501006);
+            
+        
+
+        circle_marker_7404154bcd60264721c432e59060204a.bindPopup(popup_3ea3abca92be51b963f48d5ace3f6ee1)
+        ;
+
+        
+    
+    
+            var circle_marker_47e22160926bcf31eef5b9d8783f4d72 = L.circleMarker(
+                [39.37586258, 22.93896948],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_297c35fed5186661c9a64d70f2165841 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_64fb1d3dc86b494a9ab64f7fe5ef9aa4 = $(`<div id="html_64fb1d3dc86b494a9ab64f7fe5ef9aa4" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 370<br>         <strong>Boardings:</strong> 1<br>         <strong>Unboardings:</strong> 1<br>         <strong>Arrival Time:</strong>9:32:00 πμ<br>         <strong>Time in Stop:</strong> 10"<br>         <strong>Time Delay:</strong> 2'     </div>     </div>`)[0];
+                popup_297c35fed5186661c9a64d70f2165841.setContent(html_64fb1d3dc86b494a9ab64f7fe5ef9aa4);
+            
+        
+
+        circle_marker_47e22160926bcf31eef5b9d8783f4d72.bindPopup(popup_297c35fed5186661c9a64d70f2165841)
+        ;
+
+        
+    
+    
+            var circle_marker_5f4a8602cd0059c0d80b7bbc79e97750 = L.circleMarker(
+                [39.37812275, 22.94108833],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_52bf94bab1425858cb5f0f0e5eea0e9c = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_0f4d787d934d67aa95430330d285646c = $(`<div id="html_0f4d787d934d67aa95430330d285646c" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 493<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 2<br>         <strong>Arrival Time:</strong>9:33:00 πμ<br>         <strong>Time in Stop:</strong> 10"<br>         <strong>Time Delay:</strong> 1'     </div>     </div>`)[0];
+                popup_52bf94bab1425858cb5f0f0e5eea0e9c.setContent(html_0f4d787d934d67aa95430330d285646c);
+            
+        
+
+        circle_marker_5f4a8602cd0059c0d80b7bbc79e97750.bindPopup(popup_52bf94bab1425858cb5f0f0e5eea0e9c)
+        ;
+
+        
+    
+    
+            var circle_marker_a0b9ce21620bee7407b14e0b60f0ed8e = L.circleMarker(
+                [39.37990869, 22.94003079],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_0c2c536009869718022803e26837d1a0 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_3abbd437f3df6cd3e8df6b5df69485e6 = $(`<div id="html_3abbd437f3df6cd3e8df6b5df69485e6" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 372<br>         <strong>Boardings:</strong> 1<br>         <strong>Unboardings:</strong> 1<br>         <strong>Arrival Time:</strong>9:34:00 πμ<br>         <strong>Time in Stop:</strong> 11"<br>         <strong>Time Delay:</strong> 1'     </div>     </div>`)[0];
+                popup_0c2c536009869718022803e26837d1a0.setContent(html_3abbd437f3df6cd3e8df6b5df69485e6);
+            
+        
+
+        circle_marker_a0b9ce21620bee7407b14e0b60f0ed8e.bindPopup(popup_0c2c536009869718022803e26837d1a0)
+        ;
+
+        
+    
+    
+            var circle_marker_fcdbb7e12da5e2b60ac1ecbff0b95694 = L.circleMarker(
+                [39.38179698, 22.93980353],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_99046fececdd26c599a9842d6debcbdc = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_bf93d32cd2fa9f7eb9c5b09263e322f5 = $(`<div id="html_bf93d32cd2fa9f7eb9c5b09263e322f5" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 373<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 1<br>         <strong>Arrival Time:</strong>9:36:00 πμ<br>         <strong>Time in Stop:</strong> 10"<br>         <strong>Time Delay:</strong> 1'     </div>     </div>`)[0];
+                popup_99046fececdd26c599a9842d6debcbdc.setContent(html_bf93d32cd2fa9f7eb9c5b09263e322f5);
+            
+        
+
+        circle_marker_fcdbb7e12da5e2b60ac1ecbff0b95694.bindPopup(popup_99046fececdd26c599a9842d6debcbdc)
+        ;
+
+        
+    
+    
+            var circle_marker_d688579b07d2f700311f5ae8b739a398 = L.circleMarker(
+                [39.38407013, 22.93915795],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_3c5ab4d084655bd4f73b795c87658d5d = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_bfdf6e42a8a778107779f300c5b188e9 = $(`<div id="html_bfdf6e42a8a778107779f300c5b188e9" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 374<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 1<br>         <strong>Arrival Time:</strong>9:36:00 πμ<br>         <strong>Time in Stop:</strong> 11"<br>         <strong>Time Delay:</strong> 1'     </div>     </div>`)[0];
+                popup_3c5ab4d084655bd4f73b795c87658d5d.setContent(html_bfdf6e42a8a778107779f300c5b188e9);
+            
+        
+
+        circle_marker_d688579b07d2f700311f5ae8b739a398.bindPopup(popup_3c5ab4d084655bd4f73b795c87658d5d)
+        ;
+
+        
+    
+    
+            var circle_marker_56569f776e59c2265d0df9b61e828d77 = L.circleMarker(
+                [39.38298429, 22.93671654],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_c50aca60ac8b2ea9d38ca071a169c39a = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_11fe137bb2f61efc69ad809033c7d78e = $(`<div id="html_11fe137bb2f61efc69ad809033c7d78e" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 035<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 1<br>         <strong>Arrival Time:</strong>9:39:00 πμ<br>         <strong>Time in Stop:</strong> 10"<br>         <strong>Time Delay:</strong> 1'     </div>     </div>`)[0];
+                popup_c50aca60ac8b2ea9d38ca071a169c39a.setContent(html_11fe137bb2f61efc69ad809033c7d78e);
+            
+        
+
+        circle_marker_56569f776e59c2265d0df9b61e828d77.bindPopup(popup_c50aca60ac8b2ea9d38ca071a169c39a)
+        ;
+
+        
+    
+    
+            var circle_marker_8474d6e12905ca41a6e6b7df55da931c = L.circleMarker(
+                [39.38195998, 22.93492312],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_5ff341f2cccab3fcde8ead34fdf06611 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_901ab0c3bbac45ecbea15e5d5d1ccc26 = $(`<div id="html_901ab0c3bbac45ecbea15e5d5d1ccc26" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 157<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 2<br>         <strong>Arrival Time:</strong>9:41:00 πμ<br>         <strong>Time in Stop:</strong> 11"<br>         <strong>Time Delay:</strong> 1'     </div>     </div>`)[0];
+                popup_5ff341f2cccab3fcde8ead34fdf06611.setContent(html_901ab0c3bbac45ecbea15e5d5d1ccc26);
+            
+        
+
+        circle_marker_8474d6e12905ca41a6e6b7df55da931c.bindPopup(popup_5ff341f2cccab3fcde8ead34fdf06611)
+        ;
+
+        
+    
+    
+            var circle_marker_04675f76ec117a97a9ebbb54cbe46ee8 = L.circleMarker(
+                [39.38232453, 22.93397525],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_c3db276c656dad06e03155add0080338 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_632cb59cbe8c9978f5cfbc0653d46c25 = $(`<div id="html_632cb59cbe8c9978f5cfbc0653d46c25" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 033<br>         <strong>Boardings:</strong> 1<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>9:41:00 πμ<br>         <strong>Time in Stop:</strong> 9"<br>         <strong>Time Delay:</strong> 2'     </div>     </div>`)[0];
+                popup_c3db276c656dad06e03155add0080338.setContent(html_632cb59cbe8c9978f5cfbc0653d46c25);
+            
+        
+
+        circle_marker_04675f76ec117a97a9ebbb54cbe46ee8.bindPopup(popup_c3db276c656dad06e03155add0080338)
+        ;
+
+        
+    
+    
+            var circle_marker_8bf8a542ad83887b4326336422df78a4 = L.circleMarker(
+                [39.38409265, 22.93431884],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_60d9850990accaa08bf54e4e45b53af6 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_c53c58fa399da930cc038b2fc3629273 = $(`<div id="html_c53c58fa399da930cc038b2fc3629273" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 032<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 1<br>         <strong>Arrival Time:</strong>9:43:00 πμ<br>         <strong>Time in Stop:</strong> 9"<br>         <strong>Time Delay:</strong> 2'     </div>     </div>`)[0];
+                popup_60d9850990accaa08bf54e4e45b53af6.setContent(html_c53c58fa399da930cc038b2fc3629273);
+            
+        
+
+        circle_marker_8bf8a542ad83887b4326336422df78a4.bindPopup(popup_60d9850990accaa08bf54e4e45b53af6)
+        ;
+
+        
+    
+    
+            var circle_marker_e7deb3afd6b6f182712b433403da5d67 = L.circleMarker(
+                [39.38505766, 22.93598064],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_35d266af38277519e43e512ec9827a9a = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_613e374af16afe3f03815cbc2d32e3b7 = $(`<div id="html_613e374af16afe3f03815cbc2d32e3b7" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 031<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>9:43:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 2'     </div>     </div>`)[0];
+                popup_35d266af38277519e43e512ec9827a9a.setContent(html_613e374af16afe3f03815cbc2d32e3b7);
+            
+        
+
+        circle_marker_e7deb3afd6b6f182712b433403da5d67.bindPopup(popup_35d266af38277519e43e512ec9827a9a)
+        ;
+
+        
+    
+    
+            var circle_marker_11eac31221f2bd1af4d5043e940d3a76 = L.circleMarker(
+                [39.38610022, 22.93838232],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_3a7bfa59db0c02675da919bdace7e473 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_91bb67828818deb86bbd1d3f6ff18d9d = $(`<div id="html_91bb67828818deb86bbd1d3f6ff18d9d" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 030<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>9:44:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 1'     </div>     </div>`)[0];
+                popup_3a7bfa59db0c02675da919bdace7e473.setContent(html_91bb67828818deb86bbd1d3f6ff18d9d);
+            
+        
+
+        circle_marker_11eac31221f2bd1af4d5043e940d3a76.bindPopup(popup_3a7bfa59db0c02675da919bdace7e473)
+        ;
+
+        
+    
+    
+            var circle_marker_37941297dc1da68f24ce3a989f075309 = L.circleMarker(
+                [39.38768229, 22.93893073],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_b774c262773d7a4a838c08d4e03bc0d8 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_cf68d0c47fb20fa6dcabdc4e4384a082 = $(`<div id="html_cf68d0c47fb20fa6dcabdc4e4384a082" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 139<br>         <strong>Boardings:</strong> 1<br>         <strong>Unboardings:</strong> 2<br>         <strong>Arrival Time:</strong>9:44:00 πμ<br>         <strong>Time in Stop:</strong> 9"<br>         <strong>Time Delay:</strong> 1'     </div>     </div>`)[0];
+                popup_b774c262773d7a4a838c08d4e03bc0d8.setContent(html_cf68d0c47fb20fa6dcabdc4e4384a082);
+            
+        
+
+        circle_marker_37941297dc1da68f24ce3a989f075309.bindPopup(popup_b774c262773d7a4a838c08d4e03bc0d8)
+        ;
+
+        
+    
+    
+            var circle_marker_d7889ad32ff64b84eef2f03015bbd93b = L.circleMarker(
+                [39.38681581, 22.94170417],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_19cf95b14e870846293636ec42afce83);
+        
+    
+        var popup_39c0a7f21f4df71be89d43a087c3e4e1 = L.popup({"maxWidth": 250, "minWidth": 150});
+
+        
+            
+                var html_4f79fbe3ecec883f78f230107c899ed7 = $(`<div id="html_4f79fbe3ecec883f78f230107c899ed7" style="width: 100.0%; height: 100.0%;">     <div style="width: 250px; font-size: 14px;">         <strong>Stop ID:</strong> 009<br>         <strong>Boardings:</strong> 0<br>         <strong>Unboardings:</strong> 0<br>         <strong>Arrival Time:</strong>9:44:00 πμ<br>         <strong>Time in Stop:</strong> 0"<br>         <strong>Time Delay:</strong> 1'     </div>     </div>`)[0];
+                popup_39c0a7f21f4df71be89d43a087c3e4e1.setContent(html_4f79fbe3ecec883f78f230107c899ed7);
+            
+        
+
+        circle_marker_d7889ad32ff64b84eef2f03015bbd93b.bindPopup(popup_39c0a7f21f4df71be89d43a087c3e4e1)
+        ;
+
+        
+    
+    
+            feature_group_19cf95b14e870846293636ec42afce83.addTo(map_f2fbd2a733a3165fba983f97892f2a44);
+        
+    
+            var layer_control_9e1273e136a1d3ceefc73b3bda37935c_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_0076ff17bf264dc497c8a616861a942a,
+                },
+                overlays :  {
+                    "Trip 1" : feature_group_366f9bba34fdde6590f26b60bb9053b6,
+                    "Trip 2" : feature_group_19cf95b14e870846293636ec42afce83,
+                },
+            };
+            let layer_control_9e1273e136a1d3ceefc73b3bda37935c = L.control.layers(
+                layer_control_9e1273e136a1d3ceefc73b3bda37935c_layers.base_layers,
+                layer_control_9e1273e136a1d3ceefc73b3bda37935c_layers.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_f2fbd2a733a3165fba983f97892f2a44);
+
+        
 </script>
 </html>
