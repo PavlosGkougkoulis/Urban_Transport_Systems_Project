@@ -7,34 +7,87 @@
     <title>Project Navigation</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
             text-align: center;
+            background-image: url('https://www.example.com/urban-transport-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
+
+        h1 {
+            font-size: 36px;
+            color: #ffffff;
+            padding-top: 50px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        p {
+            font-size: 20px;
+            color: #ffffff;
+            margin-top: -10px;
+            margin-bottom: 40px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
         ul {
             list-style-type: none;
             padding: 0;
+            margin-top: 20px;
         }
+
         li {
-            margin: 10px 0;
+            margin: 15px 0;
         }
+
         a {
             text-decoration: none;
             color: #0073e6;
-            font-size: 18px;
+            font-size: 20px;
+            padding: 10px 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            transition: all 0.3s ease;
         }
+
         a:hover {
+            background-color: #0073e6;
+            color: #ffffff;
             text-decoration: underline;
+        }
+
+        /* Adding a bus image as the header */
+        .header-img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            border-bottom: 5px solid #0073e6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
     </style>
 </head>
 <body>
-    <h1>SAS Project Statistic Datatables</h1>
-    <p>Choose a datatable category:</p>
-    <ul>
-        <li><a href="Erwt_Leoforeio/index.html">Erwt_Leoforeio</a></li>
-        <li><a href="Erwt_Stash/index.html">Erwt_Stash</a></li>
-        <li><a href="Stop_Visualization/index.html">Stop_Visualization</a></li>
-    </ul>
+    <!-- Bus Image Header -->
+    <img class="header-img" src="https://www.example.com/bus-image.jpg" alt="Urban Transport">
+
+    <div class="container">
+        <h1>SAS Project Statistic Datatables</h1>
+        <p>Choose a datatable category:</p>
+        <ul>
+            <li><a href="Erwt_Leoforeio/index.html">Erwt_Leoforeio</a></li>
+            <li><a href="Erwt_Stash/index.html">Erwt_Stash</a></li>
+            <li><a href="Stop_Visualization/index.html">Stop_Visualization</a></li>
+        </ul>
+    </div>
 </body>
 </html>
