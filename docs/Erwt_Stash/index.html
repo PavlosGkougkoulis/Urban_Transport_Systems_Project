@@ -5,37 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Erwt_Stash</title>
     <style>
+        /* General Body Styles */
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
             text-align: center;
+            
+            /* Background Image */
+            background-image: url('https://raw.githubusercontent.com/PavlosGkougkoulis/Final_SAS_B_G_G_K/refs/heads/main/docs/Erwt_Stash/Datatable_Image1.webp');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh; /* Full-screen height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff; /* Text color for readability */
         }
+
+        /* Background Overlay */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+            z-index: 1;
+        }
+
+        /* Main Container Styling */
+        .container {
+            position: relative;
+            z-index: 2;
+            background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Soft shadow */
+            max-width: 600px;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-top: 0;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Text shadow for readability */
+        }
+
+        p {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
         ul {
             list-style-type: none;
             padding: 0;
+            margin: 0;
         }
+
         li {
-            margin: 10px 0;
+            margin: 15px 0;
         }
+
         a {
             text-decoration: none;
-            color: #0073e6;
-            font-size: 18px;
+            color: #ffffff;
+            font-size: 20px;
+            padding: 12px 25px;
+            background-color: #0073e6;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            display: inline-block;
         }
+
         a:hover {
-            text-decoration: underline;
+            background-color: #005bb5;
         }
     </style>
 </head>
 <body>
-    <h1>Erwt_Stash</h1>
-    <p>Choose a page to view:</p>
-    <ul>
-        <li><a href="Datatable_Desc_Stats.html">Datatable_Desc_Stats</a></li>
-        <li><a href="Datatable_Frequencies.html">Datatable_Frequencies</a></li>
-        <li><a href="Datatable_Chi_Squared.html">Datatable_Chi_Squared</a></li>
-        <li><a href="Datatable_T_test.html">Datatable_T_test</a></li>
-        <li><a href="Datatable_Anova.html">Datatable_Anova</a></li>
-    </ul>
+    <div class="container">
+        <h1>Erwt_Stash</h1>
+        <p>Choose a page to view:</p>
+        <ul>
+            <li><a href="Erwt_Stash.html">Bus stop at P.Mella Questionnairep</a></li>
+        </ul>
+    </div>
 </body>
 </html>
