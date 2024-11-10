@@ -3,7 +3,7 @@ from folium import plugins
 import os
 from folium.plugins import AntPath
 
-map = folium.Map(location=[39.36136106, 22.93288320], zoom_start=20)
+map = folium.Map(location=[39.36136106, 22.93288320], zoom_start=15)
 
 
 # **Trip 1 Go** 
