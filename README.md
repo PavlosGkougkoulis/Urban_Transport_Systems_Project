@@ -20,4 +20,4 @@ This project ultimately aims to provide ASTIKO KTEL Volou with actionable insigh
 If you would like to contribute to this project, please fork the repository and create a pull request. 
 
 ## Acknowledgments
-Special thanks to ASTIKO KTEL Volou for providing support needed for this analysis.
+Special thanks to ASTIKO KTEL Volou for providing the support needed for this analysis.
