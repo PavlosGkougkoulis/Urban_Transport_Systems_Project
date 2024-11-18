@@ -1882,6 +1882,31 @@ ggplot(scaled_data_pg, aes(x = Group, y = Scaled_Mean_Percentage_pg, fill = Grou
   theme_minimal()
 
 ###Profil Erwtithentwn###
+nrow(erwt_pavlos)
+pos_apant_p <- 100*((nrow(erwt_pavlos))/35)
+pos_apant_p
+nrow(erwt_gialouris)
+pos_apant_g <- 100*((nrow(erwt_pavlos))/40)
+pos_apant_g
+data_pa_p <- data.frame(
+  category = c("Answered", "Not Answered"),
+  value = c(pos_apant_p, 100 - pos_apant_p))
+data_pa_g <- data.frame(
+  category = c("Answered", "Not Answered"),
+  value = c(pos_apant_g, 100 - pos_apant_g))
+pa_pie_chart <- function(data, title) {
+  ggplot(data, aes(x = "", y = value, fill = category)) +
+    geom_col(width = 1) +
+    coord_polar(theta = "y") +
+    theme_void() +
+    labs(title = title, fill = "Category") +
+    scale_fill_manual(values = c("blue", "red")) +
+    geom_text(aes(label = sprintf("%.1f%%", value)), 
+              position = position_stack(vjust = 0.5), color = "black")
+}
+p1_pa_p <- pa_pie_chart(data_pa_p, "Pavlos Responses")
+p2_pa_g <- pa_pie_chart(data_pa_g, "Gialouris Responses")
+grid.arrange(p1_pa_p, p2_pa_g, ncol = 2)
 count_gender_p <- table(erwt_pavlos$gender)
 count_gender_p
 count_gender_g <- table(erwt_gialouris$gender)
