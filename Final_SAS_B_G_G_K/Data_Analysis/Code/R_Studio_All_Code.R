@@ -25,6 +25,8 @@ install.packages("gridExtra")
 install.packages("pheatmap")
 install.packages("reshape2")
 install.packages("corrplot")
+install.packages("rlang")
+install.packages("htmlwidgets")
 library("stats")
 library("ggplot2")
 library("car")
@@ -45,6 +47,8 @@ library("gridExtra")
 library("pheatmap")
 library("reshape2")
 library("corrplot")
+library("rlang")
+library("htmlwidgets")
 
 #####Data#####
 metrhsh_vainas <- data.frame(read_xlsx('E:/University/9ο ΕΞΑΜΗΝΟ/ΣΥΣΤΗΜΑΤΑ ΑΣΤΙΚΩΝ ΣΥΓΚΟΙΝΩΝΙΩΝ/ERGASIA EKSAMHNOU/Final_SAS_B_G_G_K/Data/Erwthmatologia/Apanthseis/All_R/Έντυπο_Μέτρησης_στην_Στάση (Απαντήσεις).xlsx'))
@@ -917,241 +921,287 @@ labels_v <- c("Total Boarded", "Total Unboarded")
 totals_df_v <- data.frame(
   Category = labels_v,
   Total = totals_v)
-ggplot(totals_df_v, aes(x = Category, y = Total, fill = Category)) +
+pl1 <- ggplot(totals_df_v, aes(x = Category, y = Total, fill = Category)) +
   geom_bar(stat = "identity",color = "black") +
   scale_fill_manual(values = c("skyblue", "lightcoral")) +
   labs(x = "Category", y = "Total People", title = "Total Number of People Boarded vs. Unboarded")
+pl1
 mean_boarded_v <- mean(metrhsh_vainas$ppl_boarded)
+mean_boarded_v
 mean_unboarded_v <- mean(metrhsh_vainas$ppl_unboarded)
+mean_unboarded_v
 means_v <- c(mean_boarded_v, mean_unboarded_v)
 labels_mean_v <- c("Average Boarded", "Average Unboarded")
 means_df_v <- data.frame(
   Category = labels_mean_v,
   Average = means_v
 )
-ggplot(means_df_v, aes(x = Category, y = Average, fill = Category)) +
+pl2 <- ggplot(means_df_v, aes(x = Category, y = Average, fill = Category)) +
   geom_bar(stat = "identity",color = "black") +
   scale_fill_manual(values = c("skyblue", "lightcoral")) +
   labs(x = "Category", y = "Average People", title = "Average Number of People Boarded vs. Unboarded")
+pl2
 boxplot_df_v <- data.frame(
   Category = rep(c("Boarded", "Unboarded"), each = length(metrhsh_vainas$ppl_boarded)),
   Value = c(metrhsh_vainas$ppl_boarded, metrhsh_vainas$ppl_unboarded)
 )
-ggplot(boxplot_df_v, aes(x = Category, y = Value, fill = Category)) +
+pl3 <-ggplot(boxplot_df_v, aes(x = Category, y = Value, fill = Category)) +
   geom_boxplot(color = "black") +
   scale_fill_manual(values = c("lightblue", "lightpink")) +
-  labs(y = "Number of People", title = "Distribution of People Boarded and Unboarded")
+  labs(y = "Number of People", title = "Distribution of People Boarded and Unboarded") 
+pl3
 ##Ana grammh##
 #Epivivaseis
 colnames(ppl_boarded_per_line_max_vainas) <- c("line_v", "max_ppl_boarded_v")
-ggplot(ppl_boarded_per_line_max_vainas, aes(x = factor(line_v), y = max_ppl_boarded_v)) +
+pl4 <-ggplot(ppl_boarded_per_line_max_vainas, aes(x = factor(line_v), y = max_ppl_boarded_v)) +
   geom_bar(stat = "identity", fill = "lightcoral",color = "black") + 
   labs(x = "Bus Line", y = "Max People Boarded", title = "Max People Boarded per Bus Line") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl4
 colnames(ppl_boarded_per_line_mean_vainas) <- c("line_v", "mean_ppl_boarded_v")
-ggplot(ppl_boarded_per_line_mean_vainas, aes(x = factor(line_v), y = mean_ppl_boarded_v)) +
+ppl_boarded_per_line_mean_vainas
+pl5 <- ggplot(ppl_boarded_per_line_mean_vainas, aes(x = factor(line_v), y = mean_ppl_boarded_v)) +
   geom_bar(stat = "identity", fill = "lightcoral",color = "black") + 
   labs(x = "Bus Line", y = "Average People Boarded", title = "Average People Boarded per Bus Line") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl5
 colnames(ppl_boarded_per_line_sum_vainas) <- c("line_v", "sum_ppl_boarded_v")
-ggplot(ppl_boarded_per_line_sum_vainas, aes(x = factor(line_v), y = sum_ppl_boarded_v)) +
+ppl_boarded_per_line_sum_vainas
+pl6<- ggplot(ppl_boarded_per_line_sum_vainas, aes(x = factor(line_v), y = sum_ppl_boarded_v)) +
   geom_bar(stat = "identity", fill = "lightcoral",color = "black") + 
   labs(x = "Bus Line", y = "Sum of People Boarded", title = "Sum of People Boarded per Bus Line") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
-ggplot(metrhsh_vainas, aes(x = factor(line), y = ppl_boarded)) +
+pl6
+pl7 <- ggplot(metrhsh_vainas, aes(x = factor(line), y = ppl_boarded)) +
   geom_boxplot(fill = "lightcoral",color = "black") +
   labs(x = "Line", y = "People Boarded", title = "Box Plot of People Boarded per Line") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl7
 #Apovivaseis
 colnames(ppl_unboarded_per_line_max_vainas) <- c("line_v", "max_ppl_unboarded_v")
-ggplot(ppl_unboarded_per_line_max_vainas, aes(x = factor(line_v), y = max_ppl_unboarded_v)) +
+pl8 <- ggplot(ppl_unboarded_per_line_max_vainas, aes(x = factor(line_v), y = max_ppl_unboarded_v)) +
   geom_bar(stat = "identity", fill = "lightcoral",color = "black") +  
   labs(x = "Bus Line", y = "Max People Unboarded", title = "Max People Unboarded per Bus Line") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl8
 colnames(ppl_unboarded_per_line_mean_vainas) <- c("line_v", "mean_ppl_unboarded_v")
-ggplot(ppl_unboarded_per_line_mean_vainas, aes(x = factor(line_v), y = mean_ppl_unboarded_v)) +
+ppl_unboarded_per_line_mean_vainas
+pl9 <- ggplot(ppl_unboarded_per_line_mean_vainas, aes(x = factor(line_v), y = mean_ppl_unboarded_v)) +
   geom_bar(stat = "identity", fill = "lightcoral",color = "black") +  
   labs(x = "Bus Line", y = "Average People Unboarded", title = "Average People Unboarded per Bus Line") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl9
 colnames(ppl_unboarded_per_line_sum_vainas) <- c("line_v", "sum_ppl_unboarded_v")
-ggplot(ppl_unboarded_per_line_sum_vainas, aes(x = factor(line_v), y = sum_ppl_unboarded_v)) +
+ppl_unboarded_per_line_sum_vainas
+pl10 <- ggplot(ppl_unboarded_per_line_sum_vainas, aes(x = factor(line_v), y = sum_ppl_unboarded_v)) +
   geom_bar(stat = "identity", fill = "lightcoral",color = "black") +  
   labs(x = "Bus Line", y = "Sum of People Unboarded", title = "Sum of People Unboarded per Bus Line") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
-ggplot(metrhsh_vainas, aes(x = factor(line), y = ppl_unboarded)) +
+pl10
+pl11 <- ggplot(metrhsh_vainas, aes(x = factor(line), y = ppl_unboarded)) +
   geom_boxplot(fill = "lightcoral",color = "black") +  
   labs(x = "Line", y = "People Unboarded", title = "Box Plot of People Unboarded per Line") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl11
 
 ###Kathysterhseis###
 colnames(mean_t_paramonhs_vainas) <- c("line_v", "mean_t_paramonhs_v")
-ggplot(mean_t_paramonhs_vainas, aes(x = factor(line_v), y = mean_t_paramonhs_v)) +
+pl12 <- ggplot(mean_t_paramonhs_vainas, aes(x = factor(line_v), y = mean_t_paramonhs_v)) +
   geom_bar(stat = "identity", fill = "lightcoral",color = "black") +  
   labs(x = "Bus Line", y = "Average Time per Stop (s)", title = "Average Time per Stop per Bus Line") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl12
 colnames(max_t_paramonhs_vainas) <- c("line_v", "max_t_paramonhs_v")
-ggplot(max_t_paramonhs_vainas, aes(x = factor(line_v), y = max_t_paramonhs_v)) +
+pl13 <- ggplot(max_t_paramonhs_vainas, aes(x = factor(line_v), y = max_t_paramonhs_v)) +
   geom_bar(stat = "identity", fill = "lightcoral",color = "black") +  
   labs(x = "Bus Line", y = "Max Time per Stop (s)", title = "Max Time per Stop per Bus Line") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl13
 colnames(sum_t_paramonhs_vainas) <- c("line_v", "sum_t_paramonhs_v")
-ggplot(sum_t_paramonhs_vainas, aes(x = factor(line_v), y = sum_t_paramonhs_v)) +
+pl14 <- ggplot(sum_t_paramonhs_vainas, aes(x = factor(line_v), y = sum_t_paramonhs_v)) +
   geom_bar(stat = "identity", fill = "lightcoral",color = "black") +  
   labs(x = "Bus Line", y = "Total Time per Stop (s)", title = "Total Time per Stop per Bus Line") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl14
 
 ###skip stashs ana grammh###
 skips_counts_df_v <- as.data.frame(skips_counts_vainas)
 colnames(skips_counts_df_v) <- c("line_v", "skips_count_v")
-ggplot(skips_counts_df_v, aes(x = factor(line_v), y = skips_count_v)) +
+pl15<- ggplot(skips_counts_df_v, aes(x = factor(line_v), y = skips_count_v)) +
   geom_bar(stat = "identity", fill = "lightcoral",color = "black") +
   labs(x = "Bus Line", y = "Number of Skips", title = "Number of Skips per Bus Line") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl15
 
 ###Poia grammh prosilthe perissotero###
 line_count_df_v <- as.data.frame(line_count_vainas)
 colnames(line_count_df_v) <- c("line_v", "count_v")
-ggplot(line_count_df_v, aes(x = factor(line_v), y = count_v)) +
+pl16 <- ggplot(line_count_df_v, aes(x = factor(line_v), y = count_v)) +
   geom_bar(stat = "identity", fill = "lightcoral",color = "black") +
   labs(x = "Bus Line", y = "Frequency", title = "Number of Buses") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl16
 
 ###Syxnothta grammwn f ( gia tis 2 wres aixmhs )###
 syxnothta_df_v <- data.frame(line_v = names(syxnothta_vainas), syxnothta_v = as.numeric(syxnothta_vainas))
-ggplot(syxnothta_df_v, aes(x = factor(line_v), y = syxnothta_v)) +
+pl17 <- ggplot(syxnothta_df_v, aes(x = factor(line_v), y = syxnothta_v)) +
   geom_bar(stat = "identity", fill = "lightcoral",color = "black") +
   labs(x = "Bus Line", y = "Frequency (bus/hour)", title = "Frequency per Bus Line") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl17
 
 #Xronoapostash grammwn ( gia tis 2 wres aixmhs )###
 xronoapostash_df_v <- data.frame(line_v = names(xronoapostash_vainas), xronoapostash_v = as.numeric(xronoapostash_vainas))
-ggplot(xronoapostash_df_v, aes(x = factor(line_v), y = xronoapostash_v)) +
+xronoapostash_df_v
+pl18 <- ggplot(xronoapostash_df_v, aes(x = factor(line_v), y = xronoapostash_v)) +
   geom_bar(stat = "identity", fill = "lightcoral",color = "black") +
   labs(x = "Bus Line", y = "Xronoapostash (min)", title = "Time Distance per Bus Line") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl18
 
 ###Arithmos leoforeiwn ( gia tis 2 wres aixmhs )###
 bus_count_df_v <- data.frame(line_v = names(bus_count_vainas), bus_count_v = as.numeric(bus_count_vainas))
-ggplot(bus_count_df_v, aes(x = factor(line_v), y = bus_count_v)) +
+pl19 <- ggplot(bus_count_df_v, aes(x = factor(line_v), y = bus_count_v)) +
   geom_bar(stat = "identity", fill = "lightcoral",color = "black") +
   labs(x = "Bus Line", y = "Bus Count", title = "Bus Count per Bus Line") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl19
 
 ###Kathisterhsh Grammwn se sxesh me tis pragmatikes###
 aggr_time_diff_v <- aggregate(asb_time_diff ~ line, data = time_diff_tilematikh_df_vainas, sum)
-ggplot(aggr_time_diff_v, aes(x = factor(line), y = asb_time_diff)) +
+pl20 <- ggplot(aggr_time_diff_v, aes(x = factor(line), y = asb_time_diff)) +
   geom_bar(stat = "identity", fill = "lightcoral",color = "black") +
   labs(x = "Bus Line", y = "Sum of Absolute Time Differences (min)", title = "Sum of Absolute Time Difference per Bus Line") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl20
 
 ###Mesh taxythta kathe grammhs###
 data_tilematikh2 <- data_tilematikh2[!is.na(data_tilematikh2$mesh_u), ]
 data_tilematikh2$line_v <- as.factor(data_tilematikh2$lines)
-ggplot(data_tilematikh2, aes(x = line_v, y = mesh_u)) +
+pl21 <- ggplot(data_tilematikh2, aes(x = line_v, y = mesh_u)) +
   geom_col(fill = "lightcoral",color = "black") +
   labs(x = "Bus Line", y = "Average Speed (km/h)", title = "Average Speed per Bus Line") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl21
 
 ###Synolikh Apostash kathe grammhs###
-ggplot(km_per_line, aes(x = `data_tilematikh2$lines`, y = `2 * (data_tilematikh2$km_lines)`)) +
+pl22 <- ggplot(km_per_line, aes(x = `data_tilematikh2$lines`, y = `2 * (data_tilematikh2$km_lines)`)) +
   geom_col(fill = "lightcoral",color = "black") +
   labs(x = "Bus Line", y = "Total Distance (km)", title = "Total Distance per Bus Line") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl22
 
 ###tkyklou kathe grammhs###
-ggplot(t_kyklou_ana_grammh, aes(x = `data_tilematikh2$lines`, y = `data_tilematikh2$t_kyklou_grammhs`)) +
+pl23<- ggplot(t_kyklou_ana_grammh, aes(x = `data_tilematikh2$lines`, y = `data_tilematikh2$t_kyklou_grammhs`)) +
   geom_col(fill = "lightcoral",color = "black") +
   labs(x = "Bus Line", y = "Total Cycle Time (min)", title = "Total Cycle Time per Bus Line") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl23
 
 ###Arithmos leoforeiwn mesw tou tcycle/h ( gia tis 2 wres aixmhs )###
 colnames(bus_count_me_tkyklou) <- c("line_v", "bus_count_tilematikh_v")
-ggplot(bus_count_me_tkyklou, aes(x = factor(line_v), y = bus_count_tilematikh_v)) +
+pl24 <- ggplot(bus_count_me_tkyklou, aes(x = factor(line_v), y = bus_count_tilematikh_v)) +
   geom_bar(stat = "identity", fill = "lightcoral",color = "black") +
   labs(x = "Bus Line", y = "Bus Count", title = "Bus Count per Line via Tcycle") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl24
 
 ###tepanaforas kathe grammhs sthn metrhsh kai officially###
 colnames(t_epanaforas_grammhs) <- c("line_v", "time_break_v")
-ggplot(t_epanaforas_grammhs, aes(x = factor(line_v), y = time_break_v)) +
+pl25 <- ggplot(t_epanaforas_grammhs, aes(x = factor(line_v), y = time_break_v)) +
   geom_bar(stat = "identity", fill = "lightcoral",color = "black") +
   labs(x = "Bus Line", y = "Time Break (min)", title = "Total Time Break per Bus Line") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl25
 
 ###Pie plot gia parked car kai bus lane###
 parked_car_counts_v <- table(metrhsh_vainas$parked_car)
 parked_car_df_v <- data.frame(parked_car_v = names(parked_car_counts_v), count_v = as.vector(parked_car_counts_v))
-ggplot(parked_car_df_v, aes(x = "", y = count_v, fill = parked_car_v)) +
+parked_car_df_v
+pl26 <- ggplot(parked_car_df_v, aes(x = "", y = count_v, fill = parked_car_v)) +
   geom_bar(stat = "identity", width = 1,color = "black") +
   coord_polar(theta = "y") +
   labs(title = "Parked Car (ΝΑΙ/ΟΧΙ)", fill = "Parked Car") +
   theme_void() +
   theme(plot.title = element_text(hjust = 0.5))
+pl26
 bus_line_counts_v <- table(metrhsh_vainas$bus_line)
+bus_line_counts_v
 bus_line_df_v <- data.frame(bus_line_v = names(bus_line_counts_v), count_v = as.vector(bus_line_counts_v))
-ggplot(bus_line_df_v, aes(x = "", y = count_v, fill = bus_line_v)) +
+pl27 <- ggplot(bus_line_df_v, aes(x = "", y = count_v, fill = bus_line_v)) +
   geom_bar(stat = "identity", width = 1,color = "black") +
   coord_polar(theta = "y") +
   labs(title = "Bus Lane (ΝΑΙ/ΟΧΙ)", fill = "Bus Lane") +
   theme_void() +
   theme(plot.title = element_text(hjust = 0.5))
+pl27
 
 ###Histogram gia ppl boarded kai unboarded per 1 min###
 time_arr_1min_v <- floor(as.numeric(metrhsh_vainas$time_arr) / 60) * 60
 metrhsh_vainas$time_arr_1min <- as.POSIXct(time_arr_1min_v, origin = "1970-01-01", tz = "UTC")
-ggplot(metrhsh_vainas, aes(x = time_arr_1min, y = ppl_boarded)) +
+pl28 <- ggplot(metrhsh_vainas, aes(x = time_arr_1min, y = ppl_boarded)) +
   geom_bar(stat = "identity", width = 60, color = "black", fill = "skyblue") +
   geom_smooth(method = "loess", se = FALSE, color = "red") +
   labs(title = "People Boarded per 1-Minute Interval", x = "Arrival Time (1-Minute Intervals)", y = "People Boarded") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
-ggplot(metrhsh_vainas, aes(x = time_arr_1min, y = ppl_unboarded)) +
+pl28
+
+pl29 <- ggplot(metrhsh_vainas, aes(x = time_arr_1min, y = ppl_unboarded)) +
   geom_bar(stat = "identity", width = 60, color = "black", fill = "orange") +
   geom_smooth(method = "loess", se = FALSE, color = "red") +
   labs(title = "People Unboarded per 1-Minute Interval", x = "Arrival Time (1-Minute Intervals)", y = "People Unboarded") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl29
 
 ###Scatter Plots###
 ##kathysterhsh/nrow##
 time_diff_df_v_p <- data.frame(Index = 1:length(time_diff_tilematikh_df_vainas$asb_time_diff),
                                Time_Difference_v_p = time_diff_tilematikh_df_vainas$asb_time_diff)
-ggplot(time_diff_df_v_p, aes(x = Index, y = Time_Difference_v_p)) +
+pl30 <- ggplot(time_diff_df_v_p, aes(x = Index, y = Time_Difference_v_p)) +
   geom_point(color = "blue") +  
   geom_smooth(method = "loess", se = TRUE, color = "red") +  
   labs(title = "Scatter Plot of Time Differences",
        x = "Index",
        y = "Time Difference (min)") +
   theme_minimal()
+pl30
+
 ##ppl boarded/nrow##
 ppl_boarded_df_v_p <- data.frame(Index = 1:length(metrhsh_vainas$ppl_boarded),
                                  People_Boarded_v_p = metrhsh_vainas$ppl_boarded)
-ggplot(ppl_boarded_df_v_p, aes(x = Index, y = People_Boarded_v_p)) +
+pl31 <- ggplot(ppl_boarded_df_v_p, aes(x = Index, y = People_Boarded_v_p)) +
   geom_point(color = "blue") +  
   geom_smooth(method = "loess", se = TRUE, color = "red") +  
   labs(title = "Scatter Plot of People Boarded",
        x = "Index",
        y = "Number of People Boarded") +
   theme_minimal()
+pl31
+
 ##ppl unboarded/nrow##
 ppl_unboarded_df_v_p <- data.frame(Index = 1:length(metrhsh_vainas$ppl_unboarded),
                                    People_unboarded_v_p = metrhsh_vainas$ppl_unboarded)
-ggplot(ppl_unboarded_df_v_p, aes(x = Index, y = People_unboarded_v_p)) +
+pl32 <- ggplot(ppl_unboarded_df_v_p, aes(x = Index, y = People_unboarded_v_p)) +
   geom_point(color = "blue") +  
   geom_smooth(method = "loess", se = TRUE, color = "red") +  
   labs(title = "Scatter Plot of People Unoarded",
        x = "Index",
        y = "Number of People Boarded") +
   theme_minimal()
+pl32
+
 ##tparamonhs/nrow
 as.numeric(t_paramonhs_vainas)
 t_paramonhs_df_v_p <- data.frame(Index = 1:length(as.numeric(t_paramonhs_vainas)),
                                  Value_v_p = as.numeric(t_paramonhs_vainas))
-ggplot(t_paramonhs_df_v_p, aes(x = Index, y = Value_v_p)) +
+pl33 <-ggplot(t_paramonhs_df_v_p, aes(x = Index, y = Value_v_p)) +
   geom_point(color = "blue") +  
   geom_smooth(method = "loess", se = TRUE, color = "red") +  
   labs(title = "Scatter Plot of Time in Stop Values",
        x = "Index",
        y = "Value") +
   theme_minimal()
+pl33
 
 
 ####Metrhsh sthn sto leoforeio
@@ -1165,10 +1215,12 @@ labels_g <- c("Total Boarded", "Total Unboarded")
 totals_df_g <- data.frame(
   Category = labels_g,
   Total = totals_g)
-ggplot(totals_df_g, aes(x = Category, y = Total, fill = Category)) +
+totals_df_g
+pl34 <-ggplot(totals_df_g, aes(x = Category, y = Total, fill = Category)) +
   geom_bar(stat = "identity",color = "black") +
   scale_fill_manual(values = c("skyblue", "lightcoral")) +
   labs(x = "Category", y = "Total People", title = "Total Number of People Boarded vs. Unboarded")
+pl34
 mean_boarded_g <- mean(metrhsh_zaras$ppl_boarded)
 mean_unboarded_g <- mean(metrhsh_zaras$ppl_unboarded)
 means_g <- c(mean_boarded_g, mean_unboarded_g)
@@ -1177,139 +1229,165 @@ means_df_g <- data.frame(
   Category = labels_mean_g,
   Average = means_g
 )
-ggplot(means_df_g, aes(x = Category, y = Average, fill = Category)) +
+pl35 <- ggplot(means_df_g, aes(x = Category, y = Average, fill = Category)) +
   geom_bar(stat = "identity",color = "black") +
   scale_fill_manual(values = c("skyblue", "lightcoral")) +
   labs(x = "Category", y = "Average People", title = "Average Number of People Boarded vs. Unboarded")
+pl35
 boxplot_df_g <- data.frame(
   Category = rep(c("Boarded", "Unboarded"), each = length(metrhsh_zaras$ppl_boarded)),
   Value = c(metrhsh_zaras$ppl_boarded, metrhsh_zaras$ppl_unboarded)
 )
-ggplot(boxplot_df_g, aes(x = Category, y = Value, fill = Category)) +
+pl36 <- ggplot(boxplot_df_g, aes(x = Category, y = Value, fill = Category)) +
   geom_boxplot(color = "black") +
   scale_fill_manual(values = c("lightblue", "lightpink")) +
   labs(y = "Number of People", title = "Distribution of People Boarded and Unboarded")
+pl36
+
 ##Ana stash##
 #Epivivaseis
 colnames(ppl_boarded_per_stop_max_zaras) <- c("stop_g", "max_ppl_boarded_g")
-ggplot(ppl_boarded_per_stop_max_zaras, aes(x = factor(stop_g), y = max_ppl_boarded_g)) +
+pl37 <- ggplot(ppl_boarded_per_stop_max_zaras, aes(x = factor(stop_g), y = max_ppl_boarded_g)) +
   geom_bar(stat = "identity", fill = "lightcoral",color = "black") + 
   labs(x = "Bus Stop", y = "Max People Boarded", title = "Max People Boarded per Stop") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl37
 colnames(ppl_boarded_per_stop_mean_zaras) <- c("stop_g", "mean_ppl_boarded_g")
-ggplot(ppl_boarded_per_stop_mean_zaras, aes(x = factor(stop_g), y = mean_ppl_boarded_g)) +
+pl38 <- ggplot(ppl_boarded_per_stop_mean_zaras, aes(x = factor(stop_g), y = mean_ppl_boarded_g)) +
   geom_bar(stat = "identity", fill = "lightcoral",color = "black") + 
   labs(x = "Bus Stop", y = "Average People Boarded", title = "Average People Boarded per Stop") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl38
+ppl_boarded_per_stop_mean_zaras
 colnames(ppl_boarded_per_stop_sum_zaras) <- c("stop_g", "sum_ppl_boarded_g")
-ggplot(ppl_boarded_per_stop_sum_zaras, aes(x = factor(stop_g), y = sum_ppl_boarded_g)) +
+pl39 <- ggplot(ppl_boarded_per_stop_sum_zaras, aes(x = factor(stop_g), y = sum_ppl_boarded_g)) +
   geom_bar(stat = "identity", fill = "lightcoral",color = "black") + 
   labs(x = "Bus Stop", y = "Sum of People Boarded", title = "Sum of People Boarded per Stop") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
-ggplot(metrhsh_zaras, aes(x = factor(stop), y = ppl_boarded)) +
+pl39
+ppl_boarded_per_stop_sum_zaras
+pl40 <-ggplot(metrhsh_zaras, aes(x = factor(stop), y = ppl_boarded)) +
   geom_boxplot(fill = "lightcoral",color = "black") +
   labs(x = "Stop", y = "People Boarded", title = "Box Plot of People Boarded per Stop") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl40
 #Apovivaseis
 colnames(ppl_unboarded_per_stop_max_zaras) <- c("stop_g", "max_ppl_unboarded_g")
-ggplot(ppl_unboarded_per_stop_max_zaras, aes(x = factor(stop_g), y = max_ppl_unboarded_g)) +
+pl41 <- ggplot(ppl_unboarded_per_stop_max_zaras, aes(x = factor(stop_g), y = max_ppl_unboarded_g)) +
   geom_bar(stat = "identity", fill = "lightcoral",color = "black") +  
   labs(x = "Bus Stop", y = "Max People Unboarded", title = "Max People Unboarded per Stop") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl41
 colnames(ppl_unboarded_per_stop_mean_zaras) <- c("stop_g", "mean_ppl_unboarded_g")
-ggplot(ppl_unboarded_per_stop_mean_zaras, aes(x = factor(stop_g), y = mean_ppl_unboarded_g)) +
+pl42 <- ggplot(ppl_unboarded_per_stop_mean_zaras, aes(x = factor(stop_g), y = mean_ppl_unboarded_g)) +
   geom_bar(stat = "identity", fill = "lightcoral",color = "black") +  
   labs(x = "Bus Stop", y = "Average People Unboarded", title = "Average People Unboarded per Stop") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl42
+ppl_unboarded_per_stop_mean_zaras
 colnames(ppl_unboarded_per_stop_sum_zaras) <- c("stop_g", "sum_ppl_unboarded_g")
-ggplot(ppl_unboarded_per_stop_sum_zaras, aes(x = factor(stop_g), y = sum_ppl_unboarded_g)) +
+pl43 <- ggplot(ppl_unboarded_per_stop_sum_zaras, aes(x = factor(stop_g), y = sum_ppl_unboarded_g)) +
   geom_bar(stat = "identity", fill = "lightcoral",color = "black") +  
   labs(x = "Bus Stop", y = "Sum of People Unboarded", title = "Sum of People Unboarded per Stop") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
-ggplot(metrhsh_zaras, aes(x = factor(stop), y = ppl_unboarded)) +
+pl43
+ppl_unboarded_per_stop_sum_zaras
+pl44 <- ggplot(metrhsh_zaras, aes(x = factor(stop), y = ppl_unboarded)) +
   geom_boxplot(fill = "lightcoral",color = "black") +  
   labs(x = "Stop", y = "People Unboarded", title = "Box Plot of People Unboarded per Stop") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl44
 
 ###Kathysterhseis###
 colnames(mean_t_paramonhs_zaras) <- c("stop_g", "mean_t_paramonhs_g")
-ggplot(mean_t_paramonhs_zaras, aes(x = factor(stop_g), y = mean_t_paramonhs_g)) +
+pl45 <- ggplot(mean_t_paramonhs_zaras, aes(x = factor(stop_g), y = mean_t_paramonhs_g)) +
   geom_bar(stat = "identity", fill = "lightcoral",color = "black") + 
   labs(x = "Stop", y = "Average Time per Stop (s)", title = "Average Time per Stop") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl45
 colnames(max_t_paramonhs_zaras) <- c("stop_g", "max_t_paramonhs_g")
-ggplot(max_t_paramonhs_zaras, aes(x = factor(stop_g), y = max_t_paramonhs_g)) +
+pl46 <- ggplot(max_t_paramonhs_zaras, aes(x = factor(stop_g), y = max_t_paramonhs_g)) +
   geom_bar(stat = "identity", fill = "lightcoral",color = "black") +  
   labs(x = "Bus Stop", y = "Max Time per Stop (s)", title = "Max Time per Stop") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl46
 colnames(sum_t_paramonhs_zaras) <- c("stop_g", "sum_t_paramonhs_g")
-ggplot(sum_t_paramonhs_zaras, aes(x = factor(stop_g), y = sum_t_paramonhs_g)) +
+pl47 <- ggplot(sum_t_paramonhs_zaras, aes(x = factor(stop_g), y = sum_t_paramonhs_g)) +
   geom_bar(stat = "identity", fill = "lightcoral",color = "black") +  
   labs(x = "Bus Stop", y = "Total Time per Stop (s)", title = "Total Time per Stop") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl47
 
 ###skips stashs###
 skips_counts_df_g <- as.data.frame(skips_counts_zaras)
 colnames(skips_counts_df_g) <- c("stop_g", "skips_count_g")
-ggplot(skips_counts_df_g, aes(x = factor(stop_g), y = skips_count_g)) +
+pl48 <-ggplot(skips_counts_df_g, aes(x = factor(stop_g), y = skips_count_g)) +
   geom_bar(stat = "identity", fill = "lightcoral",color = "black") +
   labs(x = "Bus Stop", y = "Number of Skips", title = "Number of Skips per Bus Stop") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl48
 
 ###Kathisterhsh Stasewn se sxesh me tis pragmatikes###
-ggplot(time_diff_staseis_zaras, aes(x = `time_diff_tilematikh_df_zaras$asb_time_diff`)) +
+pl49 <-ggplot(time_diff_staseis_zaras, aes(x = `time_diff_tilematikh_df_zaras$asb_time_diff`)) +
   geom_histogram(binwidth = 1, fill = "lightcoral", color = "black", alpha = 0.7) +
   labs(x = "Maximum Absolute Time Difference (min)", y = "Frequency", 
        title = "Histogram of Maximum Absolute Time Difference per Stop") +
   theme_minimal()
+pl49
 
 ### Pie plot gia parked car kai bus lane###
 parked_car_counts_g <- table(metrhsh_zaras$parked_car)
+parked_car_counts_g
 parked_car_df_g <- data.frame(parked_car_g = names(parked_car_counts_g), count_g = as.vector(parked_car_counts_g))
-ggplot(parked_car_df_g, aes(x = "", y = count_g, fill = parked_car_g)) +
+pl50 <- ggplot(parked_car_df_g, aes(x = "", y = count_g, fill = parked_car_g)) +
   geom_bar(stat = "identity", width = 1,color = "black") +
   coord_polar(theta = "y") +
   labs(title = "Parked Car (ΝΑΙ/ΟΧΙ)", fill = "Parked Car") +
   theme_void() +
   theme(plot.title = element_text(hjust = 0.5))
+pl50
 bus_line_counts_g <- table(metrhsh_zaras$bus_line)
 bus_line_df_g <- data.frame(bus_line_g = names(bus_line_counts_g), count_g = as.vector(bus_line_counts_g))
-ggplot(bus_line_df_g, aes(x = "", y = count_g, fill = bus_line_g)) +
+pl51 <-ggplot(bus_line_df_g, aes(x = "", y = count_g, fill = bus_line_g)) +
   geom_bar(stat = "identity", width = 1, color = "black") +
   coord_polar(theta = "y") +
   labs(title = "Bus Lane (ΝΑΙ/ΟΧΙ)", fill = "Bus Lane") +
   theme_void() +
   theme(plot.title = element_text(hjust = 0.5))
+pl51
 
 ### Histogram gia ppl boarded kai unboarded per 1 min###
 time_arr_1min_g <- floor(as.numeric(metrhsh_zaras$time_arr) / 60) * 60
 metrhsh_zaras$time_arr_1min_g <- as.POSIXct(time_arr_1min_g, origin = "1970-01-01", tz = "UTC")
-ggplot(metrhsh_zaras, aes(x = time_arr_1min_g, y = ppl_boarded)) +
+pl52 <- ggplot(metrhsh_zaras, aes(x = time_arr_1min_g, y = ppl_boarded)) +
   geom_bar(stat = "identity", width = 60, color = "black", fill = "skyblue") +
   geom_smooth(method = "loess", se = FALSE, color = "red") +
   labs(title = "People Boarded per 1-Minute Interval", x = "Arrival Time (1-Minute Intervals)", y = "People Boarded") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
-ggplot(metrhsh_zaras, aes(x = time_arr_1min_g, y = ppl_unboarded)) +
+pl52
+pl53 <- ggplot(metrhsh_zaras, aes(x = time_arr_1min_g, y = ppl_unboarded)) +
   geom_bar(stat = "identity", width = 60, color = "black", fill = "orange") +
   geom_smooth(method = "loess", se = FALSE, color = "red") +
   labs(title = "People Unboarded per 1-Minute Interval", x = "Arrival Time (1-Minute Intervals)", y = "People Unboarded") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl53
 
 ###Scatter Plots###
 ##kathysterhsh/nrow##
 time_diff_df_z_p <- data.frame(Index = 1:length(time_diff_tilematikh_df_zaras$asb_time_diff),
                            Time_Difference_z_p = time_diff_tilematikh_df_zaras$asb_time_diff)
-ggplot(time_diff_df_z_p, aes(x = Index, y = Time_Difference_z_p)) +
+pl54 <- ggplot(time_diff_df_z_p, aes(x = Index, y = Time_Difference_z_p)) +
   geom_point(color = "blue") +  
   geom_smooth(method = "loess", se = TRUE, color = "red") +  
   labs(title = "Scatter Plot of Time Differences",
        x = "Index",
        y = "Time Difference (min)") +
   theme_minimal()
+pl54
 ##ppl boarded/nrow##
 ppl_boarded_df_z_p <- data.frame(Index = 1:length(metrhsh_zaras$ppl_boarded),
                              People_Boarded_z_p = metrhsh_zaras$ppl_boarded)
-ggplot(ppl_boarded_df_z_p, aes(x = Index, y = People_Boarded_z_p)) +
+pl55 <- ggplot(ppl_boarded_df_z_p, aes(x = Index, y = People_Boarded_z_p)) +
   geom_point(color = "blue") +  
   geom_smooth(method = "loess", se = TRUE, color = "red") +  
   labs(title = "Scatter Plot of People Boarded",
@@ -1317,27 +1395,30 @@ ggplot(ppl_boarded_df_z_p, aes(x = Index, y = People_Boarded_z_p)) +
        y = "Number of People Boarded") +
   theme_minimal()
 ppl_boarded_df_z_p
+pl55
 ##ppl unboarded/nrow##
 ppl_unboarded_df_z_p <- data.frame(Index = 1:length(metrhsh_zaras$ppl_unboarded),
                                  People_unboarded_z_p = metrhsh_zaras$ppl_unboarded)
-ggplot(ppl_unboarded_df_z_p, aes(x = Index, y = People_unboarded_z_p)) +
+pl56 <- ggplot(ppl_unboarded_df_z_p, aes(x = Index, y = People_unboarded_z_p)) +
   geom_point(color = "blue") +  
   geom_smooth(method = "loess", se = TRUE, color = "red") +  
   labs(title = "Scatter Plot of People Unboarded",
        x = "Index",
        y = "Number of People Boarded") +
   theme_minimal()
+pl56
 ##tparamonhs/nrow
 as.numeric(t_paramonhs_zaras)
 t_paramonhs_df_z_p <- data.frame(Index = 1:length(as.numeric(t_paramonhs_zaras)),
                              Value_z_p = as.numeric(t_paramonhs_zaras))
-ggplot(t_paramonhs_df_z_p, aes(x = Index, y = Value_z_p)) +
+pl57 <- ggplot(t_paramonhs_df_z_p, aes(x = Index, y = Value_z_p)) +
   geom_point(color = "blue") +  
   geom_smooth(method = "loess", se = TRUE, color = "red") +  
   labs(title = "Scatter Plot of Time in Stop Values",
        x = "Index",
        y = "Value") +
   theme_minimal()
+pl57
 
 ####Erwthmatologio sthn stash
 
@@ -1363,22 +1444,34 @@ create_histogram_synart_p <- function(df_p, column_name_p){
     theme_minimal() + 
     theme(axis.text.x = element_text(angle = 0))  
 }
-create_histogram_synart_p(Syxnothtes_df_p, "Move_Reason_p")
-create_histogram_synart_p(Syxnothtes_df_p, "Safety_Score_p")
-create_histogram_synart_p(Syxnothtes_df_p, "Bus_use_Frequency_p")
-create_histogram_synart_p(Syxnothtes_df_p, "Reliability_Score_p")
-create_histogram_synart_p(Syxnothtes_df_p, "Cleanliness_Score_p")
-create_histogram_synart_p(Syxnothtes_df_p, "Ticket_Price_Score_p")
-create_histogram_synart_p(Syxnothtes_df_p, "Time_Waited_Score_p")
-create_histogram_synart_p(Syxnothtes_df_p, "Comfort_Score_p")
-create_histogram_synart_p(Syxnothtes_df_p, "Distance_to_Stop_Score_p")
-create_histogram_synart_p(Syxnothtes_df_p, "Overall_Score_p")
-create_histogram_synart_p(Syxnothtes_df_p, "Gender_p")
-create_histogram_synart_p(Syxnothtes_df_p, "Age_p")
+pl58 <- create_histogram_synart_p(Syxnothtes_df_p, "Move_Reason_p")
+pl59 <- create_histogram_synart_p(Syxnothtes_df_p, "Safety_Score_p")
+pl60 <- create_histogram_synart_p(Syxnothtes_df_p, "Bus_use_Frequency_p")
+pl61 <- create_histogram_synart_p(Syxnothtes_df_p, "Reliability_Score_p")
+pl62 <- create_histogram_synart_p(Syxnothtes_df_p, "Cleanliness_Score_p")
+pl63 <- create_histogram_synart_p(Syxnothtes_df_p, "Ticket_Price_Score_p")
+pl64 <- create_histogram_synart_p(Syxnothtes_df_p, "Time_Waited_Score_p")
+pl65 <- create_histogram_synart_p(Syxnothtes_df_p, "Comfort_Score_p")
+pl66 <- create_histogram_synart_p(Syxnothtes_df_p, "Distance_to_Stop_Score_p")
+pl67 <- create_histogram_synart_p(Syxnothtes_df_p, "Overall_Score_p")
+pl68 <- create_histogram_synart_p(Syxnothtes_df_p, "Gender_p")
+pl69 <- create_histogram_synart_p(Syxnothtes_df_p, "Age_p")
+pl58
+pl59
+pl60
+pl61
+pl62
+pl63
+pl64
+pl65
+pl66
+pl67
+pl68
+pl69
 
 ###Mean vs Overall Score gia kathe eggrafh###
 Mean_vs_Overall_Score_p$row_number <- 1:nrow(Mean_vs_Overall_Score_p)
-ggplot(Mean_vs_Overall_Score_p, aes(x = row_number, y = Apolyto_Sygkrishs)) +
+pl70 <-ggplot(Mean_vs_Overall_Score_p, aes(x = row_number, y = Apolyto_Sygkrishs)) +
   geom_point(color = "blue") +
   geom_smooth(method = "loess", color = "red", se = TRUE) + 
   labs(
@@ -1387,35 +1480,39 @@ ggplot(Mean_vs_Overall_Score_p, aes(x = row_number, y = Apolyto_Sygkrishs)) +
     title = "Scatter Plot of Absolute Difference of Overall - Mean Score"  
   ) +
   theme_minimal()
+pl70
 
 ###dokimh x^2###
 chi_square_matrix_p <- reshape2::acast(x_tetr_results_p, Variable1_p ~ Variable2_p, value.var = "p_value_p")
 chi_square_matrix_p[is.na(chi_square_matrix_p)] <- 1 
-ggplot(melt(chi_square_matrix_p), aes(Var1, Var2, fill = value)) +
+pl71 <- ggplot(melt(chi_square_matrix_p), aes(Var1, Var2, fill = value)) +
   geom_tile(color = "white") +
   scale_fill_gradient(low = "blue", high = "red", name = "p-value") +
   labs(title = "Chi-Square Test p-values", x = "Variable 1", y = "Variable 2") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl71
 
 ###t test me gender ###
-ggplot(t_test_results_p, aes(x = Variable1_t_p, y = p_value_t_p, fill = Variable2_t_p)) +
+pl72 <- ggplot(t_test_results_p, aes(x = Variable1_t_p, y = p_value_t_p, fill = Variable2_t_p)) +
   geom_bar(stat = "identity", position = "dodge") +
   labs(title = "T-Test p-values by Numerical Variables (Gender Comparison)", x = "Numerical Variable", y = "p-value") +
   theme_minimal()
+pl72
 
 ###Anova Test###
 anova_matrix_p <- reshape2::acast(anova_results_p, Variable1_a_p ~ Variable2_a_p, value.var = "F_value_a_p")
-ggplot(melt(anova_matrix_p), aes(Var1, Var2, fill = value)) +
+pl73 <- ggplot(melt(anova_matrix_p), aes(Var1, Var2, fill = value)) +
   geom_tile(color = "white") +
   scale_fill_gradient(low = "lightblue", high = "darkblue", name = "F-value") +
   labs(title = "ANOVA F-values Heatmap", x = "Numerical Variable", y = "Categorical Variable") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl73
 
 ###Residuals vs Fitted###
 par(mfrow = c(1, 2))  # Side-by-side plots
-plot(linear_regrr_p$fitted.values, linear_regrr_p$residuals,
+pl74 <- plot(linear_regrr_p$fitted.values, linear_regrr_p$residuals,
      main = "Residuals vs Fitted",
      xlab = "Fitted Values",
      ylab = "Residuals")
@@ -1425,51 +1522,56 @@ qqline(linear_regrr_p$residuals, col = "red")
 
 ###Linera Regression###
 linear_coef_p <- data.frame(Variable = names(coef(linear_regrr_p)), Estimate = coef(linear_regrr_p))
-ggplot(linear_coef_p, aes(x = reorder(Variable, Estimate), y = Estimate)) +
+pl75 <- ggplot(linear_coef_p, aes(x = reorder(Variable, Estimate), y = Estimate)) +
   geom_bar(stat = "identity", fill = "steelblue") +
   coord_flip() +
   labs(title = "Linear Regression Coefficients", x = "Variable", y = "Coefficient Estimate") +
   theme_minimal()
+pl75
 
 ###Logistic Regression###
 logistic_odds_p <- exp(coef(logistic_regrr_p))
 logistic_odds_df_p <- data.frame(Variable = names(logistic_odds_p), Odds_Ratio = logistic_odds_p)
-ggplot(logistic_odds_df_p, aes(x = reorder(Variable, Odds_Ratio), y = Odds_Ratio)) +
+pl76 <- ggplot(logistic_odds_df_p, aes(x = reorder(Variable, Odds_Ratio), y = Odds_Ratio)) +
   geom_bar(stat = "identity", fill = "skyblue") +
   coord_flip() +
   labs(title = "Logistic Regression Odds Ratios", x = "Predictor Variable", y = "Odds Ratio") +
   theme_minimal()
+pl76
 
 ###Descriptive Statistics###
 mean_values_p <- as.numeric(Desc_Stats_Apotelesmata_p[5, -c(1, 2, 4)])  
 variables_p <- c("Safety Score", "Reliability Score", "Cleanliness Score", "Ticket Price Score", 
                "Time Waited Score", "Comfort Score", "Distance to Stop Score", "Overall Score")
 mean_df <- data.frame(Variable = variables_p, Mean = mean_values_p)
-ggplot(mean_df, aes(x = reorder(Variable, -Mean), y = Mean, fill = Variable)) +
+pl77 <- ggplot(mean_df, aes(x = reorder(Variable, -Mean), y = Mean, fill = Variable)) +
   geom_bar(stat = "identity") +
   labs(title = "Mean Scores for Each Variable", 
        x = "Variable", y = "Mean Score") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
   scale_fill_brewer(palette = "Set3", guide = FALSE)
-
+pl77
+mean_df
 ###Boxplot Desc Stats###
 Desc_Stats_Apotelesmata_p_long <- Desc_Stats_Apotelesmata_p %>%
   gather(key = "Statistic", value = "Value", -Statistic_p)
 Desc_Stats_Apotelesmata_p_long_filtered <- Desc_Stats_Apotelesmata_p_long %>%
   filter(Statistic_p == "Mean" | Statistic_p == "Variance")
-ggplot(Desc_Stats_Apotelesmata_p_long_filtered, aes(x = Statistic, y = Value, fill = Statistic)) +
+pl78 <- ggplot(Desc_Stats_Apotelesmata_p_long_filtered, aes(x = Statistic, y = Value, fill = Statistic)) +
   geom_boxplot() +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
   labs(title = "Boxplot of Variables", x = "Statistic", y = "Value")
+pl78
 
 ###Skewness line plot###
 skewness_data_p <- Desc_Stats_Apotelesmata_p_long[Desc_Stats_Apotelesmata_p_long$Statistic_p == "Skewness", ]
-ggplot(skewness_data_p, aes(x = Value, fill = Statistic_p)) +
+pl79 <- ggplot(skewness_data_p, aes(x = Value, fill = Statistic_p)) +
   geom_density(alpha = 0.5) +
   labs(title = "Density of Skewness", x = "Skewness", y = "Density") +
   theme_minimal()
+pl79 
 
 ###Histogramm synarthsh gia means kai medians###
 plot_histogram_with_mean_median_p <- function(data_p, column_name_p) {
@@ -1482,51 +1584,68 @@ plot_histogram_with_mean_median_p <- function(data_p, column_name_p) {
     labs(title = paste("Histogram of", column_name_p, "with Mean and Median"), 
          x = column_name_p, y = "Frequency")
 }
-plot_histogram_with_mean_median_p(erwt_pavlos, "safety_score")
-plot_histogram_with_mean_median_p(erwt_pavlos, "reliab_score")
-plot_histogram_with_mean_median_p(erwt_pavlos, "clean_score")
-plot_histogram_with_mean_median_p(erwt_pavlos, "price_score")
-plot_histogram_with_mean_median_p(erwt_pavlos, "time_waited_score")
-plot_histogram_with_mean_median_p(erwt_pavlos, "comfort_score")
-plot_histogram_with_mean_median_p(erwt_pavlos, "distance_to_stop_score")
-plot_histogram_with_mean_median_p(erwt_pavlos, "overall_score")
+pl80 <- plot_histogram_with_mean_median_p(erwt_pavlos, "safety_score")
+pl81 <- plot_histogram_with_mean_median_p(erwt_pavlos, "reliab_score")
+pl82 <- plot_histogram_with_mean_median_p(erwt_pavlos, "clean_score")
+pl83 <- plot_histogram_with_mean_median_p(erwt_pavlos, "price_score")
+pl84 <- plot_histogram_with_mean_median_p(erwt_pavlos, "time_waited_score")
+pl85 <- plot_histogram_with_mean_median_p(erwt_pavlos, "comfort_score")
+pl86 <- plot_histogram_with_mean_median_p(erwt_pavlos, "distance_to_stop_score")
+pl87 <- plot_histogram_with_mean_median_p(erwt_pavlos, "overall_score")
+pl80
+pl81
+pl82
+pl83
+pl84
+pl85
+pl86
+pl87
+
+
+
+
+
 
 ###CV plot###
 cv_data_p <- Desc_Stats_Apotelesmata_p[Desc_Stats_Apotelesmata_p$Statistic_p == "Coefficient of Variation",]
 cv_data_long_p <- gather(cv_data_p, key = "Score_Type", value = "CV", -Statistic_p)
 cv_data_long_p <- cv_data_long_p[!(cv_data_long_p$Score_Type %in% c("Bus Use Frequency", "Move Reason")),]
-ggplot(cv_data_long_p, aes(x = Score_Type, y = CV, fill = Score_Type)) +
+pl88 <- ggplot(cv_data_long_p, aes(x = Score_Type, y = CV, fill = Score_Type)) +
   geom_bar(stat = "identity", show.legend = FALSE) +
   labs(title = "Coefficient of Variation for Each Score Type", x = "Score Type", y = "CV (%)") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl88
 
 ###kurtosis plot###
 kurtosis_data_p <- Desc_Stats_Apotelesmata_p[Desc_Stats_Apotelesmata_p$Statistic_p == "Kurtosis",]
 kurtosis_data_long_p <- gather(kurtosis_data_p, key = "Score_Type", value = "Kurtosis", -Statistic_p)
 kurtosis_data_long_p$Kurtosis <- as.numeric(kurtosis_data_long_p$Kurtosis)
-ggplot(kurtosis_data_long_p, aes(x = Score_Type, y = Kurtosis, fill = Score_Type)) +
+pl89 <- ggplot(kurtosis_data_long_p, aes(x = Score_Type, y = Kurtosis, fill = Score_Type)) +
   geom_bar(stat = "identity", show.legend = FALSE) +
   labs(title = "Kurtosis for Each Score Type", x = "Score Type", y = "Kurtosis") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl89
 
 ###range-variance plot###
 range_variance_data_p <- Desc_Stats_Apotelesmata_p[Desc_Stats_Apotelesmata_p$Statistic_p %in% c("Range", "Variance"),]
 range_variance_data_long_p <- gather(range_variance_data_p, key = "Score_Type", value = "Value", -Statistic_p)
 range_variance_data_long_p$Value <- as.numeric(range_variance_data_long_p$Value)
-ggplot(range_variance_data_long_p, aes(x = Score_Type, y = Value, fill = Score_Type)) +
+pl90 <- ggplot(range_variance_data_long_p, aes(x = Score_Type, y = Value, fill = Score_Type)) +
   geom_bar(stat = "identity", position = "dodge") +
   labs(title = "Range and Variance for Each Score Type", x = "Score Type", y = "Value") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl90
 
 ###percentiles plot###
 percentiles_p <- Desc_Stats_Apotelesmata_p[Desc_Stats_Apotelesmata_p$Statistic_p %in% c("P10", "P25", "P50", "P75", "P90"),]
 percentiles_long_p <- gather(percentiles_p, key = "Score_Type", value = "Score", -Statistic_p)
 percentiles_long_p$Score <- as.numeric(percentiles_long_p$Score)
-ggplot(percentiles_long_p, aes(x = Score_Type, y = Score, group = Statistic_p, color = Statistic_p)) +
+pl91 <- ggplot(percentiles_long_p, aes(x = Score_Type, y = Score, group = Statistic_p, color = Statistic_p)) +
   geom_line() +
   geom_point() +
   labs(title = "Percentiles for Each Score Type", x = "Percentile", y = "Score") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl91
 
 ###Correlation Matrix###
 selected_columns_p <- c("move_reas", "bus_use_freq", "min_of_travel", "reliab_score", 
@@ -1538,7 +1657,7 @@ data_subset_p <- data_subset_p[, sapply(data_subset_p, function(x) length(unique
 data_subset_p <- na.omit(data_subset_p)
 cor_matrix_p <- cor(data_subset_p, use = "complete.obs", method = "pearson")
 cor_matrix_melted_p <- melt(cor_matrix_p)
-ggplot(data = cor_matrix_melted_p, aes(x = Var1, y = Var2, fill = value)) +
+pl92 <- ggplot(data = cor_matrix_melted_p, aes(x = Var1, y = Var2, fill = value)) +
   geom_tile(color = "white") +
   scale_fill_gradient2(low = "blue", high = "red", mid = "white", midpoint = 0, 
                        limit = c(-1, 1), space = "Lab", name="Pearson\nCorrelation") +
@@ -1547,6 +1666,7 @@ ggplot(data = cor_matrix_melted_p, aes(x = Var1, y = Var2, fill = value)) +
         axis.text.y = element_text(size = 10)) +
   labs(title = "Pearson Correlation Matrix Heatmap", x = "", y = "") +
   coord_fixed()
+pl92
 
 
 ####Erwthmatologio sto leoforeio
@@ -1573,22 +1693,33 @@ create_histogram_synart_g <- function(df_g, column_name_g){
     theme_minimal() + 
     theme(axis.text.x = element_text(angle = 0))  
 }
-create_histogram_synart_g(Syxnothtes_df_g, "Move_Reason_g")
-create_histogram_synart_g(Syxnothtes_df_g, "Safety_Score_g")
-create_histogram_synart_g(Syxnothtes_df_g, "Bus_use_Frequency_g")
-create_histogram_synart_g(Syxnothtes_df_g, "Reliability_Score_g")
-create_histogram_synart_g(Syxnothtes_df_g, "Cleanliness_Score_g")
-create_histogram_synart_g(Syxnothtes_df_g, "Ticket_Price_Score_g")
-create_histogram_synart_g(Syxnothtes_df_g, "Time_Waited_Score_g")
-create_histogram_synart_g(Syxnothtes_df_g, "Comfort_Score_g")
-create_histogram_synart_g(Syxnothtes_df_g, "Distance_to_Stop_Score_g")
-create_histogram_synart_g(Syxnothtes_df_g, "Overall_Score_g")
-create_histogram_synart_g(Syxnothtes_df_g, "Gender_g")
-create_histogram_synart_g(Syxnothtes_df_g, "Age_g")
-
+pl93 <- create_histogram_synart_g(Syxnothtes_df_g, "Move_Reason_g")
+pl94 <- create_histogram_synart_g(Syxnothtes_df_g, "Safety_Score_g")
+pl95 <- create_histogram_synart_g(Syxnothtes_df_g, "Bus_use_Frequency_g")
+pl96 <- create_histogram_synart_g(Syxnothtes_df_g, "Reliability_Score_g")
+pl97 <- create_histogram_synart_g(Syxnothtes_df_g, "Cleanliness_Score_g")
+pl98 <- create_histogram_synart_g(Syxnothtes_df_g, "Ticket_Price_Score_g")
+pl99 <- create_histogram_synart_g(Syxnothtes_df_g, "Time_Waited_Score_g")
+pl100 <- create_histogram_synart_g(Syxnothtes_df_g, "Comfort_Score_g")
+pl101 <- create_histogram_synart_g(Syxnothtes_df_g, "Distance_to_Stop_Score_g")
+pl102 <- create_histogram_synart_g(Syxnothtes_df_g, "Overall_Score_g")
+pl103 <- create_histogram_synart_g(Syxnothtes_df_g, "Gender_g")
+pl104 <- create_histogram_synart_g(Syxnothtes_df_g, "Age_g")
+pl93
+pl94
+pl95
+pl96
+pl97
+pl98
+pl99
+pl100
+pl101
+pl102
+pl103
+pl104
 ###Mean vs Overall Score gia kathe eggrafh###
 Mean_vs_Overall_Score_g$row_number <- 1:nrow(Mean_vs_Overall_Score_g)
-ggplot(Mean_vs_Overall_Score_g, aes(x = row_number, y = Apolyto_Sygkrishs)) +
+pl105 <- ggplot(Mean_vs_Overall_Score_g, aes(x = row_number, y = Apolyto_Sygkrishs)) +
   geom_point(color = "blue") +
   geom_smooth(method = "loess", color = "red", se = TRUE) + 
   labs(
@@ -1597,35 +1728,39 @@ ggplot(Mean_vs_Overall_Score_g, aes(x = row_number, y = Apolyto_Sygkrishs)) +
     title = "Scatter Plot of Absolute Difference of Overall - Mean Score"  
   ) +
   theme_minimal()
+pl105
 
 ###dokimh x^2###
 chi_square_matrix_g <- reshape2::acast(x_tetr_results_g, Variable1_g ~ Variable2_g, value.var = "p_value_g")
 chi_square_matrix_g[is.na(chi_square_matrix_g)] <- 1 
-ggplot(melt(chi_square_matrix_g), aes(Var1, Var2, fill = value)) +
+pl106 <- ggplot(melt(chi_square_matrix_g), aes(Var1, Var2, fill = value)) +
   geom_tile(color = "white") +
   scale_fill_gradient(low = "blue", high = "red", name = "p-value") +
   labs(title = "Chi-Square Test p-values", x = "Variable 1", y = "Variable 2") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl106
 
 ###t test me gender ###
-ggplot(t_test_results_g, aes(x = Variable1_t_g, y = p_value_t_g, fill = Variable2_t_g)) +
+pl107 <- ggplot(t_test_results_g, aes(x = Variable1_t_g, y = p_value_t_g, fill = Variable2_t_g)) +
   geom_bar(stat = "identity", position = "dodge") +
   labs(title = "T-Test p-values by Numerical Variables (Gender Comparison)", x = "Numerical Variable", y = "p-value") +
   theme_minimal()
+pl107
 
 ###Anova Test###
 anova_matrix_g <- reshape2::acast(anova_results_g, Variable1_a_g ~ Variable2_a_g, value.var = "F_value_a_g")
-ggplot(melt(anova_matrix_g), aes(Var1, Var2, fill = value)) +
+pl108 <- ggplot(melt(anova_matrix_g), aes(Var1, Var2, fill = value)) +
   geom_tile(color = "white") +
   scale_fill_gradient(low = "lightblue", high = "darkblue", name = "F-value") +
   labs(title = "ANOVA F-values Heatmap", x = "Numerical Variable", y = "Categorical Variable") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl108
 
 ###Residuals vs Fitted###
 par(mfrow = c(1, 2))  # Side-by-side plots
-plot(linear_regrr_g$fitted.values, linear_regrr_g$residuals,
+pl109 <- plot(linear_regrr_g$fitted.values, linear_regrr_g$residuals,
      main = "Residuals vs Fitted",
      xlab = "Fitted Values",
      ylab = "Residuals")
@@ -1635,51 +1770,57 @@ qqline(linear_regrr_g$residuals, col = "red")
 
 ###Linera Regression###
 linear_coef_g <- data.frame(Variable = names(coef(linear_regrr_g)), Estimate = coef(linear_regrr_g))
-ggplot(linear_coef_g, aes(x = reorder(Variable, Estimate), y = Estimate)) +
+pl110 <- ggplot(linear_coef_g, aes(x = reorder(Variable, Estimate), y = Estimate)) +
   geom_bar(stat = "identity", fill = "steelblue") +
   coord_flip() +
   labs(title = "Linear Regression Coefficients", x = "Variable", y = "Coefficient Estimate") +
   theme_minimal()
+pl110 
 
 ###Logistic Regression###
 logistic_odds_g <- exp(coef(logistic_regrr_g))
 logistic_odds_df_g <- data.frame(Variable = names(logistic_odds_g), Odds_Ratio = logistic_odds_g)
-ggplot(logistic_odds_df_g, aes(x = reorder(Variable, Odds_Ratio), y = Odds_Ratio)) +
+pl111 <- ggplot(logistic_odds_df_g, aes(x = reorder(Variable, Odds_Ratio), y = Odds_Ratio)) +
   geom_bar(stat = "identity", fill = "skyblue") +
   coord_flip() +
   labs(title = "Logistic Regression Odds Ratios", x = "Predictor Variable", y = "Odds Ratio") +
   theme_minimal()
+pl111
 
 ###Descriptive Statistics###
 mean_values_g <- as.numeric(Desc_Stats_Apotelesmata_g[5, -c(1, 2, 4)])  
 variables_g <- c("Safety Score", "Reliability Score", "Cleanliness Score", "Ticket Price Score", 
                "Time Waited Score", "Comfort Score", "Distance to Stop Score", "Overall Score")
 mean_df_g <- data.frame(Variable = variables_g, Mean = mean_values_g)
-ggplot(mean_df_g, aes(x = reorder(Variable, -Mean), y = Mean, fill = Variable)) +
+pl112 <- ggplot(mean_df_g, aes(x = reorder(Variable, -Mean), y = Mean, fill = Variable)) +
   geom_bar(stat = "identity") +
   labs(title = "Mean Scores for Each Variable", 
        x = "Variable", y = "Mean Score") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
   scale_fill_brewer(palette = "Set3", guide = FALSE)
+pl112
+mean_df_g
 
 ###Boxplot Desc Stats###
 Desc_Stats_Apotelesmata_g_long <- Desc_Stats_Apotelesmata_g %>%
   gather(key = "Statistic", value = "Value", -Statistic_g)
 Desc_Stats_Apotelesmata_g_long_filtered <- Desc_Stats_Apotelesmata_g_long %>%
   filter(Statistic_g == "Mean" | Statistic_g == "Variance")
-ggplot(Desc_Stats_Apotelesmata_g_long_filtered, aes(x = Statistic, y = Value, fill = Statistic)) +
+pl113 <- ggplot(Desc_Stats_Apotelesmata_g_long_filtered, aes(x = Statistic, y = Value, fill = Statistic)) +
   geom_boxplot() +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
   labs(title = "Boxplot of Selected Statistics", x = "Statistic", y = "Value")
+pl113
 
 ###Skewness line plot###
 skewness_data_g <- Desc_Stats_Apotelesmata_g_long[Desc_Stats_Apotelesmata_g_long$Statistic_g == "Skewness", ]
-ggplot(skewness_data_g, aes(x = Value, fill = Statistic_g)) +
+pl114 <- ggplot(skewness_data_g, aes(x = Value, fill = Statistic_g)) +
   geom_density(alpha = 0.5) +
   labs(title = "Density of Skewness", x = "Skewness", y = "Density") +
   theme_minimal()
+pl114
 
 ###Histogramm synarthsh gia means kai medians###
 plot_histogram_with_mean_median_g <- function(data_g, column_name_g) {
@@ -1692,51 +1833,55 @@ plot_histogram_with_mean_median_g <- function(data_g, column_name_g) {
     labs(title = paste("Histogram of", column_name_g, "with Mean and Median"), 
          x = column_name_g, y = "Frequency")
 }
-plot_histogram_with_mean_median_g(erwt_gialouris, "safety_score")
-plot_histogram_with_mean_median_g(erwt_gialouris, "reliab_score")
-plot_histogram_with_mean_median_g(erwt_gialouris, "clean_score")
-plot_histogram_with_mean_median_g(erwt_gialouris, "price_score")
-plot_histogram_with_mean_median_g(erwt_gialouris, "time_waited_score")
-plot_histogram_with_mean_median_g(erwt_gialouris, "comfort_score")
-plot_histogram_with_mean_median_g(erwt_gialouris, "distance_to_stop_score")
-plot_histogram_with_mean_median_g(erwt_gialouris, "overall_score")
+pl115 <- plot_histogram_with_mean_median_g(erwt_gialouris, "safety_score")
+pl116 <- plot_histogram_with_mean_median_g(erwt_gialouris, "reliab_score")
+pl117 <- plot_histogram_with_mean_median_g(erwt_gialouris, "clean_score")
+pl118 <- plot_histogram_with_mean_median_g(erwt_gialouris, "price_score")
+pl119 <- plot_histogram_with_mean_median_g(erwt_gialouris, "time_waited_score")
+pl120 <- plot_histogram_with_mean_median_g(erwt_gialouris, "comfort_score")
+pl121 <- plot_histogram_with_mean_median_g(erwt_gialouris, "distance_to_stop_score")
+pl122 <- plot_histogram_with_mean_median_g(erwt_gialouris, "overall_score")
 
 ###CV plot###
 cv_data_g <- Desc_Stats_Apotelesmata_g[Desc_Stats_Apotelesmata_g$Statistic_g == "Coefficient of Variation",]
 cv_data_long_g <- gather(cv_data_g, key = "Score_Type", value = "CV", -Statistic_g)
 cv_data_long_g <- cv_data_long_g[!(cv_data_long_g$Score_Type %in% c("Bus Use Frequency", "Move Reason")),]
-ggplot(cv_data_long_g, aes(x = Score_Type, y = CV, fill = Score_Type)) +
+pl123 <- ggplot(cv_data_long_g, aes(x = Score_Type, y = CV, fill = Score_Type)) +
   geom_bar(stat = "identity", show.legend = FALSE) +
   labs(title = "Coefficient of Variation for Each Score Type", x = "Score Type", y = "CV (%)") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl123
 
 ###kurtosis plot###
 kurtosis_data_g <- Desc_Stats_Apotelesmata_g[Desc_Stats_Apotelesmata_g$Statistic_g == "Kurtosis",]
 kurtosis_data_long_g <- gather(kurtosis_data_g, key = "Score_Type", value = "Kurtosis", -Statistic_g)
 kurtosis_data_long_g$Kurtosis <- as.numeric(kurtosis_data_long_g$Kurtosis)
-ggplot(kurtosis_data_long_g, aes(x = Score_Type, y = Kurtosis, fill = Score_Type)) +
+pl124 <- ggplot(kurtosis_data_long_g, aes(x = Score_Type, y = Kurtosis, fill = Score_Type)) +
   geom_bar(stat = "identity", show.legend = FALSE) +
   labs(title = "Kurtosis for Each Score Type", x = "Score Type", y = "Kurtosis") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl124
 
 ###range-variance plot###
 range_variance_data_g <- Desc_Stats_Apotelesmata_g[Desc_Stats_Apotelesmata_g$Statistic_g %in% c("Range", "Variance"),]
 range_variance_data_long_g <- gather(range_variance_data_g, key = "Score_Type", value = "Value", -Statistic_g)
 range_variance_data_long_g$Value <- as.numeric(range_variance_data_long_g$Value)
-ggplot(range_variance_data_long_g, aes(x = Score_Type, y = Value, fill = Score_Type)) +
+pl125 <- ggplot(range_variance_data_long_g, aes(x = Score_Type, y = Value, fill = Score_Type)) +
   geom_bar(stat = "identity", position = "dodge") +
   labs(title = "Range and Variance for Each Score Type", x = "Score Type", y = "Value") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl125
 
 ###percentiles plot###
 percentiles_g <- Desc_Stats_Apotelesmata_g[Desc_Stats_Apotelesmata_g$Statistic_g %in% c("P10", "P25", "P50", "P75", "P90"),]
 percentiles_long_g <- gather(percentiles_g, key = "Score_Type", value = "Score", -Statistic_g)
 percentiles_long_g$Score <- as.numeric(percentiles_long_g$Score)
-ggplot(percentiles_long_g, aes(x = Score_Type, y = Score, group = Statistic_g, color = Statistic_g)) +
+pl126 <- ggplot(percentiles_long_g, aes(x = Score_Type, y = Score, group = Statistic_g, color = Statistic_g)) +
   geom_line() +
   geom_point() +
   labs(title = "Percentiles for Each Score Type", x = "Percentile", y = "Score") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+pl126
 
 ###Correlation Matrix###
 selected_columns_g <- c("move_reas", "bus_use_freq", "min_of_travel", "reliab_score", 
@@ -1748,7 +1893,7 @@ data_subset_g <- data_subset_g[, sapply(data_subset_g, function(x) length(unique
 data_subset_g <- na.omit(data_subset_g)
 cor_matrix_g <- cor(data_subset_g, use = "complete.obs", method = "pearson")
 cor_matrix_melted_g <- melt(cor_matrix_g)
-ggplot(data = cor_matrix_melted_g, aes(x = Var1, y = Var2, fill = value)) +
+pl127 <- ggplot(data = cor_matrix_melted_g, aes(x = Var1, y = Var2, fill = value)) +
   geom_tile(color = "white") +
   scale_fill_gradient2(low = "blue", high = "red", mid = "white", midpoint = 0, 
                        limit = c(-1, 1), space = "Lab", name="Pearson\nCorrelation") +
@@ -1757,7 +1902,7 @@ ggplot(data = cor_matrix_melted_g, aes(x = Var1, y = Var2, fill = value)) +
         axis.text.y = element_text(size = 10)) +
   labs(title = "Pearson Correlation Matrix Heatmap", x = "", y = "") +
   coord_fixed()
-
+pl127
 
 ####Erwthmatologia mazi
 
@@ -1776,13 +1921,14 @@ data_pg <- data.frame(
   Category = c("Pos_apant_p", "Pos_apant_g"),
   Percentage = c(pos_apant_p, pos_apant_g)
 )
-ggplot(data_pg, aes(x = Category, y = Percentage, fill = Category)) +
+pl128 <- ggplot(data_pg, aes(x = Category, y = Percentage, fill = Category)) +
   geom_bar(stat = "identity") +
   ylim(0, 100) +
   labs(title = "Percentage of People Who Answered the Questionnaire",
        x = "Category", 
        y = "Percentage") +
   theme_minimal()
+pl128
 
 ###Pio synithismenos skopos metakinhshs sthn stash###
 #Pavlos
@@ -1796,14 +1942,14 @@ skopos_metak_g2 <- c(9.090909, 3.030303, 6.060606, 72.727273, 3.030303, 3.030303
 categories_p2 <- c(1, 2, 4, 5, 7, 9)
 categories_g2 <- c(1, 2, 4, 5, 6, 7, 8)
 par(mfrow = c(1, 2))
-barplot(skopos_metak_p2, 
+pl129 <- barplot(skopos_metak_p2, 
         main = "Move Reason Pavlos", 
         col = "lightblue", 
         xlab = "Categories", 
         ylab = "Percentage", 
         ylim = c(0, 80),
         names.arg = categories_p2)  
-barplot(skopos_metak_g2, 
+pl130 <- barplot(skopos_metak_g2, 
         main = "Move Reason Gialourhs", 
         col = "lightgreen", 
         xlab = "Categories", 
@@ -1840,13 +1986,14 @@ data_pg2 <- data.frame(
   TravelTime = c(mesos_xronos_metak_p2, max_xronos_metak_p2, min_xronos_metak_p2,
                  mesos_xronos_metak_g2, max_xronos_metak_g2, min_xronos_metak_g2)
 )
-ggplot(data_pg2, aes(x = Statistic, y = TravelTime, fill = Group)) +
+pl131 <- ggplot(data_pg2, aes(x = Statistic, y = TravelTime, fill = Group)) +
   geom_bar(stat = "identity", position = position_dodge(width = 0.8)) +
   labs(title = "Travel Time Statistics (in minutes)",
        x = "Statistic",
        y = "Travel Time (hours)") +
   scale_fill_manual(values = c("lightblue", "lightgreen")) + 
   theme_minimal()
+pl131
 
 ###Overall Rating/Scaled Mean###
 #Pavlos
@@ -1873,13 +2020,14 @@ scaled_data_pg <- data.frame(
   Group = c("Pavlos", "Gialouris"),
   Scaled_Mean_Percentage_pg = c(Scaled_Mean_Percentage_p, Scaled_Mean_Percentage_g)
 )
-ggplot(scaled_data_pg, aes(x = Group, y = Scaled_Mean_Percentage_pg, fill = Group)) +
+pl132 <- ggplot(scaled_data_pg, aes(x = Group, y = Scaled_Mean_Percentage_pg, fill = Group)) +
   geom_bar(stat = "identity", show.legend = FALSE, color = "black") +
   labs(title = "Scaled Mean Percentage of Scores",
        x = "Group",
        y = "Scaled Mean Percentage (%)") +
   scale_fill_manual(values = c("lightblue", "lightgreen")) +
   theme_minimal()
+pl132
 
 ###Profil Erwtithentwn###
 nrow(erwt_pavlos)
@@ -1906,7 +2054,8 @@ pa_pie_chart <- function(data, title) {
 }
 p1_pa_p <- pa_pie_chart(data_pa_p, "Pavlos Responses")
 p2_pa_g <- pa_pie_chart(data_pa_g, "Gialouris Responses")
-grid.arrange(p1_pa_p, p2_pa_g, ncol = 2)
+pl133 <- grid.arrange(p1_pa_p, p2_pa_g, ncol = 2)
+pl133
 total_rows_pa <- nrow(erwt_pavlos) + nrow(erwt_gialouris)
 pos_apant_total <- 100 * (total_rows_pa / 75)
 data_total_pa <- data.frame(
@@ -1924,7 +2073,8 @@ pa_total_pie_chart <- function(data, title) {
               position = position_stack(vjust = 0.5), color = "black")
 }
 p_total_pa <- pa_total_pie_chart(data_total_pa, "Combined Responses")
-p_total_pa
+pl134 <- p_total_pa
+pl134
 count_gender_p <- table(erwt_pavlos$gender)
 count_gender_p
 count_gender_g <- table(erwt_gialouris$gender)
@@ -1939,16 +2089,22 @@ df_pavlos_ag <- data.frame(Gender = names(count_gender_p), Count = as.vector(cou
 df_gialouris_ag <- data.frame(Gender = names(count_gender_g), Count = as.vector(count_gender_g), Dataset = "Gialouris")
 df_combined_ag <- rbind(df_pavlos_ag, df_gialouris_ag)
 par(mfrow = c(1, 2))  
-pie(df_pavlos_ag$Count, labels = paste(df_pavlos_ag$Gender, "\n", df_pavlos_ag$Count), col = c("lightblue", "lightgreen"), 
+pl135 <- pie(df_pavlos_ag$Count, labels = paste(df_pavlos_ag$Gender, "\n", df_pavlos_ag$Count), col = c("lightblue", "lightgreen"), 
     main = "Gender Distribution (Pavlos)", radius = 1)
-pie(df_gialouris_ag$Count, labels = paste(df_gialouris_ag$Gender, "\n", df_gialouris_ag$Count), col = c("lightblue", "lightgreen"),
+pl135
+pl136 <- pie(df_gialouris_ag$Count, labels = paste(df_gialouris_ag$Gender, "\n", df_gialouris_ag$Count), col = c("lightblue", "lightgreen"),
     main = "Gender Distribution (Gialouris)", radius = 1)
+pl136
 count_age_g2 <- table(erwt_gialouris$age)
 df_pavlos_ag <- data.frame(Age = names(count_age_p), Count = as.vector(count_age_p), Dataset = "Pavlos")
 df_gialouris_ag <- data.frame(Age = names(count_age_g), Count = as.vector(count_age_g), Dataset = "Gialouris")
 df_combined_ag <- rbind(df_pavlos_ag, df_gialouris_ag)
 par(mfrow = c(1, 2)) 
-pie(df_pavlos_ag$Count, labels = paste(df_pavlos_ag$age, "\n", df_pavlos_ag$Count), col = c("lightblue", "lightgreen"), 
+pl137 <- pie(df_pavlos_ag$Count, labels = paste(df_pavlos_ag$age, "\n", df_pavlos_ag$Count), col = c("lightblue", "lightgreen"), 
     main = "Age Distribution (Pavlos)", radius = 1)
-pie(df_gialouris_ag$Count, labels = paste(df_gialouris_ag$age, "\n", df_gialouris_ag$Count), col = c("lightblue", "lightgreen"),
+pl137
+pl138 <- pie(df_gialouris_ag$Count, labels = paste(df_gialouris_ag$age, "\n", df_gialouris_ag$Count), col = c("lightblue", "lightgreen"),
     main = "Age Distribution (Gialouris)", radius = 1)
+pl138
+
+####Interactive Plots####
