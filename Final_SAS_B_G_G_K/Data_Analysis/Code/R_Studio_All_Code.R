@@ -1907,6 +1907,24 @@ pa_pie_chart <- function(data, title) {
 p1_pa_p <- pa_pie_chart(data_pa_p, "Pavlos Responses")
 p2_pa_g <- pa_pie_chart(data_pa_g, "Gialouris Responses")
 grid.arrange(p1_pa_p, p2_pa_g, ncol = 2)
+total_rows_pa <- nrow(erwt_pavlos) + nrow(erwt_gialouris)
+pos_apant_total <- 100 * (total_rows_pa / 75)
+data_total_pa <- data.frame(
+  category = c("Answered", "Not Answered"),
+  value = c(pos_apant_total, 100 - pos_apant_total)
+)
+pa_total_pie_chart <- function(data, title) {
+  ggplot(data, aes(x = "", y = value, fill = category)) +
+    geom_col(width = 1) +
+    coord_polar(theta = "y") +
+    theme_void() +
+    labs(title = title, fill = "Category") +
+    scale_fill_manual(values = c("blue", "red")) +
+    geom_text(aes(label = sprintf("%.1f%%", value)), 
+              position = position_stack(vjust = 0.5), color = "black")
+}
+p_total_pa <- pa_total_pie_chart(data_total_pa, "Combined Responses")
+p_total_pa
 count_gender_p <- table(erwt_pavlos$gender)
 count_gender_p
 count_gender_g <- table(erwt_gialouris$gender)
