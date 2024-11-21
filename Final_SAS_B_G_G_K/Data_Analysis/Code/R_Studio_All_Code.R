@@ -2108,3 +2108,477 @@ pl138 <- pie(df_gialouris_ag$Count, labels = paste(df_gialouris_ag$age, "\n", df
 pl138
 
 ####Interactive Plots####
+##1##
+i_pl_f <- function(pl){
+  ipl <- ggplotly(pl)
+}
+plots_1 <- list(pl1, pl2, pl3, pl4, pl5, pl6, pl7, pl8, pl9, pl10, pl11, pl12, pl13, pl14, pl15, pl16, pl17, pl18, pl19, pl20, pl21, pl22, pl23, pl24, pl25)
+iplots_1 <- lapply(plots_1, i_pl_f)
+iplots_1
+output_ipls_1 <- "E:/University/9ο ΕΞΑΜΗΝΟ/ΣΥΣΤΗΜΑΤΑ ΑΣΤΙΚΩΝ ΣΥΓΚΟΙΝΩΝΙΩΝ/ERGASIA EKSAMHNOU/Final_SAS_B_G_G_K_Repo/Final_SAS_B_G_G_K/Data_Analysis/Plots/Interactive_Plots"  # Replace with your desired folder path
+if (!dir.exists(output_ipls_1)) {
+  dir.create(output_ipls_1, recursive = TRUE)
+}
+ipls_names_1 <- c(
+  "Total_Number_of_People_Boarded_vs_Unboarded",
+  "Average_Number_of_People_Boarded_vs_Unboarded",
+  "Distribution_of_People_Boarded_and_Unboarded",
+  "Max_People_Boarded_Per_Bus_Line",
+  "Average_People_Boarded_Per_Bus_Line",
+  "Sum_of_People_Boarded_per_Bus_Line",
+  "Box_Plot_of_People_Boarded_per_Line",
+  "Max_People_Unboarded_per_Bus_Line",
+  "Average_People_Unboarded_per_Bus_Line",
+  "Sum_of_People_Unboarded_per_Bus_Line",
+  "Box_Plot_of_People_Unboarded_per_Line",
+  "Average_Time_per_Stop_per_Bus_Line",
+  "Max_Time_per_Stop_per_Bus_Line",
+  "Total_Time_per_Stop_per_Bus_Line",
+  "Number_of_Skips_per_Bus_Line",
+  "Number_of_Buses",
+  "Frequency_per_Bus_Line",
+  "Time_Distance_per_Bus_Line",
+  "Bus_Count_per_Bus_Line",
+  "Sum_of_Absolute_Time_Difference_per_Bus_Line",
+  "Average_Speed_per_Bus_Line",
+  "Total_Distance_per_Bus_Line",
+  "Total_Cycle_Time_per_Bus_Line",
+  "Bus_Count_per_Line_via_Tcycle",
+  "Total_Time_Break_per_Bus_Line"
+)
+for (i in seq_along(iplots_1)) {
+  saveWidget(iplots_1[[i]], 
+             file = file.path(output_ipls_1, paste0(ipls_names_1[i], ".html")),
+             selfcontained = TRUE)
+}
+cat("Plots saved successfully in", output_ipls_1)
+interactive_pl26 <- plot_ly(
+  data = parked_car_df_v,
+  labels = ~parked_car_v,
+  values = ~count_v,
+  type = 'pie',
+  textinfo = 'label+percent',  
+  hoverinfo = 'label+value+percent', 
+  marker = list(line = list(color = "black", width = 1))  
+) %>%
+  layout(
+    title = "Parked Car (ΝΑΙ/ΟΧΙ)",
+    titlefont = list(size = 16),
+    showlegend = TRUE
+  )
+
+interactive_pl26
+interactive_pl27 <- plot_ly(
+  data = bus_line_df_v,
+  labels = ~bus_line_v,
+  values = ~count_v,
+  type = 'pie',
+  textinfo = 'label+percent',
+  hoverinfo = 'label+value+percent',
+  marker = list(line = list(color = "black", width = 1))
+) %>%
+  layout(
+    title = "Bus Lane (ΝΑΙ/ΟΧΙ)",
+    titlefont = list(size = 16),
+    showlegend = TRUE
+  )
+
+interactive_pl27
+##2##
+plots_2 <- list(pl28, pl29, pl30, pl31, pl32, pl33)
+iplots_2 <- lapply(plots_2, i_pl_f)
+iplots_2
+output_ipls_2 <- "E:/University/9ο ΕΞΑΜΗΝΟ/ΣΥΣΤΗΜΑΤΑ ΑΣΤΙΚΩΝ ΣΥΓΚΟΙΝΩΝΙΩΝ/ERGASIA EKSAMHNOU/Final_SAS_B_G_G_K_Repo/Final_SAS_B_G_G_K/Data_Analysis/Plots/Interactive_Plots"  # Replace with your desired folder path
+if (!dir.exists(output_ipls_2)) {
+  dir.create(output_ipls_2, recursive = TRUE)
+}
+ipls_names_2 <- c(
+  'People_Boarded_per_1_Minute_Intervals',
+  'People_Unboarded_per_1_Minute_Intervals',
+  'Scatter_Plot_of_Time_Differences',
+  'Scatter_Plot_of_People_Boarded',
+  'Scatter_Plot_of_People_Unboarded',
+  'Scatter_Plot_of_Time_in_Stop'
+)
+for (i in seq_along(iplots_2)) {
+  saveWidget(iplots_2[[i]], 
+             file = file.path(output_ipls_2, paste0(ipls_names_2[i], ".html")),
+             selfcontained = TRUE)
+}
+cat("Plots saved successfully in", output_ipls_2)
+##3##
+plots_3 <- list(pl34, pl35, pl36, pl37, pl38, pl39, pl40, pl41, pl42, pl43, pl44, pl45, pl46, pl47, pl48, pl49)
+iplots_3 <- lapply(plots_3, i_pl_f)
+iplots_3
+output_ipls_3 <- "E:/University/9ο ΕΞΑΜΗΝΟ/ΣΥΣΤΗΜΑΤΑ ΑΣΤΙΚΩΝ ΣΥΓΚΟΙΝΩΝΙΩΝ/ERGASIA EKSAMHNOU/Final_SAS_B_G_G_K_Repo/Final_SAS_B_G_G_K/Data_Analysis/Plots/Interactive_Plots"  # Replace with your desired folder path
+if (!dir.exists(output_ipls_3)) {
+  dir.create(output_ipls_3, recursive = TRUE)
+}
+ipls_names_3 <- c(
+  'Total_Number_of_People_Boarded_vs_Unboarded',
+  'Average_Number_of_People_Boarded_vs_Unboarded',
+  'Distribution_of_People_Boarded_and_Unboarded',
+  'Max_People_Boarded_Per_Stop',
+  'Average_People_Boarded_Per_Stop',
+  'Sum_of_People_Boarded_per_Stop',
+  'Box_Plot_of_People_Boarded_Stop',
+  'Max_People_Unboarded_per_Stop',
+  'Average_People_Unboarded_per_Stop',
+  'Sum_of_People_Unboarded_per_Stop',
+  'Box_Plot_of_People_Unboarded_per_Stop',
+  'Average_Time_per_Stop',
+  'Max_Time_per_Stop',
+  'Total_Time_per_Stop',
+  'Number_of_Skips_per_Bus_Stop',
+  'Histogram_of_Maximum_Absolute_Time_Difference_per_Stop'
+)
+for (i in seq_along(iplots_3)) {
+  saveWidget(iplots_3[[i]], 
+             file = file.path(output_ipls_3, paste0(ipls_names_3[i], ".html")),
+             selfcontained = TRUE)
+}
+cat("Plots saved successfully in", output_ipls_3)
+##4##
+interactive_pl50 <- plot_ly(
+  data = parked_car_df_g,
+  labels = ~parked_car_g,
+  values = ~count_g,
+  type = 'pie',
+  textinfo = 'label+percent', 
+  hoverinfo = 'label+value+percent',  
+  marker = list(line = list(color = "black", width = 1)) 
+) %>%
+  layout(
+    title = "Parked Car (ΝΑΙ/ΟΧΙ)",
+    titlefont = list(size = 16),
+    showlegend = TRUE
+  )
+
+interactive_pl50
+interactive_pl51 <- plot_ly(
+  data = bus_line_df_g,
+  labels = ~bus_line_g,
+  values = ~count_g,
+  type = 'pie',
+  textinfo = 'label+percent',
+  hoverinfo = 'label+value+percent',
+  marker = list(line = list(color = "black", width = 1))
+) %>%
+  layout(
+    title = "Bus Lane (ΝΑΙ/ΟΧΙ)",
+    titlefont = list(size = 16),
+    showlegend = TRUE
+  )
+
+interactive_pl51
+##5##
+plots_5 <- list(pl52, pl53, pl54, pl55, pl56, pl57)
+iplots_5 <- lapply(plots_5, i_pl_f)
+iplots_5
+output_ipls_5 <- "E:/University/9ο ΕΞΑΜΗΝΟ/ΣΥΣΤΗΜΑΤΑ ΑΣΤΙΚΩΝ ΣΥΓΚΟΙΝΩΝΙΩΝ/ERGASIA EKSAMHNOU/Final_SAS_B_G_G_K_Repo/Final_SAS_B_G_G_K/Data_Analysis/Plots/Interactive_Plots"  # Replace with your desired folder path
+if (!dir.exists(output_ipls_5)) {
+  dir.create(output_ipls_5, recursive = TRUE)
+}
+ipls_names_5 <- c(
+  'People_Boarded_per_1_Minute_Intervals',
+  'People_Unboarded_per_1_Minute_Intervals',
+  'Scatter_Plot_of_Time_Differences',
+  'Scatter_Plot_of_People_Boarded',
+  'Scatter_Plot_of_People_Unboarded',
+  'Scatter_Plot_of_Time_in_Stop_Values'
+)
+for (i in seq_along(iplots_5)) {
+  saveWidget(iplots_5[[i]], 
+             file = file.path(output_ipls_4, paste0(ipls_names_5[i], ".html")),
+             selfcontained = TRUE)
+}
+cat("Plots saved successfully in", output_ipls_5)
+##6##
+plots_6 <- list(pl58, pl59, pl60, pl61, pl62, pl63, pl64, pl65, pl66, pl67, pl68, pl69, pl70, pl71, pl72, pl73, pl75, pl76, pl77, pl78, pl79, pl80, pl81, pl82, pl83, pl84, pl85, pl86, pl87, pl88, pl89, pl90, pl91, pl92)
+iplots_6 <- lapply(plots_6, i_pl_f)
+iplots_6
+output_ipls_6 <- "E:/University/9ο ΕΞΑΜΗΝΟ/ΣΥΣΤΗΜΑΤΑ ΑΣΤΙΚΩΝ ΣΥΓΚΟΙΝΩΝΙΩΝ/ERGASIA EKSAMHNOU/Final_SAS_B_G_G_K_Repo/Final_SAS_B_G_G_K/Data_Analysis/Plots/Interactive_Plots"  # Replace with your desired folder path
+if (!dir.exists(output_ipls_6)) {
+  dir.create(output_ipls_6, recursive = TRUE)
+}
+ipls_names_6 <- c(
+  'Move_Reason_Answer_Frequency',
+  'Safety_Score_Answer_Frequency',
+  'Bus_Use_Frequency_Answer_Frequency',
+  'Reliability_Score_Answer_Frequency',
+  'Cleanliness_Score_Answer_Frequency',
+  'Ticket_Price_Score_Answer_Frequency',
+  'Time_Waited_Score_Answer_Frequency',
+  'Comfort_Score_Answer_Frequency',
+  'Distance_to_Stop_Score_Answer_Frequency',
+  'Overall_Score_Answer_Frequency',
+  'Gender_Answer_Frequency',
+  'Age_Answer_Frequency',
+  'Scatter_Plot_of_Absolute_Difference_of_Overall_Mean_Score',
+  'Chi_Square_Test_p_Values',
+  'T_test_p_Values_by_Numerical_Variables_Gender_Comparison',
+  'Anova_F_Values_Heatmap',
+  'Linear_Regression_Coefficients',
+  'Logistic_Regression_Odds_Ratios',
+  'Mean_Scores_for_Each_Variable',
+  'Box_Plot_of_Variables',
+  'Density_of_Skewness',
+  'Safety_Score_Histogram_Mean_Median',
+  'Reliability_Score_Histogram_Mean_Median',
+  'Cleanliness_Score_Histogram_Mean_Median',
+  'Ticket_Price_Score_Histogram_Mean_Median',
+  'Time_Waited_Score_Histogram_Mean_Median',
+  'Comfort_Score_Histogram_Mean_Median',
+  'Distance_to_Stop_Score_Histogram_Mean_Median',
+  'Overall_Score_Histogram_Mean_Median',
+  'CV_for_Each_Score_Type',
+  'Kurtosis_for_Each_Score_Type',
+  'Range_and_Variance_for_Each_Score_Type',
+  'Percentiles_for_Each_Score_Type',
+  'Pearson_Corr_Matrix_Heatmap'
+)
+for (i in seq_along(iplots_6)) {
+  saveWidget(iplots_6[[i]], 
+             file = file.path(output_ipls_6, paste0(ipls_names_6[i], ".html")),
+             selfcontained = TRUE)
+}
+cat("Plots saved successfully in", output_ipls_6)
+##7##
+ipl74_1 <- plot_ly(
+  x = linear_regrr_p$fitted.values,
+  y = linear_regrr_p$residuals,
+  type = 'scatter',
+  mode = 'markers',
+  marker = list(color = 'blue'),
+  name = "Residuals vs Fitted"
+) %>%
+  add_lines(
+    x = c(min(linear_regrr_p$fitted.values), max(linear_regrr_p$fitted.values)),
+    y = c(0, 0),
+    line = list(color = 'red', dash = 'dash'),
+    name = "Zero Line"
+  ) %>%
+  layout(
+    title = "Residuals vs Fitted",
+    xaxis = list(title = "Fitted Values"),
+    yaxis = list(title = "Residuals")
+  )
+ipl74_2 <- plot_ly(
+  x = qqnorm(linear_regrr_p$residuals, plot.it = FALSE)$x,
+  y = qqnorm(linear_regrr_p$residuals, plot.it = FALSE)$y,
+  type = 'scatter',
+  mode = 'markers',
+  marker = list(color = 'blue'),
+  name = "QQ Plot"
+) %>%
+  add_lines(
+    x = c(min(qqnorm(linear_regrr_p$residuals, plot.it = FALSE)$x), 
+          max(qqnorm(linear_regrr_p$residuals, plot.it = FALSE)$x)),
+    y = c(min(qqnorm(linear_regrr_p$residuals, plot.it = FALSE)$y),
+          max(qqnorm(linear_regrr_p$residuals, plot.it = FALSE)$y)),
+    line = list(color = 'red', dash = 'dash'),
+    name = "QQ Line"
+  ) %>%
+  layout(
+    title = "QQ Plot of Residuals",
+    xaxis = list(title = "Theoretical Quantiles"),
+    yaxis = list(title = "Sample Quantiles")
+  )
+ipl74 <- subplot(ipl74_1, ipl74_2, nrows = 1, shareX = TRUE, shareY = TRUE)
+ipl74
+##8##
+plots_8 <- list(pl93, pl94, pl95, pl96, pl97, pl98, pl99, pl100, pl101, pl102, pl103, pl104, pl105, pl106, pl107, pl108, pl110, pl111, pl112, pl113, pl114, pl115, pl116, pl117, pl118, pl119, pl120, pl121, pl122, pl123, pl124, pl125, pl126, pl127)
+iplots_8 <- lapply(plots_8, i_pl_f)
+iplots_8
+output_ipls_8 <- "E:/University/9ο ΕΞΑΜΗΝΟ/ΣΥΣΤΗΜΑΤΑ ΑΣΤΙΚΩΝ ΣΥΓΚΟΙΝΩΝΙΩΝ/ERGASIA EKSAMHNOU/Final_SAS_B_G_G_K_Repo/Final_SAS_B_G_G_K/Data_Analysis/Plots/Interactive_Plots"  # Replace with your desired folder path
+if (!dir.exists(output_ipls_8)) {
+  dir.create(output_ipls_8, recursive = TRUE)
+}
+ipls_names_8 <- c(
+  'Move_Reason_Answer_Frequency',
+  'Safety_Score_Answer_Frequency',
+  'Bus_Use_Frequency_Answer_Frequency',
+  'Reliability_Score_Answer_Frequency',
+  'Cleanliness_Score_Answer_Frequency',
+  'Ticket_Price_Score_Answer_Frequency',
+  'Time_Waited_Score_Answer_Frequency',
+  'Comfort_Score_Answer_Frequency',
+  'Distance_to_Stop_Score_Answer_Frequency',
+  'Overall_Score_Answer_Frequency',
+  'Gender_Answer_Frequency',
+  'Age_Answer_Frequency',
+  'Scatter_Plot_of_Absolute_Difference_of_Overall_Mean_Score',
+  'Chi_Square_Test_p_Values',
+  'T_test_p_Values_by_Numerical_Variables_Gender_Comparison',
+  'Anova_F_Values_Heatmap',
+  'Linear_Regression_Coefficients',
+  'Logistic_Regression_Odds_Ratios',
+  'Mean_Scores_for_Each_Variable',
+  'Box_Plot_of_Variables',
+  'Density_of_Skewness',
+  'Safety_Score_Histogram_Mean_Median',
+  'Reliability_Score_Histogram_Mean_Median',
+  'Cleanliness_Score_Histogram_Mean_Median',
+  'Ticket_Price_Score_Histogram_Mean_Median',
+  'Time_Waited_Score_Histogram_Mean_Median',
+  'Comfort_Score_Histogram_Mean_Median',
+  'Distance_to_Stop_Score_Histogram_Mean_Median',
+  'Overall_Score_Histogram_Mean_Median',
+  'CV_for_Each_Score_Type',
+  'Kurtosis_for_Each_Score_Type',
+  'Range_and_Variance_for_Each_Score_Type',
+  'Percentiles_for_Each_Score_Type',
+  'Pearson_Corr_Matrix_Heatmap'
+)
+for (i in seq_along(iplots_8)) {
+  saveWidget(iplots_8[[i]], 
+             file = file.path(output_ipls_8, paste0(ipls_names_8[i], ".html")),
+             selfcontained = TRUE)
+}
+cat("Plots saved successfully in", output_ipls_8)
+##9##
+ipl109_1 <- plot_ly(
+  x = linear_regrr_g$fitted.values,
+  y = linear_regrr_g$residuals,
+  type = 'scatter',
+  mode = 'markers',
+  marker = list(color = 'blue'),
+  name = "Residuals vs Fitted"
+) %>%
+  add_lines(
+    x = c(min(linear_regrr_g$fitted.values), max(linear_regrr_g$fitted.values)),
+    y = c(0, 0),
+    line = list(color = 'red', dash = 'dash'),
+    name = "Zero Line"
+  ) %>%
+  layout(
+    title = "Residuals vs Fitted",
+    xaxis = list(title = "Fitted Values"),
+    yaxis = list(title = "Residuals")
+  )
+ipl109_2 <- plot_ly(
+  x = qqnorm(linear_regrr_g$residuals, plot.it = FALSE)$x,
+  y = qqnorm(linear_regrr_g$residuals, plot.it = FALSE)$y,
+  type = 'scatter',
+  mode = 'markers',
+  marker = list(color = 'blue'),
+  name = "QQ Plot"
+) %>%
+  add_lines(
+    x = c(min(qqnorm(linear_regrr_g$residuals, plot.it = FALSE)$x), 
+          max(qqnorm(linear_regrr_g$residuals, plot.it = FALSE)$x)),
+    y = c(min(qqnorm(linear_regrr_g$residuals, plot.it = FALSE)$y),
+          max(qqnorm(linear_regrr_g$residuals, plot.it = FALSE)$y)),
+    line = list(color = 'red', dash = 'dash'),
+    name = "QQ Line"
+  ) %>%
+  layout(
+    title = "QQ Plot of Residuals",
+    xaxis = list(title = "Theoretical Quantiles"),
+    yaxis = list(title = "Sample Quantiles")
+  )
+ipl109 <- subplot(ipl109_1, ipl109_2, nrows = 1, shareX = TRUE, shareY = TRUE)
+ipl109
+##10##
+plots_10 <- list(pl128, pl131, pl132)
+iplots_10 <- lapply(plots_10, i_pl_f)
+iplots_10
+output_ipls_10 <- "E:/University/9ο ΕΞΑΜΗΝΟ/ΣΥΣΤΗΜΑΤΑ ΑΣΤΙΚΩΝ ΣΥΓΚΟΙΝΩΝΙΩΝ/ERGASIA EKSAMHNOU/Final_SAS_B_G_G_K_Repo/Final_SAS_B_G_G_K/Data_Analysis/Plots/Interactive_Plots"  # Replace with your desired folder path
+if (!dir.exists(output_ipls_10)) {
+  dir.create(output_ipls_10, recursive = TRUE)
+}
+ipls_names_10 <- c(
+  'Responses_Percentage',
+  'Travel_Time_Stats',
+  'Scaled_Mean_Percentage_of_Scores'
+)
+for (i in seq_along(iplots_10)) {
+  saveWidget(iplots_10[[i]], 
+             file = file.path(output_ipls_10, paste0(ipls_names_10[i], ".html")),
+             selfcontained = TRUE)
+}
+cat("Plots saved successfully in", output_ipls_10)
+##11##
+skopos_metak_p2 <- c(27.586207, 6.896552, 6.896552, 51.724138, 3.448276, 3.448276)
+categories_p2 <- c(1, 2, 4, 5, 7, 9)
+skopos_metak_g2 <- c(9.090909, 3.030303, 6.060606, 72.727273, 3.030303, 3.030303, 3.030303)
+categories_g2 <- c(1, 2, 4, 5, 6, 7, 8)
+pl129_interactive <- plot_ly(
+  x = categories_p2, 
+  y = skopos_metak_p2,
+  type = 'bar',
+  name = "Move Reason Pavlos",
+  marker = list(color = 'lightblue')
+) %>%
+  layout(
+    title = "Move Reason Pavlos",
+    xaxis = list(title = "Categories"),
+    yaxis = list(title = "Percentage", range = c(0, 80)),
+    bargap = 0.2
+  )
+pl130_interactive <- plot_ly(
+  x = categories_g2, 
+  y = skopos_metak_g2,
+  type = 'bar',
+  name = "Move Reason Gialourhs",
+  marker = list(color = 'lightgreen')
+) %>%
+  layout(
+    title = "Move Reason Gialourhs",
+    xaxis = list(title = "Categories"),
+    yaxis = list(title = "Percentage", range = c(0, 80)),
+    bargap = 0.2
+  )
+pl129_130 <- subplot(pl129_interactive, pl130_interactive, nrows = 1, shareX = TRUE, shareY = TRUE)
+pl129_130
+pa_pie_chart_interactive <- function(data, title) {
+  plot_ly(data, labels = ~category, values = ~value, type = 'pie',
+          textinfo = 'percent', hoverinfo = 'label+percent', 
+          marker = list(colors = c('blue', 'red'))) %>%
+    layout(title = title, showlegend = FALSE)
+}
+p1_pa_p_interactive <- pa_pie_chart_interactive(data_pa_p, "Pavlos Responses")
+p2_pa_g_interactive <- pa_pie_chart_interactive(data_pa_g, "Gialouris Responses")
+p_total_pa_interactive <- pa_pie_chart_interactive(data_total_pa, "Combined Responses")
+subplot(p1_pa_p_interactive, p2_pa_g_interactive, nrows = 1, shareX = TRUE, shareY = TRUE)
+p_total_pa_interactive
+df_pavlos_ag_pl <- data.frame(
+  Gender = names(count_gender_p), 
+  Count = as.vector(count_gender_p), 
+  Dataset = "Pavlos"
+)
+df_gialouris_ag_pl <- data.frame(
+  Gender = names(count_gender_g), 
+  Count = as.vector(count_gender_g), 
+  Dataset = "Gialouris"
+)
+gender_pie_chart_interactive <- function(data, title) {
+  plot_ly(data, labels = ~Gender, values = ~Count, type = 'pie',
+          textinfo = 'label+percent', hoverinfo = 'label+percent',
+          marker = list(colors = c('lightblue', 'lightgreen'))) %>%
+    layout(title = title, showlegend = TRUE)
+}
+pl135_interactive <- gender_pie_chart_interactive(df_pavlos_ag_pl, "Gender Distribution (Pavlos)")
+pl136_interactive <- gender_pie_chart_interactive(df_gialouris_ag_pl, "Gender Distribution (Gialouris)")
+pl135_interactive 
+pl136_interactive
+df_pavlos_ag_pl2 <- data.frame(
+  Age = names(count_age_p), 
+  Count = as.vector(count_age_p), 
+  Dataset = "Pavlos"
+)
+df_gialouris_ag_pl2 <- data.frame(
+  Age = names(count_age_g), 
+  Count = as.vector(count_age_g), 
+  Dataset = "Gialouris"
+)
+age_pie_chart_interactive <- function(data, title) {
+  plot_ly(data, labels = ~Age, values = ~Count, type = 'pie',
+          textinfo = 'label+percent', hoverinfo = 'label+percent',
+          marker = list(colors = c('lightblue', 'lightgreen'))) %>%
+    layout(title = title, showlegend = TRUE)
+}
+pl137_interactive <- age_pie_chart_interactive(df_pavlos_ag_pl2, "Age Distribution (Pavlos)")
+pl138_interactive <- age_pie_chart_interactive(df_gialouris_ag_pl2, "Age Distribution (Gialouris)")
+pl137_interactive
+pl138_interactive
