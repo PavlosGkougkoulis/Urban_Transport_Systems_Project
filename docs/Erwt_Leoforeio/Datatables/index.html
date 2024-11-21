@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erwt_Stash</title>
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            
+            /* Background Image */
+            background-image: url('https://raw.githubusercontent.com/PavlosGkougkoulis/Final_SAS_B_G_G_K/refs/heads/main/docs/Erwt_Leoforeio/Datatable_Image1.webp');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh; /* Full-screen height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff; /* Text color for readability */
+        }
+
+        /* Background Overlay */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+            z-index: 1;
+        }
+
+        /* Main Container Styling */
+        .container {
+            position: relative;
+            z-index: 2;
+            background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Soft shadow */
+            max-width: 600px;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-top: 0;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Text shadow for readability */
+        }
+
+        p {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin: 15px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 20px;
+            padding: 12px 25px;
+            background-color: #0073e6;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        a:hover {
+            background-color: #005bb5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bus Line 2 Questionnaire Datatables</h1>
+        <p>Choose a page to view:</p>
+        <ul>
+        <li><a href="Datatable_Desc_Stats.html">Datatable of Descreptive Statistics of Variables</a></li>
+        <li><a href="Datatable_Frequencies.html">Datatable of Frequencies of Variables</a></li>
+        <li><a href="Datatable_Chi_Squared.html">Datatable of Chi-Squared Test</a></li>
+        <li><a href="Datatable_T_test.html">Datatable of T-Test</a></li>
+        <li><a href="Datatable_Anova.html">Datatable of Anova Test</a></li>
+        </ul>
+    </div>
+</body>
+</html>
