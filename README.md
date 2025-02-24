@@ -77,8 +77,15 @@ install.packages("ggplot2")
 
 5. **Contribute**: If you have suggestions, improvements, or additional analysis to contribute, feel free to fork the repository, make changes, and submit a pull request. Your contributions will help improve the project and further the goals of enhancing public transport services in Volos.
 
+**Note**: For the main part of the data analysis, download the relevant plots, code, **Technical Report**, and **Presentation** from the [Final_SAS_B_G_G_K](./Final_SAS_B_G_G_K/) folder.  
+
+
 ## Acknowledgments
 
 - **ASTIKO KTEL Volou**: A special thank you to the management and staff of ASTIKO KTEL Volou for providing the data and support that made this analysis possible. Their collaboration has been crucial in ensuring the accuracy and relevance of the findings.
 
 - **Contributors**: Thank you to the team members who have contributed to the development of this project. Their work in creating the analysis code, visualizations, and actionable recommendations has been fundamental to the success of this project.
+
+## License  
+
+This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LICENSE) file for details.
